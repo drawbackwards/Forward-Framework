@@ -32,4 +32,6 @@ sitemap.xml.gz
 .sass-cache
 bower_components
 node_modules
-build
+build/*
+!build/style.min.css
+dist

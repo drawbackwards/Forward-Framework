@@ -1,7 +1,7 @@
 // ==== SETUP ==== //
 
 // Project configuration
-var project     = 'my-theme'
+var project     = 'forward'
   , build       = './build/'
   , dist        = './dist/'+project+'/'
   , source      = './src/' // 'source' instead of 'src' to avoid confusion with gulp.src
@@ -14,6 +14,8 @@ var gulp        = require('gulp')
   , gutil       = require('gulp-util')
   , plugins     = require('gulp-load-plugins')({ camelize: true }) // This loads all modules prefixed with "gulp-" to plugin.moduleName
   , del         = require('del')
+  , browserSync = require('browser-sync')
+  , reload      = browserSync.reload;
 ;
 
 
@@ -30,9 +32,10 @@ gulp.task('styles', function() {
   }))
   .pipe(plugins.autoprefixer('last 2 versions', 'ie 9', 'ios 6', 'android 4'))
   .pipe(gulp.dest(build))
+  .pipe(browserSync.reload({ stream: true }))
   .pipe(plugins.rename({suffix: '.min'}))
-  .pipe(plugins.minifyCss({ keepSpecialComments: 1 }))
-  .pipe(gulp.dest(build));
+  .pipe(plugins.minifyCss({ keepSpecialComments: 1, keepBreaks: true }))
+  .pipe(gulp.dest(build))
 });
 
 
@@ -161,25 +164,19 @@ gulp.task('bower-normalize', function() {
 
 
 // ==== WATCH & RELOAD ==== //
-
-// Start the livereload server; not asynchronous
-gulp.task('server', ['build'], function() {
-  plugins.livereload.listen(35729, function (err) {
-    if (err) {
-      return console.log(err);
-    };
-  });
+gulp.task('browser-sync', function() {
+    browserSync({
+        proxy: "design.org"
+    });
 });
 
-// Watch task: build stuff when files are modified, livereload when anything in the `build` or `dist` folders change
-gulp.task('watch', ['server'], function() {
+// Watch task: build stuff when files are modified, reload when anything in the `build` or `dist` folders change
+gulp.task('watch', ['browser-sync'], function() {
   gulp.watch(source+'scss/**/*.scss', ['styles']);
   gulp.watch([source+'js/**/*.js', bower+'**/*.js'], ['scripts']);
   gulp.watch(source+'**/*(*.png|*.jpg|*.jpeg|*.gif)', ['images']);
   gulp.watch(source+'**/*.php', ['php']);
-  gulp.watch([build+'**/*', dist+'**/*']).on('change', function(file) {
-    plugins.livereload.changed(file.path);
-  });
+  // gulp.watch([build+'**/*', dist+'**/*'], reload);
 });
 
 
@@ -192,5 +189,5 @@ gulp.task('build', ['styles', 'scripts', 'images', 'languages', 'php']);
 // Release creates a clean distribution package under `dist` after running build, clean, and wipe in sequence
 gulp.task('dist', ['dist-images']);
 
-// The default task runs watch which boots up the Livereload server after an initial build is finished
+// The default task runs watch which boots up the browsersync server after an initial build is finished
 gulp.task('default', ['watch']);
