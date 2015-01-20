@@ -1,0 +1,33 @@
+{
+  "name": "wordpress-gulp-bower-sass",
+  "version": "0.0.4",
+  "homepage": "https://github.com/synapticism/wordpress-gulp-bower-sass",
+  "authors": [
+    "Alexander Synaptic <alexander@synapticism.com>"
+  ],
+  "moduleType": [
+    "amd"
+  ],
+  "keywords": [
+    "wordpress",
+    "gulp",
+    "bower",
+    "sass"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    ".sass-cache",
+    "build",
+    "package.json"
+  ],
+  "dependencies": {
+    "meyer-reset": "*",
+    "normalize.css": "^3.0.1"
+  }
+}
