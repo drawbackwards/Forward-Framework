@@ -1,0 +1,9 @@
+@import "neat/app/assets/stylesheets/neat-helpers";
+
+$max-width: 1088px;
+$gutter: golden-ratio(1.25em, 1);
+
+// Breakpoints
+$tablet: new-breakpoint(max-width 768px 4);
+$mobile: new-breakpoint(max-width 480px 2);
+$desktop: new-breakpoint(min-width 769px 12);

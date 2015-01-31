@@ -1,16 +1,13 @@
 /*!
-Theme Name: WordPress-Gulp-Bower-Sass
-Theme URI: https://github.com/synapticism/wordpress-gulp-bower-sass
-Author: Alexander Synaptic
-Author URI: http://alexandersynaptic.com
-Description:
-Version: 0.0.4
-License: GNU General Public Licence 2.0
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags:
-Text Domain:
-Domain Path: /languages/
+Theme Name: Forward
+Theme URI: http://drawbackwards.com
+Author: Drawbackwards
+Author URI: http://drawbackwards.com
+Description: Forward by Drawbackwards
+Version: 1.0
 */
+html{box-sizing:border-box}
+*,:after,:before{box-sizing:inherit}
 html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
 article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}
 audio,canvas,progress,video{display:inline-block;vertical-align:baseline}
@@ -41,8 +38,29 @@ textarea{overflow:auto}
 optgroup{font-weight:700}
 a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font:inherit;vertical-align:baseline}
 article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
-body{line-height:1}
 ol,ul{list-style:none}
 blockquote,q{quotes:none}
 blockquote:after,blockquote:before,q:after,q:before{content:"";content:none}
 table{border-collapse:collapse;border-spacing:0}
+body{font-weight:300;line-height:1.776889em;font-family:proxima-nova,"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:1.07142857em;color:#595959;background-color:#eee}
+a{text-decoration:none;color:#B2432C}
+a:hover{text-decoration:underline;color:#8e3523}
+.container,.site-content{max-width:1088px;margin-left:auto;margin-right:auto}
+.container:after,.site-content:after{content:"";display:table;clear:both}
+.site-content{position:relative}
+.site-header{display:none}
+#primary{float:left;display:block;margin-right:2.3576516%;width:65.8807828%;margin-top:4.28571429em}
+#primary:last-child{margin-right:0}
+@media screen and (max-width:768px){#primary{float:left;display:block;margin-right:7.42297035%;width:207.42297035%}
+#primary:last-child{margin-right:0}}
+@media screen and (min-width:769px){#primary{padding-right:4.34783%}}
+@media screen and (min-width:769px) and (max-width:768px){#primary{padding-right:0}}
+#secondary{float:left;display:block;margin-right:2.3576516%;width:31.7615656%;font-size:14px;margin-top:4.28571429em}
+#secondary:last-child{margin-right:0}
+@media screen and (max-width:768px){#secondary{float:left;display:block;margin-right:7.42297035%;width:207.42297035%}
+#secondary:last-child{margin-right:0}}
+#secondary .widget{margin-bottom:2.14285714em}
+.screen-reader-text{display:none}
+.entry-title{line-height:1em;font-weight:100;font-size:4.14285714em;text-transform:uppercase;margin-bottom:.5em}
+.entry-title a:hover{text-decoration:none}
+.widget-title{line-height:1em;font-weight:700;font-size:15px;text-transform:uppercase;margin-bottom:.5em}

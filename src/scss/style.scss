@@ -1,15 +1,76 @@
 /*!
-Theme Name: WordPress-Gulp-Bower-Sass
-Theme URI: https://github.com/synapticism/wordpress-gulp-bower-sass
-Author: Alexander Synaptic
-Author URI: http://alexandersynaptic.com
-Description:
-Version: 0.0.4
-License: GNU General Public Licence 2.0
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags:
-Text Domain:
-Domain Path: /languages/
+Theme Name: Forward
+Theme URI: http://drawbackwards.com
+Author: Drawbackwards
+Author URI: http://drawbackwards.com
+Description: Forward by Drawbackwards
+Version: 1.0
 */
 
-@import "base";
+@import 'bourbon/dist/bourbon';
+@import 'neat/app/assets/stylesheets/neat';
+@import 'base';
+@import 'grid-settings';
+@import 'variables';
+@import 'mixins';
+
+body {
+	@include type-style(default);
+
+	color: $hex-default;
+	background-color: $hex-background;
+}
+
+a {
+	@include link-hover;
+	@include links(hex-red);
+}
+
+.container,
+.site-content {
+	@include outer-container;
+}
+
+.site-content {
+	position: relative;
+}
+
+.site-header {
+	display: none;
+}
+
+#primary {
+	@include span-columns(8);
+	@include tablet-single;
+	@include media($desktop) {
+		@include double-gutter;
+	}
+
+	margin-top: px(60);
+}
+#secondary {
+	@include span-columns(4);
+	@include tablet-single;
+
+	font-size: 14px;
+
+	margin-top: px(60);
+	.widget {
+		margin-bottom: px(30);
+	}
+}
+
+.screen-reader-text {
+	display: none;
+}
+
+// Titles
+.entry-title {
+	@include type-style(h1);
+	a {
+		@include link-hover-none;
+	}
+}
+.widget-title {
+	@include type-style(h3);
+}

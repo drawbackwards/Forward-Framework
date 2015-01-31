@@ -1,0 +1,30 @@
+// Margin / Padding
+$margin: $gutter;
+$padding: $gutter;
+
+// Colors
+$hex-default: tint(#000, 35%);
+$hex-default-hover: shade($hex-default, 20%);
+
+$hex-white: #f9f9f9;
+$hex-real-white: #fff;
+
+$hex-red: #B2432C;
+$hex-red-hover: shade($hex-red, 20%);
+
+$hex-border: #e6e6e6;
+$hex-border-hover: shade($hex-border, 20%);
+
+$hex-footer: tint(#000, 50%);
+$hex-footer-hover: shade($hex-footer, 20%);
+$hex-footer-bg: #f3f3f3;
+
+$hex-background: #eee;
+
+// Type
+$proxima: 'proxima-nova', $helvetica;
+$helvetica: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$mono: Monaco, Consolas, 'Lucida Console', monospace;
+
+// Borders
+$border-thin: 1px solid $hex-border;
