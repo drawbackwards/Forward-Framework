@@ -11,11 +11,11 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'forward' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'forward' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( __( 'Theme: %1$s by %2$s.', 'forward' ), 'Forward', '<a href="http://drawbackwards.com" rel="designer">Drawbackwards</a>' ); ?>
-		</div><!-- .site-info -->
+		<div class="container">
+			<div class="site-info">
+				<?php printf( __( 'Site by %1$s', 'forward' ), '<a href="http://drawbackwards.com" rel="designer">Drawbackwards</a>' ); ?>
+			</div><!-- .site-info -->
+		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 

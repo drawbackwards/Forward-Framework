@@ -20,7 +20,7 @@
 }
 
 // Museo font weights
-@mixin proxima-weight($weight: light) {
+@mixin helvetica-weight($weight: light) {
 	@if $weight == thin {
 		font-weight: 100;
 	}
@@ -41,18 +41,17 @@
 @mixin type-style($style: default) {
 	@if $style == h1 {
 		@include line-height(tight);
-		@include proxima-weight(thin);
+		@include helvetica-weight(thin);
 
 		font-size: px(58);
 
-		text-transform: uppercase;
 		margin-bottom: .5em;
 	}
 	@if $style == h2 {
 	}
 	@if $style == h3 {
 		@include line-height(tight);
-		@include proxima-weight(bold);
+		@include helvetica-weight(bold);
 
 		font-size: 15px;
 
@@ -62,10 +61,10 @@
 	@if $style == h4 {
 	}
 	@if $style == default {
-		@include proxima-weight(light);
+		@include helvetica-weight(light);
 		@include line-height(loose);
 
-		font-family: $proxima;
+		font-family: $helvetica;
 		font-size: px(15);
 	}
 }
@@ -229,11 +228,11 @@
 
 @mixin tablet-single {
 	@include media($tablet) {
-		@include span-columns(8);
+		@include span-columns(8 of 8);
 	}
 }
 @mixin mobile-single {
 	@include media($mobile) {
-		@include span-columns(4);
+		@include span-columns(4 of 4);
 	}
 }

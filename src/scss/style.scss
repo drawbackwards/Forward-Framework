@@ -31,12 +31,8 @@ a {
 	@include outer-container;
 }
 
-.site-content {
-	position: relative;
-}
-
 .site-header {
-	display: none;
+
 }
 
 #primary {
@@ -48,6 +44,9 @@ a {
 
 	margin-top: px(60);
 }
+
+// Sidebar //
+
 #secondary {
 	@include span-columns(4);
 	@include tablet-single;
@@ -64,7 +63,8 @@ a {
 	display: none;
 }
 
-// Titles
+// Titles //
+
 .entry-title {
 	@include type-style(h1);
 	a {
@@ -73,4 +73,13 @@ a {
 }
 .widget-title {
 	@include type-style(h3);
+}
+
+// Forms //
+
+label {
+
+	.content-area & {
+		display: block;
+	}
 }
