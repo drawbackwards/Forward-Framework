@@ -10,7 +10,13 @@ $hex-white: #f9f9f9;
 $hex-real-white: #fff;
 
 $hex-red: #B2432C;
-$hex-red-hover: shade($hex-red, 20%);
+$hex-blue: #3185CB;
+
+$hex-primary: $hex-blue;
+$hex-primary-hover: shade($hex-primary, 20%);
+
+$hex-secondary: $hex-red;
+$hex-secondary-hover: shade($hex-secondary, 20%);
 
 $hex-border: #e6e6e6;
 $hex-border-hover: shade($hex-border, 20%);
@@ -19,7 +25,7 @@ $hex-footer: tint(#000, 50%);
 $hex-footer-hover: shade($hex-footer, 20%);
 $hex-footer-bg: #f3f3f3;
 
-$hex-background: #eee;
+$hex-background: shade($hex-real-white, 0%);
 
 // Type
 $helvetica: 'Helvetica Neue', Helvetica, Arial, sans-serif;

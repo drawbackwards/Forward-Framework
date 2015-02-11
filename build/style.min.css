@@ -42,9 +42,9 @@ ol,ul{list-style:none}
 blockquote,q{quotes:none}
 blockquote:after,blockquote:before,q:after,q:before{content:"";content:none}
 table{border-collapse:collapse;border-spacing:0}
-body{font-weight:300;line-height:1.776889em;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:1.07142857em;color:#595959;background-color:#eee}
-a{text-decoration:none;color:#B2432C}
-a:hover{text-decoration:underline;color:#8e3523}
+body{font-weight:300;line-height:1.776889em;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:1.07142857em;color:#595959;background-color:#fff}
+a{text-decoration:none;color:#3185CB}
+a:hover{text-decoration:underline;color:#276aa2}
 .container,.site-content{max-width:1088px;margin-left:auto;margin-right:auto}
 .container:after,.site-content:after{content:"";display:table;clear:both}
 #primary{float:left;display:block;margin-right:2.3576516%;width:65.8807828%;margin-top:4.28571429em}
@@ -61,5 +61,7 @@ a:hover{text-decoration:underline;color:#8e3523}
 .screen-reader-text{display:none}
 .entry-title{line-height:1em;font-weight:100;font-size:4.14285714em;margin-bottom:.5em}
 .entry-title a:hover{text-decoration:none}
-.widget-title{line-height:1em;font-weight:700;font-size:15px;text-transform:uppercase;margin-bottom:.5em}
+.widget-title{line-height:1em;font-weight:700;font-size:15px;margin-bottom:.5em;text-transform:uppercase}
 .content-area label{display:block}
+input[type=search],input[type=text],textarea{padding:6px 8px;border:1px solid #e6e6e6}
+input[type=submit]{padding:6px 8px;color:#f9f9f9;border:1px solid #e6e6e6;background-color:#3185CB}

@@ -15,71 +15,90 @@ Version: 1.0
 @import 'mixins';
 
 body {
-	@include type-style(default);
+    @include type-style(default);
 
-	color: $hex-default;
-	background-color: $hex-background;
+    color: $hex-default;
+    background-color: $hex-background;
 }
-
 a {
-	@include link-hover;
-	@include links(hex-red);
+    @include link-hover;
+    @include links(hex-primary);
 }
-
 .container,
 .site-content {
-	@include outer-container;
+    @include outer-container;
 }
 
-.site-header {
 
-}
+/////////////
+// Primary //
+/////////////
 
 #primary {
-	@include span-columns(8);
-	@include tablet-single;
-	@include media($desktop) {
-		@include double-gutter;
-	}
+    @include span-columns(8);
+    @include tablet-single;
+    @include media($desktop) {
+        @include double-gutter;
+    }
 
-	margin-top: px(60);
+    margin-top: px(60);
 }
 
+/////////////
 // Sidebar //
+/////////////
 
 #secondary {
-	@include span-columns(4);
-	@include tablet-single;
+    @include span-columns(4);
+    @include tablet-single;
 
-	font-size: 14px;
+    font-size: 14px;
 
-	margin-top: px(60);
-	.widget {
-		margin-bottom: px(30);
-	}
+    margin-top: px(60);
+    .widget {
+        margin-bottom: px(30);
+    }
 }
-
 .screen-reader-text {
-	display: none;
+    display: none;
 }
 
+////////////
 // Titles //
+////////////
 
 .entry-title {
-	@include type-style(h1);
-	a {
-		@include link-hover-none;
-	}
+    @include type-style(h1);
+    a {
+        @include link-hover-none;
+    }
 }
 .widget-title {
-	@include type-style(h3);
+    @include type-style(h3);
 }
 
+///////////
 // Forms //
+///////////
 
 label {
+    .content-area & {
+        display: block;
+    }
+}
 
-	.content-area & {
-		display: block;
-	}
+input[type=text],
+input[type=search],
+textarea {
+    padding: 6px 8px;
+
+    border: 1px solid $hex-border;
+}
+
+input[type=submit] {
+    padding: 6px 8px;
+
+    color: $hex-white;
+    border: 1px solid $hex-border;
+    background-color: $hex-primary;
 }
