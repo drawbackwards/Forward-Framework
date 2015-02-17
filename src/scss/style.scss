@@ -99,6 +99,9 @@ input[type=submit] {
     padding: 6px 8px;
 
     color: $hex-white;
-    border: 1px solid $hex-border;
+    border: 1px solid $hex-primary-hover;
     background-color: $hex-primary;
+    &:hover {
+        background-color: $hex-primary-hover;
+    }
 }

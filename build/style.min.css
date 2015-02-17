@@ -64,4 +64,5 @@ a:hover{text-decoration:underline;color:#276aa2}
 .widget-title{line-height:1em;font-weight:700;font-size:15px;margin-bottom:.5em;text-transform:uppercase}
 .content-area label{display:block}
 input[type=search],input[type=text],textarea{padding:6px 8px;border:1px solid #e6e6e6}
-input[type=submit]{padding:6px 8px;color:#f9f9f9;border:1px solid #e6e6e6;background-color:#3185CB}
+input[type=submit]{padding:6px 8px;color:#f9f9f9;border:1px solid #276aa2;background-color:#3185CB}
+input[type=submit]:hover{background-color:#276aa2}
