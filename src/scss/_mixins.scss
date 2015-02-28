@@ -19,7 +19,7 @@
     @return em($value, 14);
 }
 
-// Museo font weights
+// Helvetica font weights
 @mixin helvetica-weight($weight: light) {
     @if $weight == thin {
         font-weight: 100;
@@ -38,34 +38,46 @@
     }
 }
 
+// Source Sans Pro font weights
+@mixin source-sans-weight($weight: light) {
+    @if $weight == light {
+        font-weight: 300;
+    }
+    @if $weight == normal {
+        font-weight: 400;
+    }
+    @if $weight == semi-bold {
+        font-weight: 600;
+    }
+}
+
 @mixin type-style($style: default) {
     @if $style == h1 {
         @include line-height(tight);
-        @include helvetica-weight(thin);
+        @include source-sans-weight(light);
 
         font-size: px(58);
 
         margin-bottom: .5em;
+        margin-left: -5px;
     }
     @if $style == h2 {
     }
     @if $style == h3 {
         @include line-height(tight);
-        @include helvetica-weight(bold);
+        @include source-sans-weight(semi-bold);
 
         font-size: 15px;
 
         margin-bottom: .5em;
-
-        text-transform: uppercase;
     }
     @if $style == h4 {
     }
     @if $style == default {
-        @include helvetica-weight(light);
         @include line-height(loose);
+        @include source-sans-weight(light);
 
-        font-family: $helvetica;
+        font-family: $source-sans;
         font-size: px(15);
     }
 }

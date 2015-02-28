@@ -42,10 +42,11 @@ ol,ul{list-style:none}
 blockquote,q{quotes:none}
 blockquote:after,blockquote:before,q:after,q:before{content:"";content:none}
 table{border-collapse:collapse;border-spacing:0}
-body{font-weight:300;line-height:1.776889em;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:1.07142857em;color:#595959;background-color:#fff}
+body{line-height:1.776889em;font-weight:300;font-family:"Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;font-size:1.07142857em;color:#595959;background-color:#fff}
 a{text-decoration:none;color:#3185CB}
 a:hover{text-decoration:underline;color:#276aa2}
-.container,.site-content{max-width:1088px;margin-left:auto;margin-right:auto}
+textarea input{border-radius:0;-webkit-appearance:none}
+.container,.site-content{max-width:1088px;margin-left:auto;margin-right:auto;padding-right:20px;padding-left:20px}
 .container:after,.site-content:after{content:"";display:table;clear:both}
 #primary{float:left;display:block;margin-right:2.3576516%;width:65.8807828%;margin-top:4.28571429em}
 #primary:last-child{margin-right:0}
@@ -53,16 +54,18 @@ a:hover{text-decoration:underline;color:#276aa2}
 #primary:last-child{margin-right:0}}
 @media screen and (min-width:769px){#primary{padding-right:4.34783%}}
 @media screen and (min-width:769px) and (max-width:768px){#primary{padding-right:0}}
-#secondary{float:left;display:block;margin-right:2.3576516%;width:31.7615656%;font-size:14px;margin-top:4.28571429em}
+#secondary{float:left;display:block;margin-right:2.3576516%;width:31.7615656%;font-size:15px;margin-top:4.28571429em}
 #secondary:last-child{margin-right:0}
 @media screen and (max-width:768px){#secondary{float:left;display:block;margin-right:3.57866361%;width:100%}
 #secondary:last-child{margin-right:0}}
 #secondary .widget{margin-bottom:2.14285714em}
 .screen-reader-text{display:none}
-.entry-title{line-height:1em;font-weight:100;font-size:4.14285714em;margin-bottom:.5em}
+.entry-title{line-height:1em;font-weight:300;font-size:4.14285714em;margin-bottom:.5em;margin-left:-5px}
 .entry-title a:hover{text-decoration:none}
-.widget-title{line-height:1em;font-weight:700;font-size:15px;margin-bottom:.5em;text-transform:uppercase}
-.content-area label{display:block}
-input[type=search],input[type=text],textarea{padding:6px 8px;border:1px solid #e6e6e6}
+.widget-title{line-height:1em;font-weight:600;font-size:15px;margin-bottom:.5em}
+.content-area label{line-height:1em;font-weight:600;font-size:15px;display:block;margin-bottom:.5em}
+input[type=email],input[type=search],input[type=text],input[type=url],textarea{padding:6px 8px;border:1px solid #e6e6e6;margin-bottom:1em}
+input[type=email],input[type=text],input[type=url],textarea{width:100%}
 input[type=submit]{padding:6px 8px;color:#f9f9f9;border:1px solid #276aa2;background-color:#3185CB}
 input[type=submit]:hover{background-color:#276aa2}
+.site-footer{font-size:14px}

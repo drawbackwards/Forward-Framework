@@ -166,7 +166,7 @@ gulp.task('bower-normalize', function() {
 // ==== WATCH & RELOAD ==== //
 gulp.task('browser-sync', function() {
     browserSync({
-        proxy: "local.forward.dev"
+        proxy: "forward.local"
     });
 });
 
