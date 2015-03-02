@@ -22,7 +22,7 @@ var gulp        = require('gulp')
 
 // ==== STYLES ==== //
 
-// Stylesheet handling; don't forget `gem install sass`; Compass is not included by default here
+// Stylesheet handling; don't forget `gem install sass`;
 gulp.task('styles', function() {
   return gulp.src([source+'scss/*.scss', '!'+source+'scss/_*.scss']) // Ignore partials
   .pipe(plugins.rubySass({
@@ -31,6 +31,7 @@ gulp.task('styles', function() {
   , 'sourcemap=none': true // Not yet ready for prime time! Sass 3.4 has sourcemaps on by default but this causes some issues with the Gulp toolchain
   }))
   .pipe(plugins.autoprefixer('last 2 versions', 'ie 9', 'ios 6', 'android 4'))
+  .pipe(plugins.combineMediaQueries())
   .pipe(gulp.dest(build))
   .pipe(browserSync.reload({ stream: true }))
   .pipe(plugins.rename({suffix: '.min'}))
@@ -132,7 +133,7 @@ gulp.task('dist-copy', ['dist-wipe'], function() {
 // Minify stylesheets in place
 gulp.task('dist-styles', ['dist-copy'], function() {
   return gulp.src([dist+'**/*.css', '!'+dist+'**/*.min.css'])
-  .pipe(plugins.minifyCss({ keepSpecialComments: 1 }))
+  .pipe(plugins.minifyCss({ keepSpecialComments: 1, keepBreaks: true }))
   .pipe(gulp.dest(dist));
 });
 

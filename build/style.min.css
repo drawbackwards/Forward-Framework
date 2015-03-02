@@ -62,16 +62,10 @@ textarea input{border-radius:0;-webkit-appearance:none}
 .main-navigation .menu .current_page_item{font-weight:600}
 #primary{float:left;display:block;margin-right:2.3576516%;width:65.8807828%;margin-top:4.28571429em}
 #primary:last-child{margin-right:0}
-@media screen and (max-width:768px){#primary{float:left;display:block;margin-right:3.57866361%;width:100%}
-#primary:last-child{margin-right:0}}
-@media screen and (min-width:769px){#primary{padding-right:4.34783%}}
-@media screen and (min-width:769px) and (max-width:768px){#primary{padding-right:0}}
 .page-template-page-full-width #primary{float:left;display:block;margin-right:2.3576516%;width:100%;padding-right:0}
 .page-template-page-full-width #primary:last-child{margin-right:0}
 #secondary{float:left;display:block;margin-right:2.3576516%;width:31.7615656%;font-size:15px;margin-top:4.28571429em}
 #secondary:last-child{margin-right:0}
-@media screen and (max-width:768px){#secondary{float:left;display:block;margin-right:3.57866361%;width:100%}
-#secondary:last-child{margin-right:0}}
 .screen-reader-text{display:none}
 .widget{margin-bottom:1.42857143em;padding-bottom:1.42857143em;border-bottom:1px solid #e6e6e6}
 .widget:last-child{border-bottom:none}
@@ -82,3 +76,9 @@ input[type=email],input[type=text],input[type=url],textarea{width:100%}
 input[type=submit]{padding:6px 8px;color:#f9f9f9;border:1px solid #276aa2;background-color:#3185CB}
 input[type=submit]:hover{background-color:#276aa2}
 .form-allowed-tags{font-size:14px;line-height:1.5em;margin-bottom:1.5em}
+@media screen and (min-width:769px){#primary{padding-right:4.34783%}}
+@media screen and (min-width:769px) and (max-width:768px){#primary{padding-right:0}}
+@media screen and (max-width:768px){#primary{float:left;display:block;margin-right:3.57866361%;width:100%}
+#primary:last-child{margin-right:0}
+#secondary{float:left;display:block;margin-right:3.57866361%;width:100%}
+#secondary:last-child{margin-right:0}}
