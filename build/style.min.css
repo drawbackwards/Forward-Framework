@@ -54,6 +54,8 @@ textarea input{border-radius:0;-webkit-appearance:none}
 #primary:last-child{margin-right:0}}
 @media screen and (min-width:769px){#primary{padding-right:4.34783%}}
 @media screen and (min-width:769px) and (max-width:768px){#primary{padding-right:0}}
+.page-template-page-full-width #primary{float:left;display:block;margin-right:2.3576516%;width:100%;padding-right:0}
+.page-template-page-full-width #primary:last-child{margin-right:0}
 #secondary{float:left;display:block;margin-right:2.3576516%;width:31.7615656%;font-size:15px;margin-top:4.28571429em}
 #secondary:last-child{margin-right:0}
 @media screen and (max-width:768px){#secondary{float:left;display:block;margin-right:3.57866361%;width:100%}

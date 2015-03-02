@@ -58,6 +58,13 @@ input {
     margin-top: px(60);
 }
 
+// No sidebar
+.page-template-page-full-width #primary {
+    @include span-columns(12);
+
+    padding-right: 0;
+}
+
 /////////////
 // Sidebar //
 /////////////
