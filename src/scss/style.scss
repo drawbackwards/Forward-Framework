@@ -43,6 +43,56 @@ input {
     padding-left: 20px;
 }
 
+////////////
+// Header //
+////////////
+
+.entry-title {
+    @include type-style(h1);
+    a {
+        @include link-hover-none;
+    }
+}
+.widget-title {
+    @include type-style(h3);
+}
+.site-title {
+}
+.site-logo {
+    @include size(100px 60px);
+    @include hide-text;
+
+    display: block;
+
+    background-color: red;
+}
+.site-description {
+    display: none;
+}
+
+////////////////
+// Navigation //
+////////////////
+
+.main-navigation {
+    background-color: $hex-primary;
+    a {
+        color: $hex-white;
+    }
+    .menu {
+        @include row;
+        .page_item {
+            float: left;
+
+            margin-right: 2em;
+            padding-top: 1em;
+            padding-bottom: 1em;
+        }
+        .current_page_item {
+            @include source-sans-weight(semi-bold);
+        }
+    }
+}
 
 /////////////
 // Primary //
@@ -76,26 +126,26 @@ input {
     font-size: 15px;
 
     margin-top: px(60);
-    .widget {
-        margin-bottom: px(30);
-    }
 }
 .screen-reader-text {
     display: none;
 }
+.widget {
+    margin-bottom: px(20);
+    padding-bottom: px(20);
 
-////////////
-// Titles //
-////////////
-
-.entry-title {
-    @include type-style(h1);
-    a {
-        @include link-hover-none;
+    border-bottom: 1px solid $hex-border;
+    &:last-child {
+        border-bottom: none;
     }
 }
-.widget-title {
-    @include type-style(h3);
+
+////////////
+// Footer //
+////////////
+
+.site-footer {
+    font-size: 14px;
 }
 
 ///////////
@@ -105,16 +155,18 @@ input {
 label {
     .content-area & {
         @include type-style(h3);
+
         display: block;
+
         margin-bottom: .5em;
     }
 }
 
 %input-defaults {
-   padding: 6px 8px;
+    margin-bottom: 1em;
+    padding: 6px 8px;
 
-   border: 1px solid $hex-border;
-   margin-bottom: 1em; 
+    border: 1px solid $hex-border;
 }
 
 input[type=text],
@@ -122,6 +174,7 @@ input[type=email],
 input[type=url],
 textarea {
     @extend %input-defaults;
+
     width: 100%;
 }
 
@@ -140,6 +193,9 @@ input[type=submit] {
     }
 }
 
-.site-footer {
+.form-allowed-tags {
     font-size: 14px;
+    line-height: 1.5em;
+
+    margin-bottom: 1.5em;
 }
