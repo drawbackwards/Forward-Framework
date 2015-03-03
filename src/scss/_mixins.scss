@@ -9,14 +9,19 @@
 // of styles with very few mixins.
 //
 // For complete documentation:
-// Sass mixins:		http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#mixins
-// Bourbon mixins: 	http://bourbon.io/docs/
+// Sass mixins:     http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#mixins
+// Bourbon mixins:  http://bourbon.io/docs/
 
 // Import variables for use in Mixins.
 @import '_variables';
 
 @function px($value) {
     @return em($value, 14);
+}
+
+// Standard unit of measurement to keep things simple
+@function unit($value) {
+    @return 15 * $value + px;
 }
 
 // Helvetica font weights
@@ -55,6 +60,9 @@
     @if $style == h1 {
         @include line-height(tight);
         @include source-sans-weight(light);
+        @include media($tablet) {
+            font-size: px(36);
+        }
 
         font-size: px(58);
 
@@ -62,6 +70,12 @@
         margin-left: -5px;
     }
     @if $style == h2 {
+        @include line-height(tight);
+        @include source-sans-weight(normal);
+
+        font-size: 28px;
+
+        margin-bottom: .5em;
     }
     @if $style == h3 {
         @include line-height(tight);
@@ -72,6 +86,17 @@
         margin-bottom: .5em;
     }
     @if $style == h4 {
+        @include source-sans-weight(semi-bold);
+        @include line-height(tight);
+
+        font-size: 15px;
+
+        text-transform: uppercase;
+    }
+    @if $style == small {
+        @include line-height(default);
+
+        font-size: 14px;
     }
     @if $style == default {
         @include line-height(loose);

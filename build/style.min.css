@@ -45,40 +45,59 @@ table{border-collapse:collapse;border-spacing:0}
 body{line-height:1.776889em;font-weight:300;font-family:"Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;font-size:1.07142857em;color:#595959;background-color:#fff}
 a{text-decoration:none;color:#3185CB}
 a:hover{text-decoration:underline;color:#276aa2}
+a:active{position:relative;top:1px}
 textarea input{border-radius:0;-webkit-appearance:none}
-.container,.site-content{max-width:1088px;margin-left:auto;margin-right:auto;padding-right:20px;padding-left:20px}
+.container,.site-content{max-width:1088px;margin-left:auto;margin-right:auto;padding-right:30px;padding-left:30px}
 .container:after,.site-content:after{content:"";display:table;clear:both}
 .entry-title{line-height:1em;font-weight:300;font-size:4.14285714em;margin-bottom:.5em;margin-left:-5px}
 .entry-title a:hover{text-decoration:none}
-.widget-title{line-height:1em;font-weight:600;font-size:15px;margin-bottom:.5em}
-.site-logo{height:60px;width:100px;overflow:hidden;display:block;background-color:red}
-.site-logo:before{content:"";display:block;width:0;height:100%}
+.site-logo{line-height:1em;font-size:4.14285714em;margin-left:-5px;font-weight:600;display:inline-block;margin-bottom:0;padding-top:30px;padding-bottom:30px}
 .site-description{display:none}
 .main-navigation{background-color:#3185CB}
 .main-navigation a{color:#f9f9f9}
 .main-navigation .menu{display:block}
 .main-navigation .menu:after{content:"";display:table;clear:both}
-.main-navigation .menu .page_item{float:left;margin-right:2em;padding-top:1em;padding-bottom:1em}
+.main-navigation .menu .page_item{float:left;margin-right:2em;padding-top:15px;padding-bottom:15px}
 .main-navigation .menu .current_page_item{font-weight:600}
-#primary{float:left;display:block;margin-right:2.3576516%;width:65.8807828%;margin-top:4.28571429em}
+.post-navigation{margin-bottom:60px}
+#primary{float:left;display:block;margin-right:2.3576516%;width:65.8807828%;margin-top:60px}
 #primary:last-child{margin-right:0}
 .page-template-page-full-width #primary{float:left;display:block;margin-right:2.3576516%;width:100%;padding-right:0}
 .page-template-page-full-width #primary:last-child{margin-right:0}
-#secondary{float:left;display:block;margin-right:2.3576516%;width:31.7615656%;font-size:15px;margin-top:4.28571429em}
+#secondary{float:left;display:block;margin-right:2.3576516%;width:31.7615656%;line-height:1.333em;font-size:15px;margin-top:60px}
 #secondary:last-child{margin-right:0}
 .screen-reader-text{display:none}
-.widget{margin-bottom:1.42857143em;padding-bottom:1.42857143em;border-bottom:1px solid #e6e6e6}
-.widget:last-child{border-bottom:none}
-.site-footer{font-size:14px}
+.widget-title{line-height:1em;font-weight:600;font-size:15px;margin-bottom:15px}
+.widget{margin-bottom:22.5px;padding-bottom:22.5px;border-bottom:1px solid #e6e6e6}
+.widget:last-child{padding-bottom:0;border-bottom:none}
+.widget ul li{margin-bottom:15px}
+.widget ul li:last-child{margin-bottom:0}
+article{margin-bottom:60px}
+.entry-meta{line-height:1.333em;font-size:14px}
+.entry-content{margin-top:15px;margin-bottom:15px}
+.entry-footer{line-height:1.333em;font-size:14px}
+.page-title{font-weight:600;line-height:1em;font-size:15px;text-transform:uppercase;margin-bottom:22.5px;color:#999}
+.site-footer{line-height:1.333em;font-size:14px;padding-top:60px;padding-bottom:60px}
 .content-area label{line-height:1em;font-weight:600;font-size:15px;display:block;margin-bottom:.5em}
-input[type=email],input[type=search],input[type=text],input[type=url],textarea{margin-bottom:1em;padding:6px 8px;border:1px solid #e6e6e6}
-input[type=email],input[type=text],input[type=url],textarea{width:100%}
-input[type=submit]{padding:6px 8px;color:#f9f9f9;border:1px solid #276aa2;background-color:#3185CB}
+input[type=text],input[type=email],input[type=url],input[type=search],textarea{margin-bottom:1em;padding:6px 8px;border:1px solid #e6e6e6}
+input[type=text],input[type=email],input[type=url],textarea{width:100%}
+input[type=submit]{padding:6px 15px;color:#f9f9f9;border:1px solid #3185CB;border-radius:1px;background-color:#3185CB}
 input[type=submit]:hover{background-color:#276aa2}
-.form-allowed-tags{font-size:14px;line-height:1.5em;margin-bottom:1.5em}
+.form-allowed-tags{line-height:1.333em;font-size:14px;margin-bottom:30px}
+.comment-reply-title{line-height:1em;font-weight:400;font-size:28px;margin-bottom:.5em}
+.comment-notes{line-height:1.333em;font-size:14px;margin-bottom:30px}
 @media screen and (min-width:769px){#primary{padding-right:4.34783%}}
 @media screen and (min-width:769px) and (max-width:768px){#primary{padding-right:0}}
-@media screen and (max-width:768px){#primary{float:left;display:block;margin-right:3.57866361%;width:100%}
+@media screen and (max-width:768px){.container,.site-content{padding-right:15px;padding-left:15px}
+.entry-title,.site-logo{font-size:2.57142857em}
+.site-logo{padding-top:15px;padding-bottom:15px}
+.main-navigation .menu .page_item{padding-top:7.5px;padding-bottom:7.5px}
+.post-navigation{margin-bottom:30px}
+#primary{float:left;display:block;margin-right:3.57866361%;width:100%}
 #primary:last-child{margin-right:0}
+#primary{margin-top:30px}
 #secondary{float:left;display:block;margin-right:3.57866361%;width:100%}
-#secondary:last-child{margin-right:0}}
+#secondary:last-child{margin-right:0}
+#secondary{margin-top:15px}
+article{margin-bottom:30px}
+.site-footer{padding-top:15px;padding-bottom:15px}}

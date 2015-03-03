@@ -12,6 +12,10 @@ $hex-real-white: #fff;
 $hex-red: #B2432C;
 $hex-blue: #3185CB;
 
+// Greys
+$hex-light-grey: tint(#000, 60%);
+$hex-grey: tint(#000, 50%);
+
 $hex-primary: $hex-blue;
 $hex-primary-hover: shade($hex-primary, 20%);
 

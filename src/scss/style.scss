@@ -23,6 +23,9 @@ body {
 a {
     @include link-hover;
     @include links(hex-primary);
+    &:active {
+        @include position(relative, 1px null null null);
+    }
 }
 
 // Remove iOS styling
@@ -37,11 +40,14 @@ input {
 .site-content {
     @include outer-container;
     @include media($tablet) {
+        padding-right: unit(1);
+        padding-left: unit(1);
     }
 
-    padding-right: 20px;
-    padding-left: 20px;
+    padding-right: unit(2);
+    padding-left: unit(2);
 }
+
 
 ////////////
 // Header //
@@ -53,22 +59,28 @@ input {
         @include link-hover-none;
     }
 }
-.widget-title {
-    @include type-style(h3);
-}
 .site-title {
 }
 .site-logo {
-    @include size(100px 60px);
-    @include hide-text;
+    // @include size(200px 100px);
+    // @include hide-text;
+    @include type-style(h1);
+    @include source-sans-weight(semi-bold);
+    @include media($tablet) {
+        padding-top: unit(1);
+        padding-bottom: unit(1);
+    }
+    @include inline-block;
 
-    display: block;
-
-    background-color: red;
+    margin-bottom: 0;
+    // background-color: $hex-border;
+    padding-top: unit(2);
+    padding-bottom: unit(2);
 }
 .site-description {
     display: none;
 }
+
 
 ////////////////
 // Navigation //
@@ -82,16 +94,28 @@ input {
     .menu {
         @include row;
         .page_item {
+            @include media($tablet) {
+                padding-top: unit(.5);
+                padding-bottom: unit(.5);
+            }
+
             float: left;
 
             margin-right: 2em;
-            padding-top: 1em;
-            padding-bottom: 1em;
+            padding-top: unit(1);
+            padding-bottom: unit(1);
         }
         .current_page_item {
             @include source-sans-weight(semi-bold);
         }
     }
+}
+
+.post-navigation {
+    @include media($tablet) {
+        margin-bottom: unit(2);
+    }
+    margin-bottom: unit(4);
 }
 
 /////////////
@@ -104,8 +128,11 @@ input {
     @include media($desktop) {
         @include double-gutter;
     }
+    @include media($tablet) {
+        margin-top: unit(2);
+    }
 
-    margin-top: px(60);
+    margin-top: unit(4);
 }
 
 // No sidebar
@@ -115,6 +142,7 @@ input {
     padding-right: 0;
 }
 
+
 /////////////
 // Sidebar //
 /////////////
@@ -122,22 +150,72 @@ input {
 #secondary {
     @include span-columns(4);
     @include tablet-single;
+    @include media($tablet) {
+        margin-top: unit(1);
+    }
+    @include line-height(default);
 
     font-size: 15px;
 
-    margin-top: px(60);
+    margin-top: unit(4);
 }
 .screen-reader-text {
     display: none;
 }
+.widget-title {
+    @include type-style(h3);
+
+    margin-bottom: unit(1);
+}
 .widget {
-    margin-bottom: px(20);
-    padding-bottom: px(20);
+    margin-bottom: unit(1.5);
+    padding-bottom: unit(1.5);
 
     border-bottom: 1px solid $hex-border;
     &:last-child {
+        padding-bottom: 0;
+
         border-bottom: none;
     }
+    ul {
+        li {
+            margin-bottom: unit(1);
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+
+//////////
+// Blog //
+//////////
+
+article {
+    @include media($tablet) {
+        margin-bottom: unit(2);
+    }
+
+    margin-bottom: unit(4);
+}
+
+.entry-meta {
+    @include type-style(small);
+}
+.entry-content {
+    margin-top: unit(1);
+    margin-bottom: unit(1);
+}
+.entry-footer {
+    @include type-style(small);
+}
+.page-title {
+    @include type-style(h4);
+
+    margin-bottom: unit(1.5);
+
+    color: $hex-light-grey;
 }
 
 ////////////
@@ -145,8 +223,16 @@ input {
 ////////////
 
 .site-footer {
-    font-size: 14px;
+    @include type-style(small);
+    @include media($tablet) {
+        padding-top: unit(1);
+        padding-bottom: unit(1);
+    }
+
+    padding-top: unit(4);
+    padding-bottom: unit(4);
 }
+
 
 ///////////
 // Forms //
@@ -169,9 +255,9 @@ label {
     border: 1px solid $hex-border;
 }
 
-input[type=text],
-input[type=email],
-input[type=url],
+input[type='text'],
+input[type='email'],
+input[type='url'],
 textarea {
     @extend %input-defaults;
 
@@ -183,19 +269,31 @@ input[type=search] {
 }
 
 input[type=submit] {
-    padding: 6px 8px;
+    padding: 6px 15px;
 
     color: $hex-white;
-    border: 1px solid $hex-primary-hover;
+    border: 1px solid $hex-primary;
+    border-radius: 1px;
     background-color: $hex-primary;
     &:hover {
         background-color: $hex-primary-hover;
     }
 }
 
-.form-allowed-tags {
-    font-size: 14px;
-    line-height: 1.5em;
+// Comments
 
-    margin-bottom: 1.5em;
+.form-allowed-tags {
+    @include type-style(small);
+
+    margin-bottom: unit(2);
+}
+
+.comment-reply-title {
+    @include type-style(h2);
+}
+
+.comment-notes {
+    @include type-style(small);
+
+    margin-bottom: unit(2);
 }
