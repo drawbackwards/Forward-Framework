@@ -16,6 +16,9 @@ Version: 1.0
 
 body {
     @include type-style(default);
+    @include media($tablet) {
+        margin-top: $header-bar-height;
+    }
 
     color: $hex-default;
     background-color: $hex-background;
@@ -27,10 +30,14 @@ a {
         @include position(relative, 1px null null null);
     }
 }
+p {
+    margin-bottom: 1em;
+}
 
 // Remove iOS styling
-textarea
-input {
+textarea,
+input,
+input[type='search'] {
     border-radius: 0;
 
     -webkit-appearance: none;
@@ -40,8 +47,8 @@ input {
 .site-content {
     @include outer-container;
     @include media($tablet) {
-        padding-right: unit(1);
-        padding-left: unit(1);
+        padding-right: unit(1.5);
+        padding-left: unit(1.5);
     }
 
     padding-right: unit(2);
@@ -59,23 +66,35 @@ input {
         @include link-hover-none;
     }
 }
+.site-header {
+    @include media($tablet) {
+        @include position(fixed, 0px null null 0px);
+
+        width: 100%;
+        height: $header-bar-height;
+        padding-top: 0;
+        padding-bottom: 0;
+
+        background-color: $hex-border;
+    }
+
+    padding-top: unit(2);
+    padding-bottom: unit(2);
+}
+.site-branding {
+    float: left;
+}
 .site-title {
 }
 .site-logo {
-    // @include size(200px 100px);
-    // @include hide-text;
     @include type-style(h1);
     @include source-sans-weight(semi-bold);
-    @include media($tablet) {
-        padding-top: unit(1);
-        padding-bottom: unit(1);
-    }
     @include inline-block;
+    @include media($tablet) {
+        line-height: $header-bar-height;
+    }
 
     margin-bottom: 0;
-    // background-color: $hex-border;
-    padding-top: unit(2);
-    padding-bottom: unit(2);
 }
 .site-description {
     display: none;
@@ -87,23 +106,46 @@ input {
 ////////////////
 
 .main-navigation {
-    background-color: $hex-primary;
+    @include media($tablet) {
+        @include position(fixed, $header-bar-height null null 0px);
+
+        float: none;
+
+        width: 100%;
+
+        background-color: $hex-primary;
+    }
+
+    float: right;
     a {
-        color: $hex-white;
+        @include media($tablet) {
+            color: $hex-white;
+        }
     }
     .menu {
         @include row;
+        @include media($tablet) {
+            padding-top: unit(1);
+            padding-bottom: unit(1);
+        }
         .page_item {
             @include media($tablet) {
+                float: none;
+
+                margin-left: 0;
                 padding-top: unit(.5);
                 padding-bottom: unit(.5);
             }
 
             float: left;
 
-            margin-right: 2em;
+            margin-left: 2em;
             padding-top: unit(1);
             padding-bottom: unit(1);
+            @include source-sans-weight(normal);
+            &:first-child {
+                margin-left: 0;
+            }
         }
         .current_page_item {
             @include source-sans-weight(semi-bold);
@@ -115,6 +157,7 @@ input {
     @include media($tablet) {
         margin-bottom: unit(2);
     }
+
     margin-bottom: unit(4);
 }
 

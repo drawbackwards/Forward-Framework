@@ -101,6 +101,9 @@
     @if $style == default {
         @include line-height(loose);
         @include source-sans-weight(light);
+        @include media($tablet) {
+            @include source-sans-weight(normal);
+        }
 
         font-family: $source-sans;
         font-size: px(15);

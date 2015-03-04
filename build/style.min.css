@@ -46,18 +46,21 @@ body{line-height:1.776889em;font-weight:300;font-family:"Source Sans Pro","Helve
 a{text-decoration:none;color:#3185CB}
 a:hover{text-decoration:underline;color:#276aa2}
 a:active{position:relative;top:1px}
-textarea input{border-radius:0;-webkit-appearance:none}
+p{margin-bottom:1em}
+input,input[type=search],textarea{border-radius:0;-webkit-appearance:none}
 .container,.site-content{max-width:1088px;margin-left:auto;margin-right:auto;padding-right:30px;padding-left:30px}
 .container:after,.site-content:after{content:"";display:table;clear:both}
 .entry-title{line-height:1em;font-weight:300;font-size:4.14285714em;margin-bottom:.5em;margin-left:-5px}
 .entry-title a:hover{text-decoration:none}
-.site-logo{line-height:1em;font-size:4.14285714em;margin-left:-5px;font-weight:600;display:inline-block;margin-bottom:0;padding-top:30px;padding-bottom:30px}
+.site-header{padding-top:30px;padding-bottom:30px}
+.site-branding{float:left}
+.site-logo{line-height:1em;font-size:4.14285714em;margin-left:-5px;font-weight:600;display:inline-block;margin-bottom:0}
 .site-description{display:none}
-.main-navigation{background-color:#3185CB}
-.main-navigation a{color:#f9f9f9}
+.main-navigation{float:right}
 .main-navigation .menu{display:block}
 .main-navigation .menu:after{content:"";display:table;clear:both}
-.main-navigation .menu .page_item{float:left;margin-right:2em;padding-top:15px;padding-bottom:15px}
+.main-navigation .menu .page_item{float:left;margin-left:2em;padding-top:15px;padding-bottom:15px;font-weight:400}
+.main-navigation .menu .page_item:first-child{margin-left:0}
 .main-navigation .menu .current_page_item{font-weight:600}
 .post-navigation{margin-bottom:60px}
 #primary{float:left;display:block;margin-right:2.3576516%;width:65.8807828%;margin-top:60px}
@@ -88,10 +91,15 @@ input[type=submit]:hover{background-color:#276aa2}
 .comment-notes{line-height:1.333em;font-size:14px;margin-bottom:30px}
 @media screen and (min-width:769px){#primary{padding-right:4.34783%}}
 @media screen and (min-width:769px) and (max-width:768px){#primary{padding-right:0}}
-@media screen and (max-width:768px){.container,.site-content{padding-right:15px;padding-left:15px}
-.entry-title,.site-logo{font-size:2.57142857em}
-.site-logo{padding-top:15px;padding-bottom:15px}
-.main-navigation .menu .page_item{padding-top:7.5px;padding-bottom:7.5px}
+@media screen and (max-width:768px){body{font-weight:400;margin-top:60px}
+.container,.site-content{padding-right:22.5px;padding-left:22.5px}
+.entry-title{font-size:2.57142857em}
+.site-header{position:fixed;top:0;left:0;width:100%;height:60px;padding-top:0;padding-bottom:0;background-color:#e6e6e6}
+.site-logo{font-size:2.57142857em;line-height:60px}
+.main-navigation{position:fixed;top:60px;left:0;float:none;width:100%;background-color:#3185CB}
+.main-navigation a{color:#f9f9f9}
+.main-navigation .menu{padding-top:15px;padding-bottom:15px}
+.main-navigation .menu .page_item{float:none;margin-left:0;padding-top:7.5px;padding-bottom:7.5px}
 .post-navigation{margin-bottom:30px}
 #primary{float:left;display:block;margin-right:3.57866361%;width:100%}
 #primary:last-child{margin-right:0}
