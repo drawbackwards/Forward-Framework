@@ -17,7 +17,7 @@ Version: 1.0
 body {
     @include type-style(default);
     @include media($tablet) {
-        margin-top: $header-bar-height;
+        margin-top: $header-bar-height-mobile;
     }
 
     color: $hex-default;
@@ -71,18 +71,29 @@ input[type='search'] {
         @include position(fixed, 0px null null 0px);
 
         width: 100%;
-        height: $header-bar-height;
+        height: $header-bar-height-mobile;
         padding-top: 0;
         padding-bottom: 0;
 
-        background-color: $hex-border;
+        background-color: $hex-real-white;
     }
 
+    height: $header-bar-height;
     padding-top: unit(2);
     padding-bottom: unit(2);
+
+    border-bottom: 1px solid $hex-border;
+    .container {
+        position: relative;
+    }
 }
 .site-branding {
-    float: left;
+
+    @include media($tablet) {
+     left: 25px;   
+    }
+    @include position(absolute, 0px null null 30px);
+
 }
 .site-title {
 }
@@ -91,7 +102,7 @@ input[type='search'] {
     @include source-sans-weight(semi-bold);
     @include inline-block;
     @include media($tablet) {
-        line-height: $header-bar-height;
+        line-height: $header-bar-height-mobile;
     }
 
     margin-bottom: 0;
@@ -105,30 +116,43 @@ input[type='search'] {
 // Navigation //
 ////////////////
 
+// Main Navigation
+// 
 .main-navigation {
     @include media($tablet) {
-        @include position(fixed, $header-bar-height null null 0px);
+        @include position(fixed, $header-bar-height-mobile null null 0px);
 
+        display: none;
         float: none;
+        overflow-y: scroll;
 
         width: 100%;
 
-        background-color: $hex-primary;
-    }
+        background-color: $hex-white;
 
-    float: right;
+        -webkit-overflow-scrolling: touch;
+    }
+    @include media($desktop) {
+        display: block !important;
+
+        height: auto !important;
+    }
     a {
         @include media($tablet) {
-            color: $hex-white;
+            color: $hex-default;
         }
     }
+
+    @include position(absolute, 40px 0px null null);
+
     .menu {
         @include row;
         @include media($tablet) {
             padding-top: unit(1);
             padding-bottom: unit(1);
         }
-        .page_item {
+        .page_item,
+        .menu-item {
             @include media($tablet) {
                 float: none;
 
@@ -136,15 +160,18 @@ input[type='search'] {
                 padding-top: unit(.5);
                 padding-bottom: unit(.5);
             }
+            @include source-sans-weight(normal);
 
             float: left;
 
             margin-left: 2em;
-            padding-top: unit(1);
-            padding-bottom: unit(1);
-            @include source-sans-weight(normal);
             &:first-child {
                 margin-left: 0;
+            }
+            a {
+                @include media($tablet) {
+                    display: block;
+                }
             }
         }
         .current_page_item {
@@ -153,6 +180,43 @@ input[type='search'] {
     }
 }
 
+// Mobile Menu Switch
+// 
+#mobile-menu-switch {
+    @include media($tablet) {
+        display: block;
+    }
+    @include position(fixed, 0px 0px null null);
+
+    display: none;
+    .toggle {
+        font-size: 14px;
+        line-height: $header-bar-height-mobile;
+
+        display: block;
+
+        width: $header-bar-height-mobile + 10px;
+        height: $header-bar-height-mobile;
+
+        text-align: center;
+        text-transform: uppercase;
+
+        color: $hex-primary;
+        &:hover {
+            text-decoration: none;
+        }
+        &:active {
+            top: 0;
+        }
+        &.on {
+            border-left: 1px solid $hex-border;
+            background-color: $hex-white;
+        }
+    }
+}
+
+// Post Navigation
+// 
 .post-navigation {
     @include media($tablet) {
         margin-bottom: unit(2);
@@ -178,7 +242,8 @@ input[type='search'] {
     margin-top: unit(4);
 }
 
-// No sidebar
+// No Sidebar on Full Width
+// 
 .page-template-page-full-width #primary {
     @include span-columns(12);
 
@@ -210,6 +275,9 @@ input[type='search'] {
 
     margin-bottom: unit(1);
 }
+
+// Widget
+// 
 .widget {
     margin-bottom: unit(1.5);
     padding-bottom: unit(1.5);
@@ -323,7 +391,9 @@ input[type=submit] {
     }
 }
 
-// Comments
+//////////////
+// Comments //
+//////////////
 
 .form-allowed-tags {
     @include type-style(small);
