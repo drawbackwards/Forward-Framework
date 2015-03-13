@@ -110,16 +110,16 @@ input,input[type=search],textarea{border-radius:0;-webkit-appearance:none}
 .widget{margin-bottom:1em;padding-top:1em;padding-bottom:1em;border-bottom:1px solid #e6e6e6}
 .widget:first-child{padding-top:0}
 .widget:last-child{padding-bottom:0;border-bottom:none}
-.post{margin-bottom:60px;padding-bottom:60px;border-bottom:1px solid #e6e6e6}
-.post h1{font-weight:400;font-size:3.15733452em;line-height:1em;margin-top:.56278136em;margin-bottom:.56278136em;margin-left:-3px}
-.post h1:first-child{margin-top:0}
-.post h2{font-weight:400;font-size:1.776889em;line-height:1em;margin-top:1em;margin-bottom:.75018755em}
-.post h3{font-weight:600;font-size:1.333em;line-height:1em;margin-top:1em;margin-bottom:1em}
-.post h4{font-weight:600;font-size:1em;line-height:1em;margin-top:1em;margin-bottom:1em;text-transform:uppercase}
-.post h5,.post h6{font-weight:600;font-size:1em;line-height:1em;margin-top:1em;margin-bottom:1em}
-.post table{width:100%}
-.post th{font-weight:400}
-.post td,.post th{text-align:left;border-bottom:1px solid #e6e6e6;padding:.75018755em .75018755em .75018755em 0;line-height:1.333em}
+article.page,article.post{margin-bottom:60px;padding-bottom:60px;border-bottom:1px solid #e6e6e6}
+article.page h1,article.post h1{font-weight:400;font-size:3.15733452em;line-height:1em;margin-top:.56278136em;margin-bottom:.56278136em;margin-left:-3px}
+article.page h1:first-child,article.post h1:first-child{margin-top:0}
+article.page h2,article.post h2{font-weight:400;font-size:1.776889em;line-height:1em;margin-top:1em;margin-bottom:.75018755em}
+article.page h3,article.post h3{font-weight:600;font-size:1.333em;line-height:1em;margin-top:1em;margin-bottom:1em}
+article.page h4,article.post h4{font-weight:600;font-size:1em;line-height:1em;margin-top:1em;margin-bottom:1em;text-transform:uppercase}
+article.page h5,article.page h6,article.post h5,article.post h6{font-weight:600;font-size:1em;line-height:1em;margin-top:1em;margin-bottom:1em}
+article.page table,article.post table{width:100%}
+article.page th,article.post th{font-weight:400}
+article.page td,article.page th,article.post td,article.post th{text-align:left;border-bottom:1px solid #e6e6e6;padding:.75018755em .75018755em .75018755em 0;line-height:1.333em}
 .entry-title{font-weight:400;font-size:3.15733452em;line-height:1em;margin-top:.56278136em;margin-left:-3px;margin-bottom:.42219156em}
 .entry-title:first-child{margin-top:0}
 .entry-title a:hover{text-decoration:none}
@@ -159,6 +159,6 @@ body{margin-top:60px}
 #secondary{float:left;display:block;margin-right:3.57866361%;width:100%}
 #secondary:last-child{margin-right:0}
 #secondary{margin-top:15px}
-.post{margin-bottom:30px;padding-bottom:30px}
-.entry-title,.post h1{font-size:2.57142857em}
+article.page,article.post{margin-bottom:30px;padding-bottom:30px}
+.entry-title,article.page h1,article.post h1{font-size:2.57142857em}
 .site-footer{padding-top:15px;padding-bottom:15px}}

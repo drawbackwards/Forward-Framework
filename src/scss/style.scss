@@ -538,7 +538,8 @@ input[type='search'] {
 // Blog //
 //////////
 
-.post {
+article.post,
+article.page {
     @include media($tablet) {
         margin-bottom: unit(2);
         padding-bottom: unit(2);
