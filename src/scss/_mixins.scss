@@ -13,6 +13,7 @@
 // Bourbon mixins:  http://bourbon.io/docs/
 
 // Import variables for use in Mixins.
+// 
 @import '_variables';
 
 @function px($value) {
@@ -20,11 +21,19 @@
 }
 
 // Standard unit of measurement to keep things simple
+// 
 @function unit($value) {
     @return 15 * $value + px;
 }
 
+// Wrapper for modular scale function
+// 
+@function ms($value: 0) {
+    @return modular-scale(1em, $value, $perfect-fourth);
+}
+
 // Helvetica font weights
+// 
 @mixin helvetica-weight($weight: light) {
     @if $weight == thin {
         font-weight: 100;
@@ -44,6 +53,7 @@
 }
 
 // Source Sans Pro font weights
+// 
 @mixin source-sans-weight($weight: light) {
     @if $weight == light {
         font-weight: 300;
@@ -56,69 +66,103 @@
     }
 }
 
+// Predefined Type Styles
+// 
 @mixin type-style($style: default) {
     @if $style == h1 {
-        @include line-height(tight);
-        @include source-sans-weight(light);
+        @include source-sans-weight(normal);
         @include media($tablet) {
             font-size: px(36);
         }
 
-        font-size: px(58);
+        &:first-child {
+            margin-top: 0;
+        }
 
-        margin-bottom: .5em;
-        margin-left: -5px;
+        font-size: ms(4);
+        line-height: ms(0);
+
+        margin-top: ms(-2);
+        margin-bottom: ms(-2);
+        margin-left: -3px;
     }
     @if $style == h2 {
-        @include line-height(tight);
         @include source-sans-weight(normal);
 
-        font-size: 28px;
+        font-size: ms(2);
+        line-height: ms(0);
 
-        margin-bottom: .5em;
+        margin-top: ms(0);
+        margin-bottom: ms(-1);
     }
     @if $style == h3 {
-        @include line-height(tight);
         @include source-sans-weight(semi-bold);
 
-        font-size: 15px;
+        font-size: ms(1);
+        line-height: ms(0);
 
-        margin-bottom: .5em;
+        margin-top: ms(0);
+        margin-bottom: ms(0);
     }
     @if $style == h4 {
         @include source-sans-weight(semi-bold);
-        @include line-height(tight);
 
-        font-size: 15px;
+        font-size: ms(0);
+        line-height: ms(0);
+
+        margin-top: ms(0);
+        margin-bottom: ms(0);
 
         text-transform: uppercase;
+    }
+    @if $style == h5 {
+        @include source-sans-weight(semi-bold);
+
+        font-size: ms(0);
+        line-height: ms(0);
+
+        margin-top: ms(0);
+        margin-bottom: ms(0);
+    }
+    @if $style == h6 {
+        @include source-sans-weight(semi-bold);
+
+        font-size: ms(0);
+        line-height: ms(0);
+
+        margin-top: ms(0);
+        margin-bottom: ms(0);
     }
     @if $style == small {
         @include line-height(default);
 
-        font-size: 14px;
+        font-size: .9em;
     }
     @if $style == default {
-        @include line-height(loose);
         @include source-sans-weight(light);
         @include media($tablet) {
             @include source-sans-weight(normal);
         }
 
         font-family: $source-sans;
-        font-size: px(15);
+        font-size: ms(0);
+        line-height: ms(2);
+
+        margin-top: ms(0);
+        margin-bottom: ms(0);
     }
+
 }
 
 @mixin line-height($style: default) {
     @if $style == tight {
-        line-height: modular-scale(1em, 0, $perfect-fourth);
+        line-height: ms(0);
     }
     @if $style == default {
-        line-height: modular-scale(1em, 1, $perfect-fourth);
+        line-height: ms(1);
     }
     @if $style == loose {
-        line-height: modular-scale(1em, 2, $perfect-fourth);
+        line-height: ms(2);
     }
     @if $style == double {
         line-height: 2em;
