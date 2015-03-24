@@ -51,11 +51,11 @@ blockquote{line-height:1.776889em;margin-bottom:1em;padding-left:1.333em;border-
 blockquote p{margin-bottom:1em}
 >blockquote p:last-child{margin-bottom:0}
 address{margin-bottom:1em}
-code,kbd,pre,samp,tt,var{font-size:12px;line-height:1.776889em;font-family:Monaco,Consolas,"Lucida Console",monospace;-webkit-hyphens:none;-moz-hyphens:none;hyphens:none;-ms-hyphens:none}
-code{border:1px solid #e6e6e6;background-color:#fdfdfd;margin-left:.31672285em;margin-right:.31672285em;padding:.23760154em .42219156em}
+code,kbd,pre,samp,tt,var{font-family:Monaco,Consolas,"Lucida Console",monospace;font-size:12px;line-height:1.776889em;-webkit-hyphens:none;-moz-hyphens:none;hyphens:none;-ms-hyphens:none}
+code{margin-right:.31672285em;margin-left:.31672285em;padding:.23760154em .42219156em;border:1px solid #e6e6e6;background-color:#fdfdfd}
 pre{overflow:auto;max-width:100%;margin-bottom:1.6em;padding:1.776889em;border:1px solid #e6e6e6;background-color:#fdfdfd}
 abbr,acronym{cursor:help;border-bottom:1px dotted #eaeaea;border-bottom:1px dotted rgba(51,51,51,.1)}
-ins,mark{text-decoration:none;background-color:#fff9c0;padding-right:.23760154em;padding-left:.23760154em}
+ins,mark{padding-right:.23760154em;padding-left:.23760154em;text-decoration:none;background-color:#fff9c0}
 sub,sup{font-size:75%;line-height:0;position:relative;height:0;vertical-align:baseline}
 sup{bottom:1ex}
 sub{top:.5ex}
@@ -76,6 +76,15 @@ img{max-width:100%;height:auto;-ms-interpolation-mode:bicubic;border:0}
 .comment-content img[height],.entry-content img,.entry-summary img,img[class*=align],img[class*=wp-image-],img[class*=attachment-]{height:auto;vertical-align:bottom}
 figure.wp-caption,img.size-full,img.size-large,img.wp-post-image{max-width:100%;height:auto}
 .entry-content .twitter-tweet-rendered{max-width:100%!important}
+.wp-caption-text{font-size:.92857143em;padding-top:.56278136em;padding-bottom:.56278136em;text-align:center}
+.alignleft{display:inline;float:left}
+.alignright{display:inline;float:right}
+.aligncenter{display:block;margin-right:auto;margin-left:auto}
+.alignnone{display:block}
+.wp-caption.alignleft,blockquote.alignleft,img.alignleft{margin:.56278136em 1.333em .56278136em 0}
+.wp-caption.alignright,blockquote.alignright,img.alignright{margin:.56278136em 0 .56278136em 1.333em}
+.wp-caption.aligncenter,.wp-caption.alignnone,blockquote.aligncenter,blockquote.alignnone,img.aligncenter,img.alignnone{clear:both;margin-top:1.333em;margin-bottom:1em}
+.wp-caption.aligncenter,.wp-caption.alignleft,.wp-caption.alignnone,.wp-caption.alignright{margin-bottom:.42219156em}
 input,input[type=search],textarea{border-radius:0;-webkit-appearance:none}
 .container,.site-content{max-width:1088px;margin-left:auto;margin-right:auto;padding-right:30px;padding-left:30px}
 .container:after,.site-content:after{content:"";display:table;clear:both}
@@ -119,7 +128,7 @@ article.page h4,article.post h4{font-weight:600;font-size:1em;line-height:1em;ma
 article.page h5,article.page h6,article.post h5,article.post h6{font-weight:600;font-size:1em;line-height:1em;margin-top:1em;margin-bottom:1em}
 article.page table,article.post table{width:100%}
 article.page th,article.post th{font-weight:400}
-article.page td,article.page th,article.post td,article.post th{text-align:left;border-bottom:1px solid #e6e6e6;padding:.75018755em .75018755em .75018755em 0;line-height:1.333em}
+article.page td,article.page th,article.post td,article.post th{line-height:1.333em;padding:.75018755em .75018755em .75018755em 0;text-align:left;border-bottom:1px solid #e6e6e6}
 .entry-title{font-weight:400;font-size:3.15733452em;line-height:1em;margin-top:.56278136em;margin-left:-3px;margin-bottom:.42219156em}
 .entry-title:first-child{margin-top:0}
 .entry-title a:hover{text-decoration:none}
@@ -162,3 +171,6 @@ body{margin-top:60px}
 article.page,article.post{margin-bottom:30px;padding-bottom:30px}
 .entry-title,article.page h1,article.post h1{font-size:2.57142857em}
 .site-footer{padding-top:15px;padding-bottom:15px}}
+@media screen and (max-width:480px){.alignleft,.alignright{display:block;float:none}
+.wp-caption.alignleft,.wp-caption.alignright,blockquote.alignleft,blockquote.alignright,img.alignleft,img.alignright{margin:1.333em auto 1em}
+.wp-caption.aligncenter,.wp-caption.alignleft,.wp-caption.alignnone,.wp-caption.alignright{margin-bottom:.42219156em}}

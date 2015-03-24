@@ -78,7 +78,6 @@ blockquote {
     padding-left: ms(1);
 
     border-left: 1px solid $hex-border;
-
     p {
         margin-bottom: ms(0);
         > &:last-child {
@@ -97,9 +96,9 @@ tt,
 var,
 samp,
 pre {
+    font-family: $mono;
     font-size: 12px;
     line-height: ms(2);
-    font-family: $mono;
 
     -webkit-hyphens: none;
        -moz-hyphens: none;
@@ -109,11 +108,12 @@ pre {
 }
 
 code {
+    margin-right: ms(-4);
+    margin-left: ms(-4);
+    padding: ms(-5) ms(-3) ms(-5) ms(-3);
+
     border: 1px solid $hex-border;
     background-color: $hex-faint;
-    margin-left: ms(-4);
-    margin-right: ms(-4);
-    padding: ms(-5) ms(-3) ms(-5) ms(-3);
 }
 
 pre {
@@ -122,7 +122,6 @@ pre {
     max-width: 100%;
     margin-bottom: 1.6em;
     padding: ms(2);
-
     // white-space: pre;
     // white-space: pre-wrap;
     // word-wrap: break-word;
@@ -141,12 +140,12 @@ abbr {
 
 mark,
 ins {
+    padding-right: ms(-5);
+    padding-left: ms(-5);
+
     text-decoration: none;
 
     background-color: $hex-highlight;
-
-    padding-right: ms(-5);
-    padding-left: ms(-5);
 }
 
 sup,
@@ -262,6 +261,89 @@ figure.wp-caption {
 
 .entry-content .twitter-tweet-rendered {
     max-width: 100% !important;
+}
+
+// Image caption
+// 
+.wp-caption-text {
+    font-size: px(13);
+
+    padding-top: ms(-2);
+    padding-bottom: ms(-2);
+
+    text-align: center;
+}
+
+// Alignments
+// 
+.alignleft {
+    @include media($mobile) {
+        display: block;
+        float: none;
+    }
+
+    display: inline;
+    float: left;
+}
+
+.alignright {
+    @include media($mobile) {
+        display: block;
+        float: none;
+    }
+
+    display: inline;
+    float: right;
+}
+
+.aligncenter {
+    display: block;
+
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.alignnone {
+    display: block;
+}
+
+blockquote,
+.wp-caption,
+img {
+    &.alignleft {
+        @include media($mobile) {
+            margin: ms(1) auto ms(0) auto;
+        }
+
+        margin: ms(-2) ms(1) ms(-2) 0;
+    }
+    &.alignright {
+        @include media($mobile) {
+            margin: ms(1) auto ms(0) auto;
+        }
+
+        margin: ms(-2) 0 ms(-2) ms(1);
+    }
+    &.aligncenter,
+    &.alignnone {
+        clear: both;
+
+        margin-top: ms(1);
+        margin-bottom: ms(0);
+    }
+}
+
+.wp-caption {
+    &.alignleft,
+    &.alignright,
+    &.aligncenter,
+    &.alignnone {
+        @include media($mobile) {
+            margin-bottom: ms(-3);
+        }
+
+        margin-bottom: ms(-3);
+    }
 }
 
 
@@ -384,11 +466,9 @@ input[type='search'] {
             padding-top: unit(1);
             padding-bottom: unit(1);
         }
-
         &:first-child {
             margin-left: 0;
         }
-
         .page_item,
         .menu-item {
             @include media($tablet) {
@@ -549,7 +629,6 @@ article.page {
     padding-bottom: unit(4);
 
     border-bottom: 1px solid $hex-border;
-
     h1 {
         @include type-style(h1);
     }
@@ -568,7 +647,6 @@ article.page {
     h6 {
         @include type-style(h6);
     }
-
     table {
         width: 100%;
     }
@@ -577,10 +655,13 @@ article.page {
     }
     td,
     th {
-        text-align: left;
-        border-bottom: 1px solid $hex-border;
-        padding: ms(-1) ms(-1) ms(-1) 0;
         line-height: ms(1);
+
+        padding: ms(-1) ms(-1) ms(-1) 0;
+
+        text-align: left;
+
+        border-bottom: 1px solid $hex-border;
     }
 }
 
@@ -603,16 +684,13 @@ article.page {
 }
 .entry-footer {
     @include type-style(small);
-
     .cat-links,
     .tags-links,
     .comments-link {
         // margin-right: ms(0);
     }
-
     > span {
         margin-right: ms(0);
-
         &:last-child {
             margin-right: 0;
         }
