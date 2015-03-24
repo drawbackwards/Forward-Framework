@@ -704,6 +704,20 @@ article.page {
     color: $hex-light-grey;
 }
 
+.nav-links {
+    @include row;
+
+    line-height: ms(1);
+    .nav-previous {
+        @include span-columns(6);
+    }
+    .nav-next {
+        @include span-columns(6);
+
+        text-align: right;
+    }
+}
+
 ////////////
 // Footer //
 ////////////

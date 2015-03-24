@@ -138,6 +138,12 @@ article.page td,article.page th,article.post td,article.post th{line-height:1.33
 .entry-footer>span{margin-right:1em}
 .entry-footer>span:last-child{margin-right:0}
 .page-title{font-weight:600;font-size:1em;line-height:1em;margin-top:1em;text-transform:uppercase;margin-bottom:22.5px;color:#999}
+.nav-links{display:block;line-height:1.333em}
+.nav-links:after{content:"";display:table;clear:both}
+.nav-links .nav-previous{float:left;display:block;margin-right:2.3576516%;width:48.8211742%}
+.nav-links .nav-previous:last-child{margin-right:0}
+.nav-links .nav-next{float:left;display:block;margin-right:2.3576516%;width:48.8211742%;text-align:right}
+.nav-links .nav-next:last-child{margin-right:0}
 .site-footer{line-height:1.333em;font-size:.9em;padding-top:60px;padding-bottom:60px}
 .content-area label{font-weight:600;font-size:1em;line-height:1em;margin-top:1em;display:block;margin-bottom:.5em}
 input[type=text],input[type=email],input[type=url],input[type=search],textarea{margin-bottom:1em;padding:6px 8px;border:1px solid #e6e6e6}
