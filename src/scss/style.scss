@@ -667,6 +667,8 @@ article.page {
 
 .entry-title {
     @include type-style(h1);
+    // Long title fix (will affect all titles).
+    // @include word-wrap;
 
     margin-bottom: ms(-3);
     a {
