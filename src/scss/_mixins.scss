@@ -75,16 +75,15 @@
             font-size: px(36);
         }
 
-        &:first-child {
-            margin-top: 0;
-        }
-
         font-size: ms(4);
         line-height: ms(0);
 
         margin-top: ms(-2);
         margin-bottom: ms(-2);
         margin-left: -3px;
+        &:first-child {
+            margin-top: 0;
+        }
     }
     @if $style == h2 {
         @include source-sans-weight(normal);
@@ -134,9 +133,9 @@
         margin-bottom: ms(0);
     }
     @if $style == small {
-        @include line-height(default);
-
-        font-size: .9em;
+        // font-size: px(13);
+        font-size: 14px;
+        line-height: ms(1);
     }
     @if $style == default {
         @include source-sans-weight(light);
@@ -151,7 +150,6 @@
         margin-top: ms(0);
         margin-bottom: ms(0);
     }
-
 }
 
 @mixin line-height($style: default) {
