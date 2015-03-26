@@ -620,7 +620,7 @@ input[type='search'] {
 
 article.post,
 article.page,
-article.comment-body {
+.comment-body {
     @include media($tablet) {
         margin-bottom: unit(2);
         padding-bottom: unit(2);
@@ -664,6 +664,12 @@ article.comment-body {
 
         border-bottom: 1px solid $hex-border;
     }
+}
+
+article.post,
+article.page,
+article.comment-body {
+
 }
 
 .entry-title {
@@ -731,7 +737,7 @@ article.comment-body {
     margin-bottom: ms(2);
 }
 
-article.comment-body {
+.comment-body {
     @include row;
     @include media($mobile) {
         margin-bottom: unit(1);
@@ -854,6 +860,23 @@ article.comment-body {
         }
 
         margin-bottom: 0;
+    }
+}
+
+// Pingbacks
+// 
+.pingback {
+    .comment-body {
+        margin-bottom: unit(1);
+        padding-bottom: unit(1);
+        padding-left: 0;
+    }
+    + .comment .comment-body {
+        @include media($mobile) {
+            margin-top: unit(1);
+        }
+
+        margin-top: unit(2);
     }
 }
 
