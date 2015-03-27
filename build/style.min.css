@@ -122,7 +122,7 @@ input,input[type=search],textarea{border-radius:0;-webkit-appearance:none}
 .comment-body,article.page,article.post{margin-bottom:60px;padding-bottom:60px;border-bottom:1px solid #e6e6e6}
 .comment-body h1,article.page h1,article.post h1{font-weight:400;font-size:3.15733452em;line-height:1em;margin-top:.56278136em;margin-bottom:.56278136em;margin-left:-3px}
 .comment-body h1:first-child,article.page h1:first-child,article.post h1:first-child{margin-top:0}
-.comment-body h2,article.page h2,article.post h2{font-weight:400;font-size:1.776889em;line-height:1em;margin-top:1em;margin-bottom:.75018755em}
+.comment-body h2,article.page h2,article.post h2{font-weight:400;font-size:1.776889em;line-height:1.333em;margin-top:1em;margin-bottom:.75018755em}
 .comment-body h3,article.page h3,article.post h3{font-weight:600;font-size:1.333em;line-height:1em;margin-top:1em;margin-bottom:1em}
 .comment-body h4,article.page h4,article.post h4{font-weight:600;font-size:1em;line-height:1em;margin-top:1em;margin-bottom:1em;text-transform:uppercase}
 .comment-body h5,.comment-body h6,article.page h5,article.page h6,article.post h5,article.post h6{font-weight:600;font-size:1em;line-height:1em;margin-top:1em;margin-bottom:1em}
@@ -144,7 +144,8 @@ input,input[type=search],textarea{border-radius:0;-webkit-appearance:none}
 .nav-links .nav-previous:last-child{margin-right:0}
 .nav-links .nav-next{float:left;display:block;margin-right:2.3576516%;width:48.8211742%;text-align:right}
 .nav-links .nav-next:last-child{margin-right:0}
-.comments-title{font-weight:400;font-size:1.776889em;line-height:1em;margin-top:1em;margin-bottom:1.776889em}
+.page-links span{margin-right:2px;margin-left:2px}
+.comments-title{font-weight:400;font-size:1.776889em;line-height:1.333em;margin-top:1em;margin-bottom:1.776889em}
 .comment-body{display:block;margin-bottom:30px;padding-bottom:30px;padding-left:65px}
 .comment-body:after{content:"";display:table;clear:both}
 .comment-body .comment-meta{margin-bottom:.31672285em}
@@ -160,7 +161,7 @@ input,input[type=search],textarea{border-radius:0;-webkit-appearance:none}
 .comment-list{margin-left:0;padding-left:0;list-style:none}
 .comment-list li.comment{padding-left:0;margin-left:0;list-style-type:none;list-style-image:none}
 .form-allowed-tags{font-size:14px;line-height:1.333em;margin-bottom:1em}
-.comment-reply-title{font-weight:400;font-size:1.776889em;line-height:1em;margin-top:1em;margin-bottom:.75018755em}
+.comment-reply-title{font-weight:400;font-size:1.776889em;line-height:1.333em;margin-top:1em;margin-bottom:.75018755em}
 .comment-reply-title small{font-size:14px;line-height:1.333em;font-weight:300;float:right;margin-top:10px;text-transform:capitalize}
 .comment-reply-title small a{color:#999}
 .comment-notes{font-size:14px;line-height:1.333em;margin-bottom:30px}
@@ -175,6 +176,9 @@ input[type=text],input[type=email],input[type=password],input[type=url],textarea
 input[type=submit]{padding:6px 15px;color:#f9f9f9;border:1px solid #3185CB;border-radius:1px;background-color:#3185CB}
 input[type=submit]:hover{background-color:#276aa2}
 input[type=submit]:active{position:relative;top:1px;right:0;bottom:0;left:0}
+.post-password-form label{margin-top:1.776889em}
+.post-password-form input[type=password]{margin-top:.75018755em}
+.post-password-form input[type=submit]{margin-top:0}
 @media screen and (min-width:769px){.main-navigation{display:block!important;height:auto!important}
 #primary{padding-right:4.34783%}}
 @media screen and (min-width:769px) and (max-width:768px){#primary{padding-right:0}}

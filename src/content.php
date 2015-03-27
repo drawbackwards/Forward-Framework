@@ -28,6 +28,7 @@
 			wp_link_pages( array(
 				'before' => '<div class="page-links">' . __( 'Pages:', 'forward' ),
 				'after'  => '</div>',
+				'pagelink' => '<span>%</span>',
 			) );
 		?>
 	</div><!-- .entry-content -->

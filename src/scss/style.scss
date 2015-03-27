@@ -415,10 +415,11 @@ input[type='search'] {
 .site-logo {
     @include type-style(h1);
     @include source-sans-weight(semi-bold);
-    @include inline-block;
     @include media($tablet) {
         line-height: $header-bar-height-mobile;
     }
+
+    display: inline-block;
 
     margin-top: 0;
     margin-bottom: 0;
@@ -669,7 +670,6 @@ article.page,
 article.post,
 article.page,
 article.comment-body {
-
 }
 
 .entry-title {
@@ -726,6 +726,23 @@ article.comment-body {
         text-align: right;
     }
 }
+
+// Continue reading link
+// 
+.more-link {
+}
+
+// Post pagination
+// 
+.page-links {
+    span {
+        margin-right: 2px;
+        margin-left: 2px;
+    }
+}
+
+
+
 
 //////////////
 // Comments //
@@ -945,5 +962,19 @@ input[type=submit] {
     }
     &:active {
         @include position(relative, 1px 0 0 0 );
+    }
+}
+
+// Post password form
+// 
+.post-password-form {
+    label {
+        margin-top: ms(2);
+    }
+    input[type='password'] {
+        margin-top: ms(-1);
+    }
+    input[type='submit'] {
+        margin-top: 0;
     }
 }
