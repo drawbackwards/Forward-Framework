@@ -34,7 +34,7 @@ get_header(); ?>
 
 			<?php endwhile; ?>
 
-			<?php the_posts_navigation(); ?>
+			<?php forward_posts_navigation(); ?>
 
 		<?php else : ?>
 
