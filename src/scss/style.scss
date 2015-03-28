@@ -5,6 +5,7 @@ Author: Drawbackwards
 Author URI: http://drawbackwards.com
 Description: Forward by Drawbackwards
 Version: 1.0
+Text Domain: forward
 */
 
 @import 'bourbon/dist/bourbon';
@@ -708,7 +709,7 @@ article.comment-body {
 .page-title {
     @include type-style(h4);
 
-    margin-bottom: unit(1.5);
+    margin-bottom: ms(1);
 
     color: $hex-light-grey;
 }
@@ -741,8 +742,63 @@ article.comment-body {
     }
 }
 
+// Gallery
+// 
+.gallery {
+    @include row;
 
+    margin-bottom: ms(0);
+    padding-top: ms(0);
+    .gallery-item {
+        @include media($mobile) {
+            @include mobile-single;
+        }
 
+        margin-bottom: ms(0);
+
+        text-align: center;
+    }
+}
+.gallery-columns-2 {
+    .gallery-item {
+        @include span-columns(6);
+        @include omega(2n);
+        &:nth-child(2n + 1) {
+            clear: left;
+        }
+    }
+}
+.gallery-columns-3 {
+    .gallery-item {
+        @include span-columns(4);
+        @include omega(3n);
+        &:nth-child(3n + 1) {
+            clear: left;
+        }
+    }
+}
+.gallery-columns-4,
+.gallery-columns-5 {
+    .gallery-item {
+        @include span-columns(3);
+        @include omega(4n);
+        &:nth-child(4n + 1) {
+            clear: left;
+        }
+    }
+}
+.gallery-columns-6,
+.gallery-columns-7,
+.gallery-columns-8,
+.gallery-columns-9 {
+    .gallery-item {
+        @include span-columns(2);
+        @include omega(6n);
+        &:nth-child(6n + 1) {
+            clear: left;
+        }
+    }
+}
 
 //////////////
 // Comments //

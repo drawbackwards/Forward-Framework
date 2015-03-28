@@ -104,7 +104,7 @@
         margin-bottom: ms(0);
     }
     @if $style == h4 {
-        @include source-sans-weight(semi-bold);
+        @include source-sans-weight(normal);
 
         font-size: ms(0);
         line-height: ms(0);
