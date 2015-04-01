@@ -5,11 +5,10 @@
     "Ben Leivian <ben@drawbackwards.com>"
   ],
   "moduleType": [
-    "amd"
+    "node"
   ],
   "license": "MIT",
   "homepage": "http://drawbackwards.com",
-  "private": true,
   "ignore": [
     "**/.*",
     "node_modules",
@@ -18,10 +17,11 @@
     "test",
     "tests"
   ],
-  "dependencies": {
-    "meyer-reset": "*",
-    "bourbon": "~4.0.2",
-    "neat": "~1.7.0",
-    "normalize.css": "^3.0.1"
-  }
+  "devDependencies": {
+    "bourbon": "~4.2.2",
+    "neat": "~1.7.2",
+    "normalize.css": "~3.0.3",
+    "meyer-reset": "*"
+  },
+  "description": "Components for the Forward Framework."
 }

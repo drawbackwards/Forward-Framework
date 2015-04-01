@@ -1,4 +1,84 @@
-# WORDPRESS-GULP-BOWER-SASS STARTER KIT
+# Forward Framework
+
+A WordPress Gulp/Bower build system by [Drawbackwards](http://drawbackwards.com).
+
+## Directory Structure
+
+* `bower.json` - Used by Bower for package control.
+* `config.json` - Configuration file used by `gulpfile.js`.
+* `gulpfile.js` - All streaming tasks are defined here.
+* `pacakge.json` - Used by Gulp to define dependencies.
+* `build/`
+	* `css/`
+		* `style.css` - Generated from `source/scss/`.
+		* `style.min.css` - Minified (production) version.
+	* `img/` - Optimized images generated from `source/img`.
+* `source/`
+	* `img/`
+	* `scss/`
+		* `_normalize.scss` - Managed by Bower.
+        * `style.scss` - Main stylesheet using [csscomb](http://csscomb.com/) for standardization.
+	* `vendor/` - Used by Bower.
+
+## Prerequisites
+
+* [Node.js](http://nodejs.org/)
+   * OSX: [Homebrew](http://brew.sh/)
+   * Windows: [Chocolatey](http://chocolatey.org/)
+* [Gulp.js](http://gulpjs.com/)
+
+## Initial Project Setup
+
+##### Install Gulp Globally
+
+	$ npm install --global gulp
+
+##### Install Gulp Plugins
+
+	$ npm install
+
+##### Install Bower & Installer Globally
+
+	$ npm install -g bower
+	$ npm install -g bower-installer
+
+##### Install Bower Components
+
+	$ bower install
+	$ bower-installer
+
+## Project Commands
+
+Running `gulp` will start the watch process & browser-sync.
+
+	$ gulp
+
+## Developer Notes
+
+##### Create Empty `package.json`
+
+	$ npm init
+
+##### Install Gulp as a Dev Dependency
+
+	$ npm install --save-dev gulp
+
+##### Install Gulp Plugins Individually
+
+	$ npm install --save-dev gulp-util
+	$ npm install --save-dev gulp-load-plugins
+	$ npm install --save-dev browser-sync
+	$ npm install --save-dev gulp-autoprefixer
+	$ npm install --save-dev gulp-minify-css
+	$ npm install --save-dev gulp-combine-media-queries
+	$ npm install --save-dev gulp-ruby-sass
+	$ npm install --save-dev gulp-rename
+	$ npm install --save-dev gulp-changed
+	$ npm install --save-dev gulp-imagemin
+
+---
+
+# WordPress-Gulp-Bower-Sass Starter Kit
 
 This is a starter kit for developing WordPress themes with [Gulp](http://gulpjs.com/), [Bower](http://bower.io/), and [Sass](http://sass-lang.com/). No WordPress templates apart from `functions-sample.php` are included; this is simply project scaffolding for efficient theme and plugin development. For more information [check out this post on my blog](http://synapticism.com/wordpress-theme-development-with-gulp-bower-and-sass/).
 

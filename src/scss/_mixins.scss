@@ -27,9 +27,11 @@
 }
 
 // Wrapper for modular scale function
-// 
+//
+$modular-scale-ratio: $perfect-fourth;
+$modular-scale-base: 1em;
 @function ms($value: 0) {
-    @return modular-scale(1em, $value, $perfect-fourth);
+    @return modular-scale($value);
 }
 
 // Helvetica font weights
