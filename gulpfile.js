@@ -2,7 +2,7 @@
 // Setup //
 ///////////
 
-// Project configuration
+// Project Variables
 // 
 var project     = 'forward'
   , build       = './build/'
@@ -10,11 +10,13 @@ var project     = 'forward'
   , source      = './src/' // 'source' instead of 'src' to avoid confusion with gulp.src
   , lang        = 'languages/'
   , bower       = './bower_components/'
+  , url         = 'forward.local'
 ;
 
-// Initialization sequence
+// Gulp Settings & Startup
 // 
-var gulp        = require('gulp')
+var gulp        = require('gulp'),
+  sass        = require('gulp-ruby-sass')
   , gutil       = require('gulp-util')
   , plugins     = require('gulp-load-plugins')({ camelize: true }) // This loads all modules prefixed with "gulp-" to plugin.moduleName
   , del         = require('del')
@@ -27,22 +29,18 @@ var gulp        = require('gulp')
 // Styles //
 ////////////
 
-// Stylesheet handling; don't forget `gem install sass`;
+// Process Stylesheets
 // 
 gulp.task('styles', function() {
-  return gulp.src([source+'scss/*.scss', '!'+source+'scss/_*.scss']) // Ignore partials
-  .pipe(plugins.rubySass({
-    loadPath: bower // Adds the `bower_components` directory to the load path so you can @import directly
-  , precision: 8
-  , 'sourcemap=none': true // Not yet ready for prime time! Sass 3.4 has sourcemaps on by default but this causes some issues with the Gulp toolchain
-  }))
+  return sass(source + 'scss/style.scss', {
+    style: 'expanded',
+    loadPath: bower
+  })
   .pipe(plugins.autoprefixer('last 2 versions', 'ie 9', 'ios 6', 'android 4'))
   .pipe(plugins.combineMediaQueries())
-  .pipe(gulp.dest(build))
-  .pipe(browserSync.reload({ stream: true }))
-  .pipe(plugins.rename({suffix: '.min'}))
   .pipe(plugins.minifyCss({ keepSpecialComments: 1, keepBreaks: true }))
   .pipe(gulp.dest(build))
+  .pipe(browserSync.reload({ stream: true }))
 });
 
 
@@ -197,18 +195,8 @@ gulp.task('bower-normalize', function() {
 
 gulp.task('browser-sync', function() {
     browserSync({
-        proxy: "forward.local"
+        proxy: url
     });
-});
-
-// Watch task: build stuff when files are modified, reload when anything in the `build` or `dist` folders change
-// 
-gulp.task('watch', ['browser-sync'], function() {
-  gulp.watch(source+'scss/**/*.scss', ['styles']);
-  gulp.watch([source+'js/**/*.js', bower+'**/*.js'], ['scripts']);
-  gulp.watch(source+'**/*(*.png|*.jpg|*.jpeg|*.gif)', ['images']);
-  gulp.watch(source+'**/*.php', ['php']);
-  // gulp.watch([build+'**/*', dist+'**/*'], reload);
 });
 
 
@@ -224,6 +212,16 @@ gulp.task('build', ['styles', 'scripts', 'images', 'languages', 'php']);
 // 
 gulp.task('dist', ['dist-images']);
 
-// The default task runs watch which boots up the browsersync server after an initial build is finished
+// Watch Task
+// 
+gulp.task('watch', ['browser-sync'], function() {
+  gulp.watch(source+'scss/**/*.scss', ['styles']);
+  gulp.watch([source+'js/**/*.js', bower+'**/*.js'], ['scripts']);
+  gulp.watch(source+'**/*(*.png|*.jpg|*.jpeg|*.gif)', ['images']);
+  gulp.watch(source+'**/*.php', ['php']);
+  // gulp.watch([build+'**/*', dist+'**/*'], reload);
+});
+
+// Default Task (Watch)
 // 
 gulp.task('default', ['watch']);

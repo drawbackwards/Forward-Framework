@@ -33,6 +33,7 @@ sitemap.xml.gz
 bower_components
 node_modules
 build/*
+!build/style.css
 !build/style.min.css
 dist
 ._*
