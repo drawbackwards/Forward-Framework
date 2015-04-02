@@ -555,6 +555,12 @@ input[type='search'] {
     margin-bottom: unit(4);
 }
 
+// Comment Navigation
+// 
+.comment-navigation {
+    @extend .post-navigation;
+}
+
 /////////////
 // Primary //
 /////////////
