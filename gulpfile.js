@@ -4,24 +4,24 @@
 
 // Project Variables
 // 
-var project     = 'forward'
-  , build       = './build/'
-  , dist        = './dist/'+project+'/'
-  , source      = './src/' // 'source' instead of 'src' to avoid confusion with gulp.src
-  , lang        = 'languages/'
-  , bower       = './bower_components/'
-  , url         = 'forward.local'
+var project     = 'forward',
+    build       = './build/',
+    dist        = './dist/'+project+'/',
+    source      = './src/' // 'source' instead of 'src' to avoid confusion with gulp.src,
+    lang        = 'languages/',
+    bower       = './bower_components/',
+    url         = 'forward.local'
 ;
 
 // Gulp Settings & Startup
 // 
 var gulp        = require('gulp'),
-  sass        = require('gulp-ruby-sass')
-  , gutil       = require('gulp-util')
-  , plugins     = require('gulp-load-plugins')({ camelize: true }) // This loads all modules prefixed with "gulp-" to plugin.moduleName
-  , del         = require('del')
-  , browserSync = require('browser-sync')
-  , reload      = browserSync.reload;
+    sass        = require('gulp-ruby-sass'),
+    gutil       = require('gulp-util'),
+    plugins     = require('gulp-load-plugins')({ camelize: true }) // This loads all modules prefixed with "gulp-" to plugin.moduleName,
+    del         = require('del'),
+    browserSync = require('browser-sync'),
+    reload      = browserSync.reload;
 ;
 
 
