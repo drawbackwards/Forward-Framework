@@ -202,7 +202,7 @@ input[type=submit]:active{position:relative;top:1px;right:0;bottom:0;left:0}
 body,button,input,select,textarea{font-weight:400}
 body{margin-top:60px}
 .container,.site-content{padding-right:22.5px;padding-left:22.5px}
-.site-header{position:fixed;top:0;left:0;width:100%;height:60px;padding-top:0;padding-bottom:0;background-color:#fff}
+.site-header{position:fixed;top:0;left:0;z-index:1;width:100%;height:60px;padding-top:0;padding-bottom:0;background-color:#fff}
 .site-branding{left:25px}
 .site-logo{line-height:60px}
 .main-navigation{position:fixed;top:60px;left:0;display:none;float:none;overflow-y:scroll;width:100%;background-color:#f9f9f9;-webkit-overflow-scrolling:touch}

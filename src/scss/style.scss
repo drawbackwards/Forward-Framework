@@ -398,6 +398,8 @@ input[type='search'] {
     @include media($tablet) {
         @include position(fixed, 0px null null 0px);
 
+        z-index: 1;
+
         width: 100%;
         height: $header-bar-height-mobile;
         padding-top: 0;
