@@ -44,7 +44,7 @@ small,sub,sup{font-size:75%}
 address,blockquote,blockquote p,dd,dl,p{margin-bottom:1em}
 blockquote,q{quotes:none}
 blockquote:after,blockquote:before,q:after,q:before{content:"";content:none}
-.comment-body::after,.container::after,.gallery::after,.main-navigation .menu::after,.nav-links::after,.site-content::after{content:""}
+.comment-body::after,.container::after,.gallery::after,.main-navigation .menu::after,.nav-links::after,.search-form::after,.site-content::after{content:""}
 table{border-collapse:collapse;border-spacing:0}
 body,button,input,select,textarea{font-weight:300;font-family:"Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;font-size:1em;line-height:1.77689em;margin-top:1em;margin-bottom:1em;color:#595959}
 .site-logo,b,dt,strong{font-weight:600}
@@ -171,12 +171,21 @@ input,input[type=search],textarea{border-radius:0;-webkit-appearance:none}
 .form-allowed-tags{font-size:14px;line-height:1.333em;margin-bottom:1em}
 .comment-reply-title{font-weight:400;font-size:1.77689em;line-height:1.333em;margin-top:1em;margin-bottom:.75019em}
 .comment-reply-title small{font-size:14px;line-height:1.333em;font-weight:300;float:right;margin-top:10px;text-transform:capitalize}
+.content-area .search-form,.pingback+.comment .comment-body{margin-top:30px}
 .comment-notes{font-size:14px;line-height:1.333em;margin-bottom:30px}
 .comment-respond{margin-bottom:30px;padding-bottom:30px;border-bottom:1px solid #e6e6e6}
 .comment-respond .submit{margin-bottom:0}
 .pingback .comment-body{margin-bottom:15px;padding-bottom:15px;padding-left:0}
-.pingback+.comment .comment-body{margin-top:30px}
 .site-footer{font-size:14px;line-height:1.333em;padding-top:60px;padding-bottom:60px}
+.search-form{display:block;margin-bottom:30px}
+.search-form::after{clear:both;display:table}
+.content-area .search-form label{margin-top:0;margin-bottom:0}
+.search-form input[type=search]{width:100%;margin-top:0;margin-bottom:0}
+.search-form .search-submit{float:left;display:block;width:40.28361%;margin-top:0}
+.search-form .search-submit:last-child{width:32.86064%}
+.search-form label{float:left;display:block;width:67.13936%}
+.search-form label:last-child{width:59.71639%}
+.search-form label input[type=search]{box-sizing:border-box;width:100%}
 .content-area label{font-weight:600;font-size:1em;line-height:1em;margin-top:1em;display:block;margin-bottom:.5em}
 input[type=text],input[type=email],input[type=password],input[type=url],input[type=search],textarea{margin-top:.31672em;margin-bottom:1em;padding:6px 8px;border:1px solid #e6e6e6}
 input[type=text],input[type=email],input[type=password],input[type=url],textarea{width:100%}
