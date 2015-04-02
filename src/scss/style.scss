@@ -6,6 +6,9 @@ Author URI: http://drawbackwards.com
 Description: Forward by Drawbackwards
 Version: 1.0
 Text Domain: forward
+Tags: two-columns, right-sidebar, responsive-layout, accessibility-ready, threaded-comments
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 
 @import 'bourbon/app/assets/stylesheets/bourbon';
@@ -113,8 +116,11 @@ code {
     margin-left: ms(-4);
     padding: ms(-5) ms(-3) ms(-5) ms(-3);
 
-    border: 1px solid $hex-border;
     background-color: $hex-faint;
+    // Increase specificity
+    body & {
+        border: 1px solid $hex-border;
+    }
 }
 
 pre {
@@ -123,12 +129,16 @@ pre {
     max-width: 100%;
     margin-bottom: 1.6em;
     padding: ms(2);
+    // Uncomment below for 'word-wrap'
     // white-space: pre;
     // white-space: pre-wrap;
     // word-wrap: break-word;
 
-    border: 1px solid $hex-border;
     background-color: $hex-faint;
+    // Increase specificity
+    body & {
+        border: 1px solid $hex-border;
+    }
 }
 
 acronym,
@@ -668,11 +678,6 @@ article.page,
     }
 }
 
-article.post,
-article.page,
-article.comment-body {
-}
-
 .entry-title {
     @include type-style(h1);
     // Long title fix (will affect all titles).
@@ -798,6 +803,102 @@ article.comment-body {
             clear: left;
         }
     }
+}
+// Theme-Check requirements
+.gallery-caption {
+    display: block;
+}
+.bypostauthor {
+    display: block;
+}
+
+//////////////////
+// Post Formats //
+//////////////////
+
+article.sticky {
+    // Sticky Post
+    display: block;
+}
+
+article.status-draft {
+    // Draft Post
+}
+
+article.future {
+    // Scheduled Post
+}
+
+// Image
+// 
+.single-format-image {
+    // Single page body element
+}
+article.format-image {
+    // Global article element
+}
+
+// Audio
+// 
+.single-format-audio {
+    // Single page body element
+}
+article.format-audio {
+    // Global article element
+}
+
+// Video
+// 
+.single-format-video {
+    // Single page body element
+}
+article.format-video {
+    // Global article element
+}
+
+// Aside
+// 
+.single-format-aside {
+    // Single page body element
+}
+article.format-aside {
+    // Global article element
+}
+
+// Status
+// 
+.single-format-status {
+    // Single page body element
+}
+article.format-status {
+    // Global article element
+}
+
+// Link
+// 
+.single-format-link {
+    // Single page body element
+}
+article.format-link {
+    // Global article element
+}
+
+// Quote
+// 
+.single-format-quote {
+    // Single page body element
+}
+article.format-quote {
+    // Global article element
+}
+
+// Chat
+// 
+.single-format-chat {
+    // Single page body element
+}
+article.format-chat {
+    // Global article element
 }
 
 //////////////
