@@ -154,7 +154,7 @@ input,input[type=search],textarea{border-radius:0;-webkit-appearance:none}
 .gallery-columns-4 .gallery-item,.gallery-columns-5 .gallery-item{float:left;display:block;margin-right:2.35765%;width:23.23176%}
 .gallery-columns-4 .gallery-item:last-child,.gallery-columns-4 .gallery-item:nth-child(4n),.gallery-columns-5 .gallery-item:last-child,.gallery-columns-5 .gallery-item:nth-child(4n){margin-right:0}
 .gallery-columns-6 .gallery-item,.gallery-columns-7 .gallery-item,.gallery-columns-8 .gallery-item,.gallery-columns-9 .gallery-item{float:left;display:block;margin-right:2.35765%;width:14.70196%}
-.gallery-columns-6 .gallery-item:last-child,.gallery-columns-6 .gallery-item:nth-child(6n),.gallery-columns-7 .gallery-item:last-child,.gallery-columns-7 .gallery-item:nth-child(6n),.gallery-columns-8 .gallery-item:last-child,.gallery-columns-8 .gallery-item:nth-child(6n),.gallery-columns-9 .gallery-item:last-child,.gallery-columns-9 .gallery-item:nth-child(6n){margin-right:0}
+.error404 #primary:last-child,.gallery-columns-6 .gallery-item:last-child,.gallery-columns-6 .gallery-item:nth-child(6n),.gallery-columns-7 .gallery-item:last-child,.gallery-columns-7 .gallery-item:nth-child(6n),.gallery-columns-8 .gallery-item:last-child,.gallery-columns-8 .gallery-item:nth-child(6n),.gallery-columns-9 .gallery-item:last-child,.gallery-columns-9 .gallery-item:nth-child(6n){margin-right:0}
 .bypostauthor,.gallery-caption,article.sticky{display:block}
 .comments-title{font-size:1.77689em;line-height:1.333em;margin-top:1em;margin-bottom:1.77689em}
 .comment-body{display:block;margin-bottom:30px;padding-bottom:30px;padding-left:65px}
@@ -195,10 +195,13 @@ input[type=submit]:active{position:relative;top:1px;right:0;bottom:0;left:0}
 .post-password-form label{margin-top:1.77689em}
 .post-password-form input[type=password]{margin-top:.75019em}
 .post-password-form input[type=submit]{margin-top:0}
+.error404 #primary{float:left;display:block;width:100%;margin-right:0;padding-right:0}
+.error404 .page-title{font-weight:400;font-size:3.15733em;line-height:1em;margin-top:.56278em;margin-bottom:.56278em;margin-left:-3px}
+.error404 .page-title:first-child{margin-top:0}
 @media screen and (min-width:769px){.main-navigation{display:block!important;height:auto!important}
 #primary{padding-right:4.34783%}}
 @media screen and (min-width:769px)and (max-width:768px){#primary{padding-right:0}}
-@media screen and (max-width:768px){.comment-body h1,.entry-title,.site-logo,article.page h1,article.post h1{font-size:2.57143em}
+@media screen and (max-width:768px){.comment-body h1,.entry-title,.error404 .page-title,.site-logo,article.page h1,article.post h1{font-size:2.57143em}
 body,button,input,select,textarea{font-weight:400}
 body{margin-top:60px}
 .container,.site-content{padding-right:22.5px;padding-left:22.5px}

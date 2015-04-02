@@ -1180,3 +1180,19 @@ input[type=submit] {
         margin-top: 0;
     }
 }
+
+
+/////////
+// 404 //
+/////////
+
+.error404 {
+    #primary {
+        @include span-columns(12);
+        @include zero-right;
+    }
+
+    .page-title {
+        @include type-style(h1);
+    }
+}

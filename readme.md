@@ -89,7 +89,7 @@ Like images, PHP files can go anywhere under `src` and will be copied to `build`
 
 ## Credits
 
-* Forked from [synapticism/wordpress-gulp-bower-sass](https://github.com/synapticism/wordpress-gulp-bower-sass).
+* Adapted from [synapticism/wordpress-gulp-bower-sass](https://github.com/synapticism/wordpress-gulp-bower-sass).
 * [Normalize.css](https://necolas.github.io/normalize.css/)
 * [Eric Meyer's reset](http://meyerweb.com/eric/tools/css/reset/).
 
