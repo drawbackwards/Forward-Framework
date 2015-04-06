@@ -567,7 +567,7 @@ input[type='search'] {
 // Primary //
 /////////////
 
-#primary {
+.content-area {
     @include span-columns(8);
     @include tablet-single;
     @include media($desktop) {
@@ -582,7 +582,7 @@ input[type='search'] {
 
 // No Sidebar on Full Width
 // 
-.page-template-page-full-width #primary {
+.page-template-page-full-width .content-area {
     @include span-columns(12);
 
     padding-right: 0;
@@ -593,7 +593,7 @@ input[type='search'] {
 // Sidebar //
 /////////////
 
-#secondary {
+.widget-area {
     @include span-columns(4);
     @include tablet-single;
     @include media($tablet) {
@@ -1068,7 +1068,6 @@ article.format-chat {
 ////////////
 
 .site-footer {
-    @include type-style(small);
     @include media($tablet) {
         padding-top: unit(1);
         padding-bottom: unit(1);
@@ -1076,6 +1075,9 @@ article.format-chat {
 
     padding-top: unit(4);
     padding-bottom: unit(4);
+    .site-info {
+        @include type-style(small);
+    }
 }
 
 
@@ -1187,11 +1189,10 @@ input[type=submit] {
 /////////
 
 .error404 {
-    #primary {
+    .content-area {
         @include span-columns(12);
         @include zero-right;
     }
-
     .page-title {
         @include type-style(h1);
     }
