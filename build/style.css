@@ -88,11 +88,12 @@ figure.wp-caption,img.size-full,img.size-large,img.wp-post-image{max-width:100%;
 .site-logo,.site-logo:first-child{margin-top:0}
 .wp-caption.aligncenter,.wp-caption.alignleft,.wp-caption.alignnone,.wp-caption.alignright{margin-bottom:.42219em}
 input,input[type=search],textarea{border-radius:0;-webkit-appearance:none}
-.container,.site-content{max-width:68em;margin-left:auto;margin-right:auto;padding-right:2em;padding-left:2em}
+.container,.site-content{max-width:68em;margin-left:auto;margin-right:auto;-webkit-transition:padding .25s ease-in-out;transition:padding .25s ease-in-out;padding-right:2.0225em;padding-left:2.0225em}
 .container::after,.site-content::after{clear:both;display:table}
-.site-header{height:120px;padding-top:30px;padding-bottom:30px}
-.site-branding{position:absolute;top:0;left:2em}
-.site-logo{font-size:3.15733em;line-height:1em;margin-left:-3px;display:inline-block;margin-bottom:0}
+.site-header{-webkit-transition:padding,height .25s ease-in-out;transition:padding,height .25s ease-in-out;height:120px;padding-top:30px;padding-bottom:30px}
+.site-branding{position:absolute;top:0;left:2.0225em}
+.site-logo{font-size:3.15733em;line-height:1em;margin-left:-3px;-webkit-transition:font-size .25s ease-in-out;transition:font-size .25s ease-in-out;display:inline-block;margin-bottom:0}
+.content-area,.widget-area{transition:margin .25s ease-in-out;-webkit-transition:margin .25s ease-in-out}
 .site-description{display:none}
 .main-navigation{position:absolute;top:20px;right:0}
 .main-navigation .menu{display:block;padding-left:0;list-style:none}
@@ -200,14 +201,14 @@ input[type=submit]:active{position:relative;top:1px;right:0;bottom:0;left:0}
 .error404 .page-title{font-weight:400;font-size:3.15733em;line-height:1em;margin-top:.56278em;margin-bottom:.56278em;margin-left:-3px}
 .error404 .page-title:first-child{margin-top:0}
 @media screen and (min-width:769px){.main-navigation{display:block!important;height:auto!important}
-.content-area{padding-right:4.34783%}}
+.content-area{padding-right:2.35765%}}
 @media screen and (min-width:769px)and (max-width:768px){.content-area{padding-right:0}}
 @media screen and (max-width:768px){.comment-body h1,.entry-title,.error404 .page-title,.site-logo,article.page h1,article.post h1{font-size:2.57143em}
 body,button,input,select,textarea{font-weight:400}
 body{margin-top:60px}
-.container,.site-content{padding-right:1em;padding-left:1em}
+.container,.site-content{padding-right:1.01125em;padding-left:1.01125em}
 .site-header{position:fixed;top:0;left:0;z-index:1;width:100%;height:60px;padding-top:0;padding-bottom:0;background-color:#fff}
-.site-branding{left:1em}
+.site-branding{left:1.01125em}
 .site-logo{line-height:60px}
 .main-navigation{position:fixed;top:60px;left:0;display:none;float:none;overflow-y:scroll;width:100%;background-color:#f9f9f9;-webkit-overflow-scrolling:touch}
 #mobile-menu-switch,.content-area,.main-navigation .menu .menu-item a,.main-navigation .menu .page_item a,.widget-area{display:block}

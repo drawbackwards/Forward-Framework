@@ -382,13 +382,14 @@ input[type='search'] {
 .container,
 .site-content {
     @include outer-container;
+    @include transition (padding $timing-default $easing-default);
     @include media($tablet) {
-        padding-right: 1em;
-        padding-left: 1em;
+        padding-right: $gutter / 2;
+        padding-left: $gutter / 2;
     }
 
-    padding-right: 2em;
-    padding-left: 2em;
+    padding-right: $gutter;
+    padding-left: $gutter;
 }
 
 
@@ -397,6 +398,7 @@ input[type='search'] {
 ////////////
 
 .site-header {
+    @include transition (padding, height $timing-default $easing-default);
     @include media($tablet) {
         @include position(fixed, 0px null null 0px);
 
@@ -421,15 +423,16 @@ input[type='search'] {
 }
 .site-branding {
     @include media($tablet) {
-        left: 1em;
+        left: $gutter / 2;
     }
-    @include position(absolute, 0px null null 2em);
+    @include position(absolute, 0px null null $gutter);
 }
 .site-title {
 }
 .site-logo {
     @include type-style(h1);
     @include source-sans-weight(semi-bold);
+    @include transition (font-size $timing-default $easing-default);
     @include media($tablet) {
         line-height: $header-bar-height-mobile;
     }
@@ -572,6 +575,7 @@ input[type='search'] {
 .content-area {
     @include span-columns(8);
     @include tablet-single;
+    @include transition (margin $timing-default $easing-default);
     @include media($desktop) {
         @include double-gutter;
     }
@@ -598,6 +602,7 @@ input[type='search'] {
 .widget-area {
     @include span-columns(4);
     @include tablet-single;
+    @include transition (margin $timing-default $easing-default);
     @include media($tablet) {
         margin-top: unit(1);
     }
