@@ -11,6 +11,8 @@ License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 
+// $visual-grid: true !global;
+
 @import 'bourbon/app/assets/stylesheets/bourbon';
 @import 'neat/app/assets/stylesheets/neat';
 @import 'base';
@@ -381,12 +383,12 @@ input[type='search'] {
 .site-content {
     @include outer-container;
     @include media($tablet) {
-        padding-right: unit(1.5);
-        padding-left: unit(1.5);
+        padding-right: 1em;
+        padding-left: 1em;
     }
 
-    padding-right: unit(2);
-    padding-left: unit(2);
+    padding-right: 2em;
+    padding-left: 2em;
 }
 
 
@@ -419,9 +421,9 @@ input[type='search'] {
 }
 .site-branding {
     @include media($tablet) {
-        left: 25px;
+        left: 1em;
     }
-    @include position(absolute, 0px null null 30px);
+    @include position(absolute, 0px null null 2em);
 }
 .site-title {
 }
