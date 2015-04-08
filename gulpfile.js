@@ -38,7 +38,7 @@ gulp.task('styles', function() {
   })
   .pipe(plugins.autoprefixer('last 2 versions', 'ie 9', 'ios 6', 'android 4'))
   .pipe(plugins.combineMediaQueries())
-  .pipe(plugins.minifyCss({ keepSpecialComments: 1, keepBreaks: true }))
+  .pipe(plugins.minifyCss({ keepSpecialComments: 1, keepBreaks: true, compatibility: 'ie8' }))
   .pipe(gulp.dest(build))
   .pipe(browserSync.reload({ stream: true }))
 });
