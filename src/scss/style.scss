@@ -359,6 +359,14 @@ img {
     }
 }
 
+// Featured image
+// 
+.attachment-post-thumbnail {
+    display: block;
+
+    margin-bottom: ms(2);
+}
+
 
 ///////////////
 // Utilities //
@@ -382,7 +390,7 @@ input[type='search'] {
 .container,
 .site-content {
     @include outer-container;
-    @include transition (padding $timing-default $easing-default);
+    // @include transition (padding $timing-default $easing-default);
     @include media($tablet) {
         padding-right: $gutter / 2;
         padding-left: $gutter / 2;
@@ -398,7 +406,7 @@ input[type='search'] {
 ////////////
 
 .site-header {
-    @include transition (padding, height $timing-default $easing-default);
+    // @include transition (padding, height $timing-default $easing-default);
     @include media($tablet) {
         @include position(fixed, 0px null null 0px);
 
@@ -417,6 +425,12 @@ input[type='search'] {
     padding-bottom: unit(2);
 
     border-bottom: 1px solid $hex-border;
+    // Adjust for wp admin bar
+    .admin-bar & {
+        @include media($tablet) {
+            top: $wp-admin-bar-height;
+        }
+    }
     .container {
         position: relative;
     }
@@ -432,7 +446,7 @@ input[type='search'] {
 .site-logo {
     @include type-style(h1);
     @include source-sans-weight(semi-bold);
-    @include transition (font-size $timing-default $easing-default);
+    // @include transition (font-size $timing-default $easing-default);
     @include media($tablet) {
         line-height: $header-bar-height-mobile;
     }
@@ -446,6 +460,13 @@ input[type='search'] {
     display: none;
 }
 
+// Admin bar
+// 
+#wpadminbar {
+    @include media($tablet) {
+        @include position(fixed, 0px null null 0px);
+    }
+}
 
 ////////////////
 // Navigation //
@@ -473,6 +494,12 @@ input[type='search'] {
         height: auto !important;
     }
     @include position(absolute, 20px 0px null null);
+    // Adjust for wp admin bar
+    .admin-bar & {
+        @include media($tablet) {
+            top: $header-bar-height-mobile + $wp-admin-bar-height;
+        }
+    }
     a {
         @include media($tablet) {
             color: $hex-default;
@@ -526,6 +553,12 @@ input[type='search'] {
     @include position(fixed, 0px 0px null null);
 
     display: none;
+    // Adjust for wp admin bar
+    .admin-bar & {
+        @include media($tablet) {
+            top: $wp-admin-bar-height;
+        }
+    }
     .toggle {
         font-size: 14px;
         line-height: $header-bar-height-mobile;
@@ -575,7 +608,7 @@ input[type='search'] {
 .content-area {
     @include span-columns(8);
     @include tablet-single;
-    @include transition (margin $timing-default $easing-default);
+    // @include transition (margin $timing-default $easing-default);
     @include media($desktop) {
         @include double-gutter;
     }
@@ -602,9 +635,9 @@ input[type='search'] {
 .widget-area {
     @include span-columns(4);
     @include tablet-single;
-    @include transition (margin $timing-default $easing-default);
+    // @include transition (margin $timing-default $easing-default);
     @include media($tablet) {
-        margin-top: unit(1);
+        margin-top: unit(2);
     }
 
     margin-top: unit(4);
