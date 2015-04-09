@@ -91,7 +91,7 @@ figure.wp-caption,img.size-full,img.size-large,img.wp-post-image{max-width:100%;
 input,input[type=search],textarea{border-radius:0;-webkit-appearance:none}
 .container,.site-content{max-width:68em;margin-left:auto;margin-right:auto;padding-right:2.0225em;padding-left:2.0225em}
 .container::after,.site-content::after{clear:both;display:table}
-.site-header{height:120px;padding-top:1.875rem;padding-bottom:1.875rem}
+.site-header{height:120px;padding-top:30px;padding-top:1.875rem;padding-bottom:30px;padding-bottom:1.875rem}
 .site-branding{position:absolute;top:0;left:2.0225em}
 .site-logo{font-size:3.15733em;line-height:1em;margin-top:.56278em;margin-bottom:.56278em;margin-left:-3px;display:inline-block;margin-top:0;margin-bottom:0}
 .site-logo:first-child{margin-top:0}
@@ -109,19 +109,19 @@ input,input[type=search],textarea{border-radius:0;-webkit-appearance:none}
 .comment-body .comment-meta .comment-metadata a,.comment-body .reply a,.comment-reply-title small a{color:#999}
 #mobile-menu-switch .toggle:active{top:0}
 #mobile-menu-switch .toggle.on{border-left:1px solid #e6e6e6;background-color:#f9f9f9}
-.comment-navigation,.post-navigation{margin-bottom:3.75rem}
-.content-area{float:left;display:block;margin-right:2.35765%;width:65.88078%;margin-top:3.75rem}
+.comment-navigation,.post-navigation{margin-bottom:60px;margin-bottom:3.75rem}
+.content-area{float:left;display:block;margin-right:2.35765%;width:65.88078%;margin-top:60px;margin-top:3.75rem}
 .content-area:last-child{margin-right:0}
 .page-template-page-full-width .content-area{float:left;display:block;margin-right:2.35765%;width:100%;padding-right:0}
 .page-template-page-full-width .content-area:last-child{margin-right:0}
-.widget-area{float:left;display:block;margin-right:2.35765%;width:31.76157%;margin-top:3.75rem}
+.widget-area{float:left;display:block;margin-right:2.35765%;width:31.76157%;margin-top:60px;margin-top:3.75rem}
 .widget-area:last-child{margin-right:0}
 .screen-reader-text{display:none}
 .widget-title{font-size:1em;line-height:1em;margin-top:1em;margin-bottom:1em}
 .widget{margin-bottom:1em;padding-top:1em;padding-bottom:1em}
 .widget:first-child{padding-top:0}
 .widget:last-child{padding-bottom:0;border-bottom:none}
-.comment-body,article.page,article.post{margin-bottom:3.75rem;padding-bottom:3.75rem;border-bottom:1px solid #e6e6e6}
+.comment-body,article.page,article.post{margin-bottom:60px;margin-bottom:3.75rem;padding-bottom:60px;padding-bottom:3.75rem;border-bottom:1px solid #e6e6e6}
 .comment-body h1,article.page h1,article.post h1{font-weight:400;font-size:3.15733em;line-height:1em;margin-top:.56278em;margin-bottom:.56278em;margin-left:-3px}
 .comment-body h1:first-child,article.page h1:first-child,article.post h1:first-child{margin-top:0}
 .comment-body h2,article.page h2,article.post h2{font-weight:400;font-size:1.77689em;line-height:1.333em;margin-top:1em;margin-bottom:.75019em}
@@ -166,7 +166,7 @@ input,input[type=search],textarea{border-radius:0;-webkit-appearance:none}
 .gallery-columns-6 .gallery-item:nth-child(6n+1),.gallery-columns-7 .gallery-item:nth-child(6n+1),.gallery-columns-8 .gallery-item:nth-child(6n+1),.gallery-columns-9 .gallery-item:nth-child(6n+1){clear:left}
 .bypostauthor,.gallery-caption,article.sticky{display:block}
 .comments-title{font-size:1.77689em;line-height:1.333em;margin-top:1em;margin-bottom:1.77689em}
-.comment-body{display:block;margin-bottom:1.875rem;padding-bottom:1.875rem;padding-left:65px}
+.comment-body{display:block;margin-bottom:30px;margin-bottom:1.875rem;padding-bottom:30px;padding-bottom:1.875rem;padding-left:65px}
 .comment-body .comment-content p,.comment-body .comment-meta{margin-bottom:.31672em}
 .comment-body::after{clear:both;display:table}
 .comment-body .comment-meta .comment-author{position:relative;top:0;right:0;bottom:0;left:0;display:inline}
@@ -180,14 +180,14 @@ input,input[type=search],textarea{border-radius:0;-webkit-appearance:none}
 .form-allowed-tags{font-size:14px;line-height:1.333em;margin-bottom:1em}
 .comment-reply-title{font-weight:400;font-size:1.77689em;line-height:1.333em;margin-top:1em;margin-bottom:.75019em}
 .comment-reply-title small{font-size:14px;line-height:1.333em;font-weight:300;float:right;margin-top:10px;text-transform:capitalize}
-.content-area .search-form,.pingback+.comment .comment-body{margin-top:1.875rem}
-.comment-notes{font-size:14px;line-height:1.333em;margin-bottom:1.875rem}
-.comment-respond{margin-bottom:1.875rem;padding-bottom:1.875rem;border-bottom:1px solid #e6e6e6}
+.content-area .search-form,.pingback+.comment .comment-body{margin-top:30px;margin-top:1.875rem}
+.comment-notes{font-size:14px;line-height:1.333em;margin-bottom:30px;margin-bottom:1.875rem}
+.comment-respond{margin-bottom:30px;margin-bottom:1.875rem;padding-bottom:30px;padding-bottom:1.875rem;border-bottom:1px solid #e6e6e6}
 .comment-respond .submit{margin-bottom:0}
-.pingback .comment-body{margin-bottom:.9375rem;padding-bottom:.9375rem;padding-left:0}
-.site-footer{padding-top:3.75rem;padding-bottom:3.75rem}
+.pingback .comment-body{margin-bottom:15px;margin-bottom:.9375rem;padding-bottom:15px;padding-bottom:.9375rem;padding-left:0}
+.site-footer{padding-top:60px;padding-top:3.75rem;padding-bottom:60px;padding-bottom:3.75rem}
 .site-footer .site-info{font-size:14px;line-height:1.333em}
-.search-form{display:block;margin-bottom:1.875rem}
+.search-form{display:block;margin-bottom:30px;margin-bottom:1.875rem}
 .search-form::after{clear:both;display:table}
 .content-area .search-form label{margin-top:0;margin-bottom:0}
 .search-form input[type=search]{width:100%;margin-top:0;margin-bottom:0}
@@ -212,7 +212,7 @@ input[type=submit]:active{position:relative;top:1px;right:0;bottom:0;left:0}
 @media screen and (min-width:769px){.main-navigation{display:block!important;height:auto!important}
 .content-area{padding-right:2.35765%}}
 @media screen and (min-width:769px)and (max-width:768px){.content-area{padding-right:0}}
-@media screen and (max-width:768px){.comment-body h1,.entry-title,.error404 .page-title,.site-logo,article.page h1,article.post h1{font-size:2.57143em}
+@media screen and (max-width:768px){.comment-body h1,.entry-title,.error404 .page-title,.site-logo,article.page h1,article.post h1{font-size:px(36)}
 body,button,input,select,textarea{font-weight:400}
 body{margin-top:60px}
 .content-area,.widget-area{float:left;margin-top:1.875rem}

@@ -16,22 +16,11 @@
 // 
 @import '_variables';
 
-@function px($value) {
-    @return em($value, 14);
-}
-
 // Standard unit of measurement to keep things simple
 // 
+$global-unit: 15;
 @function unit($value) {
-    // @return 15 * $value + px;
-    @return rem(15 * $value);
-}
-
-// Rem units with pixel fallback. Conflicts with minifycss.
-// 
-@mixin rem-px($property, $value) {
-    #{$property}: $value + px;
-    #{$property}: rem($value);
+    @return rem($global-unit * $value);
 }
 
 // Wrapper for modular scale function
