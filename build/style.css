@@ -48,7 +48,7 @@ blockquote:after,blockquote:before,q:after,q:before{content:none}
 table{border-collapse:collapse;border-spacing:0}
 body,button,input,select,textarea{font-weight:300;font-family:"Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;font-size:1em;line-height:1.77689em;margin-top:1em;margin-bottom:1em;color:#595959}
 .site-logo,b,dt,strong{font-weight:600}
-body{background-color:#fff}
+body{margin-top:0;margin-bottom:0;background-color:#fff}
 h1,h2,h3,h4,h5,h6{font-weight:600;clear:both}
 a:hover{text-decoration:underline;color:#276aa2}
 #mobile-menu-switch .toggle:hover,.entry-title a:hover,ins,mark{text-decoration:none}
