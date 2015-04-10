@@ -258,18 +258,18 @@ $modular-scale-base: 1em;
 }
 
 @mixin bg-image($filename, $x: left, $y: top, $ext: png ) {
-    background-image: url('../images/#{$filename}.#{$ext}');
+    background-image: url('./img/#{$filename}.#{$ext}');
     background-repeat: no-repeat;
     background-position: $x $y;
 }
 
 @mixin bg-image-hidpi($filename, $width, $height, $x: left, $y: top, $ext: png ) {
     @include hidpi {
-        background-image: url('../images/#{$filename}@2x.#{$ext}');
+        background-image: url('./img/#{$filename}@2x.#{$ext}');
         background-size: $width + px $height + px;
     }
 
-    background-image: url('../images/#{$filename}.#{$ext}');
+    background-image: url('./img/#{$filename}.#{$ext}');
     background-repeat: no-repeat;
     background-position: $x $y;
 }
