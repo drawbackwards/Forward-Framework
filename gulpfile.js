@@ -185,8 +185,8 @@ gulp.task('bower', ['bower-normalize']);
 // 
 gulp.task('bower-normalize', function() {
   return gulp.src(bower+'normalize.css/normalize.css')
-  .pipe(plugins.rename('_base_normalize.scss'))
-  .pipe(gulp.dest(source+'scss'));
+  .pipe(plugins.rename('_normalize.scss'))
+  .pipe(gulp.dest(source+'scss/base'));
 });
 
 
