@@ -15,10 +15,10 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 @import 'bourbon/app/assets/stylesheets/bourbon';
 @import 'neat/app/assets/stylesheets/neat';
-@import 'base/base';
-@import 'forward/grid-settings';
-@import 'forward/variables';
-@import 'forward/mixins';
+@import '../base/base';
+@import 'grid-settings';
+@import 'variables';
+@import 'mixins';
 
 body,
 button,

@@ -32,7 +32,7 @@ var gulp        = require('gulp'),
 // Process Stylesheets
 // 
 gulp.task('styles', function() {
-  return sass(source + 'scss/style.scss', {
+  return sass(source + 'scss/forward/style.scss', {
     style: 'expanded',
     loadPath: bower
   })
