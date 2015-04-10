@@ -8,10 +8,11 @@
  */
 ?>
 
+		</div><!-- .container -->
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="container">
+		<div class="footer-container">
 			<div class="site-info">
 				<?php printf( __( 'Site by %1$s', 'forward' ), '<a href="http://drawbackwards.com" rel="designer">Drawbackwards</a>' ); ?>
 			</div><!-- .site-info -->

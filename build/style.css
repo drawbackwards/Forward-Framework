@@ -13,7 +13,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 pre,textarea{overflow:auto}
 code,pre{background-color:#fdfdfd}
 embed,iframe,img,object,pre,video{max-width:100%}
-.site-header .container,a:active,sub,sup{position:relative}
+.header-container,a:active,sub,sup{position:relative}
 .comment-list li.comment,.main-navigation .menu li,.no-bullets li{list-style-type:none;list-style-image:none}
 html{box-sizing:border-box;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
 *,::after,::before{box-sizing:inherit}
@@ -43,8 +43,8 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 small,sub,sup{font-size:75%}
 address,blockquote,blockquote p,dd,dl,p{margin-bottom:1em}
 blockquote,q{quotes:none}
-blockquote:after,blockquote:before,q:after,q:before{content:"";content:none}
-.comment-body::after,.container::after,.gallery::after,.main-navigation .menu::after,.nav-links::after,.search-form::after,.site-content::after{content:""}
+blockquote:after,blockquote:before,q:after,q:before{content:none}
+.comment-body::after,.gallery::after,.main-navigation .menu::after,.nav-links::after,.search-form::after,blockquote:after,blockquote:before,q:after,q:before{content:""}
 table{border-collapse:collapse;border-spacing:0}
 body,button,input,select,textarea{font-weight:300;font-family:"Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;font-size:1em;line-height:1.77689em;margin-top:1em;margin-bottom:1em;color:#595959}
 .site-logo,b,dt,strong{font-weight:600}
@@ -89,8 +89,8 @@ figure.wp-caption,img.size-full,img.size-large,img.wp-post-image{max-width:100%;
 .wp-caption.aligncenter,.wp-caption.alignleft,.wp-caption.alignnone,.wp-caption.alignright{margin-bottom:.42219em}
 .attachment-post-thumbnail{display:block;margin-bottom:1.77689em}
 input,input[type=search],textarea{border-radius:0;-webkit-appearance:none}
-.container,.site-content{max-width:68em;margin-left:auto;margin-right:auto;padding-right:2.0225em;padding-left:2.0225em}
-.container::after,.site-content::after{clear:both;display:table}
+.container,.content-container,.footer-container,.header-container{max-width:68em;margin-left:auto;margin-right:auto;padding-right:2.0225em;padding-left:2.0225em}
+.container::after,.content-container::after,.footer-container::after,.header-container::after{clear:both;content:"";display:table}
 .site-header{height:120px;padding-top:30px;padding-top:1.875rem;padding-bottom:30px;padding-bottom:1.875rem}
 .site-branding{position:absolute;top:0;left:2.0225em}
 .site-logo{font-size:3.15733em;line-height:1em;margin-top:.56278em;margin-bottom:.56278em;margin-left:-3px;display:inline-block;margin-top:0;margin-bottom:0}
@@ -216,7 +216,7 @@ input[type=submit]:active{position:relative;top:1px;right:0;bottom:0;left:0}
 body,button,input,select,textarea{font-weight:400}
 body{margin-top:60px}
 .content-area,.widget-area{float:left;margin-top:1.875rem}
-.container,.site-content{padding-right:1.01125em;padding-left:1.01125em}
+.container,.content-container,.footer-container,.header-container{padding-right:1.01125em;padding-left:1.01125em}
 .site-header{position:fixed;top:0;left:0;z-index:1;width:100%;height:60px;padding-top:0;padding-bottom:0;background-color:#fff}
 .admin-bar .site-header{top:46px}
 .site-branding{left:1.01125em}
