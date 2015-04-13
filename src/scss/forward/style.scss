@@ -25,7 +25,7 @@ button,
 input,
 select,
 textarea {
-    @include type-style(default);
+    @include type-style-default;
 
     color: $hex-default;
 }
@@ -51,7 +51,7 @@ h3,
 h4,
 h5,
 h6 {
-    @include source-sans-weight(semi-bold);
+    @include font-weight(semi-bold);
 
     clear: both;
 }
@@ -70,7 +70,7 @@ p {
 
 b,
 strong {
-    @include source-sans-weight(semi-bold);
+    @include font-weight(semi-bold);
 }
 
 dfn,
@@ -227,7 +227,7 @@ dl {
 }
 
 dt {
-    @include source-sans-weight(semi-bold);
+    @include font-weight(semi-bold);
 }
 
 dd {
@@ -282,7 +282,7 @@ figure.wp-caption {
 // Image caption
 // 
 .wp-caption-text {
-    @include type-style(small);
+    @include type-style-small;
 
     padding-top: ms(0);
     padding-bottom: ms(0);
@@ -461,8 +461,8 @@ input[type='search'] {
 .site-title {
 }
 .site-logo {
-    @include type-style(h1);
-    @include source-sans-weight(semi-bold);
+    @include type-style-h1;
+    @include font-weight(semi-bold);
     // @include transition (font-size $timing-default $easing-default);
     @include media($tablet) {
         line-height: $header-bar-height-mobile;
@@ -541,7 +541,7 @@ input[type='search'] {
                 padding-top: unit(.5);
                 padding-bottom: unit(.5);
             }
-            @include source-sans-weight(normal);
+            @include font-weight(normal);
 
             float: left;
 
@@ -556,7 +556,7 @@ input[type='search'] {
             }
         }
         .current_page_item {
-            @include source-sans-weight(semi-bold);
+            @include font-weight(semi-bold);
         }
     }
 }
@@ -663,7 +663,7 @@ input[type='search'] {
     display: none;
 }
 .widget-title {
-    @include type-style(h5);
+    @include type-style-h5;
 }
 
 // Widget
@@ -708,28 +708,28 @@ article.page,
 
     border-bottom: 1px solid $hex-border;
     h1 {
-        @include type-style(h1);
+        @include type-style-h1;
     }
     h2 {
-        @include type-style(h2);
+        @include type-style-h2;
     }
     h3 {
-        @include type-style(h3);
+        @include type-style-h3;
     }
     h4 {
-        @include type-style(h4);
+        @include type-style-h4;
     }
     h5 {
-        @include type-style(h5);
+        @include type-style-h5;
     }
     h6 {
-        @include type-style(h6);
+        @include type-style-h6;
     }
     table {
         width: 100%;
     }
     th {
-        @include source-sans-weight(normal);
+        @include font-weight(normal);
     }
     td,
     th {
@@ -744,7 +744,7 @@ article.page,
 }
 
 .entry-title {
-    @include type-style(h1);
+    @include type-style-h1;
     // Long title fix (will affect all titles).
     // @include word-wrap;
 
@@ -754,7 +754,7 @@ article.page,
     }
 }
 .entry-meta {
-    @include type-style(small);
+    @include type-style-small;
 }
 .entry-content,
 .entry-summary,
@@ -763,7 +763,7 @@ article.page,
     margin-bottom: ms(2);
 }
 .entry-footer {
-    @include type-style(small);
+    @include type-style-small;
     .cat-links,
     .tags-links,
     .comments-link {
@@ -777,7 +777,7 @@ article.page,
     }
 }
 .page-title {
-    @include type-style(h4);
+    @include type-style-h4;
 
     margin-bottom: ms(1);
 
@@ -971,7 +971,7 @@ article.format-chat {
 //////////////
 
 .comments-title {
-    @include type-style(h2);
+    @include type-style-h2;
 
     margin-bottom: ms(2);
 }
@@ -995,7 +995,7 @@ article.format-chat {
             display: inline;
         }
         .comment-metadata {
-            @include type-style(small);
+            @include type-style-small;
 
             display: inline;
 
@@ -1022,7 +1022,7 @@ article.format-chat {
         }
     }
     .reply {
-        @include type-style(small);
+        @include type-style-small;
 
         padding-top: ms(-4);
         a {
@@ -1051,7 +1051,7 @@ article.format-chat {
 }
 
 .form-allowed-tags {
-    @include type-style(small);
+    @include type-style-small;
     // You might just want to hide this
     // display: none;
 
@@ -1061,10 +1061,10 @@ article.format-chat {
 }
 
 .comment-reply-title {
-    @include type-style(h2);
+    @include type-style-h2;
     small {
-        @include type-style(small);
-        @include source-sans-weight(light);
+        @include type-style-small;
+        @include font-weight(light);
 
         float: right;
 
@@ -1078,7 +1078,7 @@ article.format-chat {
 }
 
 .comment-notes {
-    @include type-style(small);
+    @include type-style-small;
 
     margin-bottom: unit(2);
 }
@@ -1133,7 +1133,7 @@ article.format-chat {
     padding-top: unit(4);
     padding-bottom: unit(4);
     .site-info {
-        @include type-style(small);
+        @include type-style-small;
     }
 }
 
@@ -1181,7 +1181,7 @@ article.format-chat {
 
 label {
     .content-area & {
-        @include type-style(h5);
+        @include type-style-h5;
 
         display: block;
 
@@ -1251,6 +1251,6 @@ input[type=submit] {
         @include zero-right;
     }
     .page-title {
-        @include type-style(h1);
+        @include type-style-h1;
     }
 }

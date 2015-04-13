@@ -31,29 +31,10 @@ $modular-scale-base: 1em;
     @return modular-scale($value);
 }
 
-// Helvetica font weights
-// 
-@mixin helvetica-weight($weight: light) {
-    @if $weight == thin {
-        font-weight: 100;
-    }
-    @if $weight == light {
-        font-weight: 300;
-    }
-    @if $weight == regular {
-        font-weight: 400;
-    }
-    @if $weight == semibold {
-        font-weight: 600;
-    }
-    @if $weight == bold {
-        font-weight: 700;
-    }
-}
 
 // Source Sans Pro font weights
 // 
-@mixin source-sans-weight($weight: light) {
+@mixin font-weight($weight: light) {
     @if $weight == light {
         font-weight: 300;
     }
@@ -65,90 +46,128 @@ $modular-scale-base: 1em;
     }
 }
 
-// Predefined Type Styles
+// Font weight translations
 // 
-@mixin type-style($style: default) {
-    @if $style == h1 {
-        @include source-sans-weight(normal);
-        @include media($tablet) {
-            font-size: px(36);
-        }
-
-        font-size: ms(4);
-        line-height: ms(0);
-
-        margin-top: ms(-2);
-        margin-bottom: ms(-2);
-        margin-left: -3px;
-        &:first-child {
-            margin-top: 0;
-        }
+@mixin font-weight($weight: default) {
+    @if ($weight == thin) or ($weight == ultralight) {
+        font-weight: 100;
     }
-    @if $style == h2 {
-        @include source-sans-weight(normal);
-
-        font-size: ms(2);
-        line-height: ms(1);
-
-        margin-top: ms(0);
-        margin-bottom: ms(-1);
+    @if ($weight == extralight) {
+        font-weight: 200;
     }
-    @if $style == h3 {
-        @include source-sans-weight(semi-bold);
-
-        font-size: ms(1);
-        line-height: ms(0);
-
-        margin-top: ms(0);
-        margin-bottom: ms(0);
+    @if ($weight == light) {
+        font-weight: 300;
     }
-    @if $style == h4 {
-        @include source-sans-weight(normal);
-
-        font-size: ms(0);
-        line-height: ms(0);
-
-        margin-top: ms(0);
-        margin-bottom: ms(0);
-
-        text-transform: uppercase;
+    @if ($weight == normal) or ($weight == book) or ($weight == regular) {
+        font-weight: 400;
     }
-    @if $style == h5 {
-        @include source-sans-weight(semi-bold);
-
-        font-size: ms(0);
-        line-height: ms(0);
-
-        margin-top: ms(0);
-        margin-bottom: ms(0);
+    @if ($weight == medium) {
+        font-weight: 500;
     }
-    @if $style == h6 {
-        @include source-sans-weight(semi-bold);
-
-        font-size: ms(0);
-        line-height: ms(0);
-
-        margin-top: ms(0);
-        margin-bottom: ms(0);
+    @if ($weight == semibold) or ($weight == semi-bold) or ($weight == demi) {
+        font-weight: 600;
     }
-    @if $style == small {
-        // font-size: px(13);
-        font-size: 14px;
-        line-height: ms(1);
+    @if ($weight == bold) {
+        font-weight: 700;
     }
-    @if $style == default {
-        @include source-sans-weight(light);
-        @include media($tablet) {
-            @include source-sans-weight(normal);
-        }
-
-        font-family: $source-sans;
-        font-size: ms(0);
-        line-height: ms(2);
-
-        margin-top: ms(0);
-        margin-bottom: ms(0);
+    @if ($weight == extrabold) {
+        font-weight: 800;
     }
+    @if ($weight == black) or ($weight == heavy) {
+        font-weight: 900;
+    }
+}
+
+
+// Predefined Type Styles
+//
+
+@mixin type-style-h1 {
+    @include font-weight(normal);
+    @include media($tablet) {
+        font-size: px(36);
+    }
+
+    font-size: ms(4);
+    line-height: ms(0);
+
+    margin-top: ms(-2);
+    margin-bottom: ms(-2);
+    margin-left: -3px;
+    &:first-child {
+        margin-top: 0;
+    }
+}
+
+@mixin type-style-h2 {
+    @include font-weight(normal);
+
+    font-size: ms(2);
+    line-height: ms(1);
+
+    margin-top: ms(0);
+    margin-bottom: ms(-1);
+}
+
+@mixin type-style-h3 {
+    @include font-weight(semi-bold);
+
+    font-size: ms(1);
+    line-height: ms(0);
+
+    margin-top: ms(0);
+    margin-bottom: ms(0);
+}
+
+@mixin type-style-h4 {
+    @include font-weight(normal);
+
+    font-size: ms(0);
+    line-height: ms(0);
+
+    margin-top: ms(0);
+    margin-bottom: ms(0);
+
+    text-transform: uppercase;
+}
+
+@mixin type-style-h5 {
+    @include font-weight(semi-bold);
+
+    font-size: ms(0);
+    line-height: ms(0);
+
+    margin-top: ms(0);
+    margin-bottom: ms(0);
+}
+
+@mixin type-style-h6 {
+    @include font-weight(semi-bold);
+
+    font-size: ms(0);
+    line-height: ms(0);
+
+    margin-top: ms(0);
+    margin-bottom: ms(0);
+}
+
+@mixin type-style-small {
+    font-size: rem(14);
+    line-height: ms(1);
+}
+
+@mixin type-style-default {
+    @include font-weight(light);
+    @include media($tablet) {
+        @include font-weight(normal);
+    }
+
+    font-family: $default-font;
+    font-size: ms(0);
+    line-height: ms(2);
+
+    margin-top: ms(0);
+    margin-bottom: ms(0);
 }
 
 @mixin line-height($style: default) {

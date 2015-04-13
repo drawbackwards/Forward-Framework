@@ -78,7 +78,7 @@ img{height:auto;-ms-interpolation-mode:bicubic}
 .comment-content img[height],.entry-content img,.entry-summary img,img[class*=align],img[class*=wp-image-],img[class*=attachment-]{height:auto;vertical-align:bottom}
 figure.wp-caption,img.size-full,img.size-large,img.wp-post-image{max-width:100%;height:auto}
 .entry-content .twitter-tweet-rendered{max-width:100%!important}
-.wp-caption-text{font-size:14px;line-height:1.333em;padding-top:1em;padding-bottom:1em;text-align:center}
+.wp-caption-text{font-size:14px;font-size:.875rem;line-height:1.333em;padding-top:1em;padding-bottom:1em;text-align:center}
 .alignleft{display:inline;float:left}
 .alignright{display:inline;float:right}
 .aligncenter,.alignnone{display:block}
@@ -132,7 +132,7 @@ input,input[type=search],textarea{border-radius:0;-webkit-appearance:none}
 .comment-body table,article.page table,article.post table{width:100%}
 .comment-body td,.comment-body th,article.page td,article.page th,article.post td,article.post th{line-height:1.333em;padding:.75019em .75019em .75019em 0;text-align:left;border-bottom:1px solid #e6e6e6}
 .entry-title{font-size:3.15733em;line-height:1em;margin-top:.56278em;margin-left:-3px;margin-bottom:.42219em}
-.entry-footer,.entry-meta{font-size:14px;line-height:1.333em}
+.entry-footer,.entry-meta{font-size:14px;font-size:.875rem;line-height:1.333em}
 .entry-title:first-child{margin-top:0}
 .entry-content,.entry-summary,.page-content{margin-top:1em;margin-bottom:1.77689em}
 .entry-footer>span{margin-right:1em}
@@ -170,23 +170,23 @@ input,input[type=search],textarea{border-radius:0;-webkit-appearance:none}
 .comment-body .comment-content p,.comment-body .comment-meta{margin-bottom:.31672em}
 .comment-body::after{clear:both;display:table}
 .comment-body .comment-meta .comment-author{position:relative;top:0;right:0;bottom:0;left:0;display:inline}
-.comment-body .comment-meta .comment-metadata{font-size:14px;line-height:1.333em;display:inline;margin-left:.56278em}
+.comment-body .comment-meta .comment-metadata{font-size:14px;font-size:.875rem;line-height:1.333em;display:inline;margin-left:.56278em}
 .comment-body .comment-meta .avatar{position:absolute;top:0;right:0;bottom:0;left:-65px;border-radius:50%}
 .comment-body .comment-meta .says{display:none}
-.comment-body .reply{font-size:14px;line-height:1.333em;padding-top:.31672em}
+.comment-body .reply{font-size:14px;font-size:.875rem;line-height:1.333em;padding-top:.31672em}
 .comment-form-comment{margin-bottom:0}
 .comment-list{margin-left:0;padding-left:0;list-style:none}
 .comment-list li.comment{padding-left:0;margin-left:0}
-.form-allowed-tags{font-size:14px;line-height:1.333em;margin-bottom:1em}
+.form-allowed-tags{font-size:14px;font-size:.875rem;line-height:1.333em;margin-bottom:1em}
 .comment-reply-title{font-weight:400;font-size:1.77689em;line-height:1.333em;margin-top:1em;margin-bottom:.75019em}
-.comment-reply-title small{font-size:14px;line-height:1.333em;font-weight:300;float:right;margin-top:10px;text-transform:capitalize}
+.comment-reply-title small{font-size:14px;font-size:.875rem;line-height:1.333em;font-weight:300;float:right;margin-top:10px;text-transform:capitalize}
 .content-area .search-form,.pingback+.comment .comment-body{margin-top:30px;margin-top:1.875rem}
-.comment-notes{font-size:14px;line-height:1.333em;margin-bottom:30px;margin-bottom:1.875rem}
+.comment-notes{font-size:14px;font-size:.875rem;line-height:1.333em;margin-bottom:30px;margin-bottom:1.875rem}
 .comment-respond{margin-bottom:30px;margin-bottom:1.875rem;padding-bottom:30px;padding-bottom:1.875rem;border-bottom:1px solid #e6e6e6}
 .comment-respond .submit{margin-bottom:0}
 .pingback .comment-body{margin-bottom:15px;margin-bottom:.9375rem;padding-bottom:15px;padding-bottom:.9375rem;padding-left:0}
 .site-footer{padding-top:60px;padding-top:3.75rem;padding-bottom:60px;padding-bottom:3.75rem}
-.site-footer .site-info{font-size:14px;line-height:1.333em}
+.site-footer .site-info{font-size:14px;font-size:.875rem;line-height:1.333em}
 .search-form{display:block;margin-bottom:30px;margin-bottom:1.875rem}
 .search-form::after{clear:both;display:table}
 .content-area .search-form label{margin-top:0;margin-bottom:0}
