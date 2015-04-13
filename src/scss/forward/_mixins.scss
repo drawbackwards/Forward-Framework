@@ -49,16 +49,16 @@ $modular-scale-base: 1em;
 // Font weight translations
 // 
 @mixin font-weight($weight: default) {
-    @if ($weight == thin) or ($weight == ultralight) {
+    @if ($weight == thin) or ($weight == ultralight) or ($weight == ultra-light) {
         font-weight: 100;
     }
-    @if ($weight == extralight) {
+    @if ($weight == extralight) or ($weight == extra-light) {
         font-weight: 200;
     }
     @if ($weight == light) {
         font-weight: 300;
     }
-    @if ($weight == normal) or ($weight == book) or ($weight == regular) {
+    @if ($weight == normal) or ($weight == book) or ($weight == regular) or ($weight == default) {
         font-weight: 400;
     }
     @if ($weight == medium) {
@@ -70,7 +70,7 @@ $modular-scale-base: 1em;
     @if ($weight == bold) {
         font-weight: 700;
     }
-    @if ($weight == extrabold) {
+    @if ($weight == extrabold) or ($weight == extrabold) {
         font-weight: 800;
     }
     @if ($weight == black) or ($weight == heavy) {
