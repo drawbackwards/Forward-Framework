@@ -377,9 +377,7 @@ img {
 
 // Remove iOS styling
 // 
-textarea,
-input,
-input[type='search'] {
+@include all-text-inputs {
     border-radius: 0;
 
     -webkit-appearance: none;
@@ -1197,11 +1195,7 @@ label {
     border: 1px solid $hex-border;
 }
 
-input[type='text'],
-input[type='email'],
-input[type='password'],
-input[type='url'],
-textarea {
+@include all-text-inputs {
     @extend %input-defaults;
 
     width: 100%;
@@ -1209,6 +1203,8 @@ textarea {
 
 input[type=search] {
     @extend %input-defaults;
+
+    width: auto;
 }
 
 input[type=submit] {

@@ -12,6 +12,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 pre,textarea{overflow:auto}
 code,pre{background-color:#fdfdfd}
+hr,input[type=search]{box-sizing:content-box}
 embed,iframe,img,object,pre,video{max-width:100%}
 .header-container,a:active,sub,sup{position:relative}
 .comment-list li.comment,.main-navigation .menu li,.no-bullets li{list-style-type:none;list-style-image:none}
@@ -36,7 +37,6 @@ button[disabled],html input[disabled]{cursor:default}
 button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}
 input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0}
 input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{height:auto}
-input[type=search]{-webkit-appearance:textfield;box-sizing:content-box}
 input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}
 optgroup{font-weight:700}
 a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font:inherit;vertical-align:baseline}
@@ -67,7 +67,7 @@ abbr,acronym{cursor:help;border-bottom:1px dotted #eaeaea;border-bottom:1px dott
 ins,mark{padding-right:.2376em;padding-left:.2376em;background-color:#fff9c0}
 sub,sup{line-height:0;height:0;vertical-align:baseline}
 big{font-size:125%}
-hr{box-sizing:content-box;height:1px;background-color:#eaeaea;background-color:rgba(51,51,51,.1)}
+hr{height:1px;background-color:#eaeaea;background-color:rgba(51,51,51,.1)}
 ol,ul{margin:0 0 1em 1.333em}
 ul{list-style:disc}
 ol{list-style:decimal}
@@ -88,7 +88,7 @@ figure.wp-caption,img.size-full,img.size-large,img.wp-post-image{max-width:100%;
 .wp-caption.aligncenter,.wp-caption.alignnone,blockquote.aligncenter,blockquote.alignnone,img.aligncenter,img.alignnone{clear:both;margin-top:1.333em;margin-bottom:1em}
 .wp-caption.aligncenter,.wp-caption.alignleft,.wp-caption.alignnone,.wp-caption.alignright{margin-bottom:.42219em}
 .attachment-post-thumbnail{display:block;margin-bottom:1.77689em}
-input,input[type=search],textarea{border-radius:0;-webkit-appearance:none}
+input[type=color],input[type=date],input[type=datetime],input[type=datetime-local],input[type=email],input[type=month],input[type=password],input[type=tel],input[type=text],input[type=time],input[type=url],input[type=week],input[type=number],input[type=search],textarea{border-radius:0;-webkit-appearance:none}
 .container,.content-container,.footer-container,.header-container{max-width:68em;margin-left:auto;margin-right:auto;padding-right:2.0225em;padding-left:2.0225em}
 .container::after,.content-container::after,.footer-container::after,.header-container::after{clear:both;content:"";display:table}
 .site-header{height:120px;padding-top:30px;padding-top:1.875rem;padding-bottom:30px;padding-bottom:1.875rem}
@@ -197,8 +197,9 @@ input,input[type=search],textarea{border-radius:0;-webkit-appearance:none}
 .search-form label:last-child{width:59.71639%}
 .search-form label input[type=search]{box-sizing:border-box;width:100%}
 .content-area label{font-weight:600;font-size:1em;line-height:1em;margin-top:1em;display:block;margin-bottom:.5em}
-input[type=text],input[type=email],input[type=password],input[type=url],input[type=search],textarea{margin-top:.31672em;margin-bottom:1em;padding:6px 8px;border:1px solid #e6e6e6}
-input[type=text],input[type=email],input[type=password],input[type=url],textarea{width:100%}
+input[type=color],input[type=date],input[type=datetime],input[type=datetime-local],input[type=email],input[type=month],input[type=password],input[type=tel],input[type=text],input[type=time],input[type=url],input[type=week],input[type=number],input[type=search],input[type=search],textarea{margin-top:.31672em;margin-bottom:1em;padding:6px 8px;border:1px solid #e6e6e6}
+input[type=color],input[type=date],input[type=datetime],input[type=datetime-local],input[type=email],input[type=month],input[type=password],input[type=tel],input[type=text],input[type=time],input[type=url],input[type=week],input[type=number],input[type=search],textarea{width:100%}
+input[type=search]{width:auto}
 input[type=submit]{padding:6px 15px;color:#f9f9f9;border:1px solid #3185CB;border-radius:1px;background-color:#3185CB}
 input[type=submit]:hover{background-color:#276aa2}
 input[type=submit]:active{position:relative;top:1px;right:0;bottom:0;left:0}

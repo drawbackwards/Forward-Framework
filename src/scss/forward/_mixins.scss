@@ -157,7 +157,7 @@ $modular-scale-base: 1em;
 }
 
 @mixin type-style-default {
-    @include font-weight(light);
+    @include font-weight($default-font-weight);
     @include media($tablet) {
         @include font-weight(normal);
     }
@@ -168,21 +168,6 @@ $modular-scale-base: 1em;
 
     margin-top: ms(0);
     margin-bottom: ms(0);
-}
-
-@mixin line-height($style: default) {
-    @if $style == tight {
-        line-height: ms(0);
-    }
-    @if $style == default {
-        line-height: ms(1);
-    }
-    @if $style == loose {
-        line-height: ms(2);
-    }
-    @if $style == double {
-        line-height: 2em;
-    }
 }
 
 @mixin no-wrap {
@@ -291,6 +276,30 @@ $modular-scale-base: 1em;
     background-image: url('./img/#{$filename}.#{$ext}');
     background-repeat: no-repeat;
     background-position: $x $y;
+}
+
+@mixin all-text-inputs {
+    input[type='color'],
+    input[type='date'],
+    input[type='datetime'],
+    input[type='datetime-local'],
+    input[type='email'],
+    input[type='month'],
+    input[type='number'],
+    input[type='password'],
+    input[type='search'],
+    input[type='tel'],
+    input[type='text'],
+    input[type='time'],
+    input[type='url'],
+    input[type='week'],
+    textarea {
+        @content;
+    }
+    // Alternate bourbon implementation below (Causes csscomb errors)
+    // #{$all-text-inputs} {
+    //     @content;
+    // }
 }
 
 @mixin zero-all {
