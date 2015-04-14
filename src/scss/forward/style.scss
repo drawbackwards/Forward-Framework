@@ -106,7 +106,7 @@ var,
 samp,
 pre {
     font-family: $mono;
-    font-size: 12px;
+    font-size: rem(12);
     line-height: ms(2);
 
     -webkit-hyphens: none;
@@ -575,7 +575,7 @@ img {
         }
     }
     .toggle {
-        font-size: 14px;
+        font-size: rem(14);
         line-height: $header-bar-height-mobile;
 
         display: block;
@@ -604,16 +604,24 @@ img {
 // 
 .post-navigation {
     @include media($tablet) {
+        margin-top: unit(2);
         margin-bottom: unit(2);
     }
 
+    margin-top: unit(4);
     margin-bottom: unit(4);
 }
 
 // Comment Navigation
 // 
 .comment-navigation {
-    @extend .post-navigation;
+    @include media($tablet) {
+        margin-top: 0;
+        margin-bottom: unit(2);
+    }
+
+    margin-top: unit(-2);
+    margin-bottom: unit(4);
 }
 
 /////////////
@@ -1034,7 +1042,14 @@ article.format-chat {
 }
 
 .comment-list {
+    @include media($tablet) {
+        margin-bottom: unit(1);
+        padding-bottom: unit(0);
+    }
     @include zero-left;
+
+    margin-bottom: unit(2);
+    padding-bottom: unit(1);
 
     list-style: none;
     li.comment {

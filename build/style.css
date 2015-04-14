@@ -12,7 +12,6 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 pre,textarea{overflow:auto}
 code,pre{background-color:#fdfdfd}
-hr,input[type=search]{box-sizing:content-box}
 embed,iframe,img,object,pre,video{max-width:100%}
 .header-container,a:active,sub,sup{position:relative}
 .comment-list li.comment,.main-navigation .menu li,.no-bullets li{list-style-type:none;list-style-image:none}
@@ -37,6 +36,7 @@ button[disabled],html input[disabled]{cursor:default}
 button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}
 input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0}
 input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{height:auto}
+input[type=search]{-webkit-appearance:textfield;box-sizing:content-box}
 input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}
 optgroup{font-weight:700}
 a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font:inherit;vertical-align:baseline}
@@ -57,7 +57,7 @@ cite,dfn,em,i{font-style:italic}
 blockquote{line-height:1.77689em;padding-left:1.333em;border-left:1px solid #e6e6e6}
 >blockquote p:last-child{margin-bottom:0}
 hr,pre{margin-bottom:1.6em}
-code,kbd,pre,samp,tt,var{font-family:Monaco,Consolas,"Lucida Console",monospace;font-size:12px;line-height:1.77689em;-webkit-hyphens:none;-moz-hyphens:none;hyphens:none;-ms-hyphens:none}
+code,kbd,pre,samp,tt,var{font-family:Monaco,Consolas,"Lucida Console",monospace;font-size:12px;font-size:.75rem;line-height:1.77689em;-webkit-hyphens:none;-moz-hyphens:none;hyphens:none;-ms-hyphens:none}
 code{margin-right:.31672em;margin-left:.31672em;padding:.2376em .42219em}
 body code,body pre{border:1px solid #e6e6e6}
 hr,img{border:0}
@@ -67,7 +67,7 @@ abbr,acronym{cursor:help;border-bottom:1px dotted #eaeaea;border-bottom:1px dott
 ins,mark{padding-right:.2376em;padding-left:.2376em;background-color:#fff9c0}
 sub,sup{line-height:0;height:0;vertical-align:baseline}
 big{font-size:125%}
-hr{height:1px;background-color:#eaeaea;background-color:rgba(51,51,51,.1)}
+hr{box-sizing:content-box;height:1px;background-color:#eaeaea;background-color:rgba(51,51,51,.1)}
 ol,ul{margin:0 0 1em 1.333em}
 ul{list-style:disc}
 ol{list-style:decimal}
@@ -88,7 +88,7 @@ figure.wp-caption,img.size-full,img.size-large,img.wp-post-image{max-width:100%;
 .wp-caption.aligncenter,.wp-caption.alignnone,blockquote.aligncenter,blockquote.alignnone,img.aligncenter,img.alignnone{clear:both;margin-top:1.333em;margin-bottom:1em}
 .wp-caption.aligncenter,.wp-caption.alignleft,.wp-caption.alignnone,.wp-caption.alignright{margin-bottom:.42219em}
 .attachment-post-thumbnail{display:block;margin-bottom:1.77689em}
-input[type=color],input[type=date],input[type=datetime],input[type=datetime-local],input[type=email],input[type=month],input[type=password],input[type=tel],input[type=text],input[type=time],input[type=url],input[type=week],input[type=number],input[type=search],textarea{border-radius:0;-webkit-appearance:none}
+input[type=color],input[type=date],input[type=datetime],input[type=datetime-local],input[type=email],input[type=month],input[type=number],input[type=password],input[type=search],input[type=tel],input[type=text],input[type=time],input[type=url],input[type=week],textarea{border-radius:0;-webkit-appearance:none}
 .container,.content-container,.footer-container,.header-container{max-width:68em;margin-left:auto;margin-right:auto;padding-right:2.0225em;padding-left:2.0225em}
 .container::after,.content-container::after,.footer-container::after,.header-container::after{clear:both;content:"";display:table}
 .site-header{height:120px;padding-top:30px;padding-top:1.875rem;padding-bottom:30px;padding-bottom:1.875rem}
@@ -105,11 +105,12 @@ input[type=color],input[type=date],input[type=datetime],input[type=datetime-loca
 .main-navigation .menu .current_page_item,.widget-title{font-weight:600}
 .main-navigation .menu .menu-item:first-child,.main-navigation .menu .page_item:first-child{margin-left:0}
 #mobile-menu-switch{position:fixed;top:0;right:0;display:none}
-#mobile-menu-switch .toggle{font-size:14px;line-height:60px;display:block;width:70px;height:60px;text-align:center;text-transform:uppercase;color:#3185CB}
+#mobile-menu-switch .toggle{font-size:14px;font-size:.875rem;line-height:60px;display:block;width:70px;height:60px;text-align:center;text-transform:uppercase;color:#3185CB}
 .comment-body .comment-meta .comment-metadata a,.comment-body .reply a,.comment-reply-title small a{color:#999}
 #mobile-menu-switch .toggle:active{top:0}
 #mobile-menu-switch .toggle.on{border-left:1px solid #e6e6e6;background-color:#f9f9f9}
-.comment-navigation,.post-navigation{margin-bottom:60px;margin-bottom:3.75rem}
+.post-navigation{margin-top:60px;margin-top:3.75rem;margin-bottom:60px;margin-bottom:3.75rem}
+.comment-navigation{margin-top:-30px;margin-top:-1.875rem;margin-bottom:60px;margin-bottom:3.75rem}
 .content-area{float:left;display:block;margin-right:2.35765%;width:65.88078%;margin-top:60px;margin-top:3.75rem}
 .content-area:last-child{margin-right:0}
 .page-template-page-full-width .content-area{float:left;display:block;margin-right:2.35765%;width:100%;padding-right:0}
@@ -175,7 +176,7 @@ input[type=color],input[type=date],input[type=datetime],input[type=datetime-loca
 .comment-body .comment-meta .says{display:none}
 .comment-body .reply{font-size:14px;font-size:.875rem;line-height:1.333em;padding-top:.31672em}
 .comment-form-comment{margin-bottom:0}
-.comment-list{margin-left:0;padding-left:0;list-style:none}
+.comment-list{margin-left:0;padding-left:0;margin-bottom:30px;margin-bottom:1.875rem;padding-bottom:15px;padding-bottom:.9375rem;list-style:none}
 .comment-list li.comment{padding-left:0;margin-left:0}
 .form-allowed-tags{font-size:14px;font-size:.875rem;line-height:1.333em;margin-bottom:1em}
 .comment-reply-title{font-weight:400;font-size:1.77689em;line-height:1.333em;margin-top:1em;margin-bottom:.75019em}
@@ -197,8 +198,8 @@ input[type=color],input[type=date],input[type=datetime],input[type=datetime-loca
 .search-form label:last-child{width:59.71639%}
 .search-form label input[type=search]{box-sizing:border-box;width:100%}
 .content-area label{font-weight:600;font-size:1em;line-height:1em;margin-top:1em;display:block;margin-bottom:.5em}
-input[type=color],input[type=date],input[type=datetime],input[type=datetime-local],input[type=email],input[type=month],input[type=password],input[type=tel],input[type=text],input[type=time],input[type=url],input[type=week],input[type=number],input[type=search],input[type=search],textarea{margin-top:.31672em;margin-bottom:1em;padding:6px 8px;border:1px solid #e6e6e6}
-input[type=color],input[type=date],input[type=datetime],input[type=datetime-local],input[type=email],input[type=month],input[type=password],input[type=tel],input[type=text],input[type=time],input[type=url],input[type=week],input[type=number],input[type=search],textarea{width:100%}
+input[type=color],input[type=date],input[type=datetime],input[type=datetime-local],input[type=email],input[type=month],input[type=number],input[type=password],input[type=search],input[type=tel],input[type=text],input[type=time],input[type=url],input[type=week],input[type=search],textarea{margin-top:.31672em;margin-bottom:1em;padding:6px 8px;border:1px solid #e6e6e6}
+input[type=color],input[type=date],input[type=datetime],input[type=datetime-local],input[type=email],input[type=month],input[type=number],input[type=password],input[type=search],input[type=tel],input[type=text],input[type=time],input[type=url],input[type=week],textarea{width:100%}
 input[type=search]{width:auto}
 input[type=submit]{padding:6px 15px;color:#f9f9f9;border:1px solid #3185CB;border-radius:1px;background-color:#3185CB}
 input[type=submit]:hover{background-color:#276aa2}
@@ -216,7 +217,6 @@ input[type=submit]:active{position:relative;top:1px;right:0;bottom:0;left:0}
 @media screen and (max-width:768px){.comment-body h1,.entry-title,.error404 .page-title,.site-logo,article.page h1,article.post h1{font-size:px(36)}
 body,button,input,select,textarea{font-weight:400}
 body{margin-top:60px}
-.content-area,.widget-area{float:left;margin-top:1.875rem}
 .container,.content-container,.footer-container,.header-container{padding-right:1.01125em;padding-left:1.01125em}
 .site-header{position:fixed;top:0;left:0;z-index:1;width:100%;height:60px;padding-top:0;padding-bottom:0;background-color:#fff}
 .admin-bar .site-header{top:46px}
@@ -229,13 +229,16 @@ body{margin-top:60px}
 .main-navigation a{color:#595959}
 .main-navigation .menu{padding-top:.9375rem;padding-bottom:.9375rem}
 .main-navigation .menu .menu-item,.main-navigation .menu .page_item{float:none;margin-left:0;padding-top:.46875rem;padding-bottom:.46875rem}
+.content-area,.widget-area{margin-top:1.875rem;float:left}
 .admin-bar #mobile-menu-switch{top:46px}
-.comment-navigation,.post-navigation{margin-bottom:1.875rem}
+.post-navigation{margin-top:1.875rem;margin-bottom:1.875rem}
+.comment-navigation{margin-top:0;margin-bottom:1.875rem}
 .content-area{margin-right:3.57866%;width:100%}
 .content-area:last-child{margin-right:0}
 .widget-area{margin-right:3.57866%;width:100%}
 .widget-area:last-child{margin-right:0}
 .comment-body,article.page,article.post{margin-bottom:1.875rem;padding-bottom:1.875rem}
+.comment-list{margin-bottom:.9375rem;padding-bottom:0rem}
 .site-footer{padding-top:.9375rem;padding-bottom:.9375rem}}
 @media screen and (max-width:480px){.comment-body,.comment-respond{margin-bottom:.9375rem;padding-bottom:.9375rem}
 .alignleft,.alignright{display:block;float:none}
