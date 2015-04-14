@@ -115,7 +115,7 @@ input[type=color],input[type=date],input[type=datetime],input[type=datetime-loca
 .content-area:last-child{margin-right:0}
 .page-template-page-full-width .content-area{float:left;display:block;margin-right:2.35765%;width:100%;padding-right:0}
 .page-template-page-full-width .content-area:last-child{margin-right:0}
-.widget-area{float:left;display:block;margin-right:2.35765%;width:31.76157%;margin-top:60px;margin-top:3.75rem}
+.widget-area{float:left;display:block;margin-right:2.35765%;width:31.76157%;margin-top:60px;margin-top:3.75rem;margin-bottom:60px;margin-bottom:3.75rem}
 .widget-area:last-child{margin-right:0}
 .screen-reader-text{display:none}
 .widget-title{font-size:1em;line-height:1em;margin-top:1em;margin-bottom:1em}
@@ -235,7 +235,7 @@ body{margin-top:60px}
 .comment-navigation{margin-top:0;margin-bottom:1.875rem}
 .content-area{margin-right:3.57866%;width:100%}
 .content-area:last-child{margin-right:0}
-.widget-area{margin-right:3.57866%;width:100%}
+.widget-area{margin-right:3.57866%;width:100%;margin-bottom:1.875rem}
 .widget-area:last-child{margin-right:0}
 .comment-body,article.page,article.post{margin-bottom:1.875rem;padding-bottom:1.875rem}
 .comment-list{margin-bottom:.9375rem;padding-bottom:0rem}

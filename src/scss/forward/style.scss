@@ -661,9 +661,11 @@ img {
     // @include transition (margin $timing-default $easing-default);
     @include media($tablet) {
         margin-top: unit(2);
+        margin-bottom: unit(2);
     }
 
     margin-top: unit(4);
+    margin-bottom: unit(4);
 }
 .screen-reader-text {
     display: none;
