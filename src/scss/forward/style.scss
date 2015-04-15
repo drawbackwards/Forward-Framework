@@ -553,7 +553,8 @@ img {
                 }
             }
         }
-        .current_page_item {
+        .current_page_item,
+        .current_page_parent {
             @include font-weight(semi-bold);
         }
     }
@@ -637,9 +638,11 @@ img {
     }
     @include media($tablet) {
         margin-top: unit(2);
+        margin-bottom: unit(2);
     }
 
     margin-top: unit(4);
+    margin-bottom: unit(4);
 }
 
 // No Sidebar on Full Width
@@ -796,13 +799,16 @@ article.page,
     @include row;
 
     line-height: ms(1);
-    .nav-previous {
-        @include span-columns(6);
-    }
     .nav-next {
-        @include span-columns(6);
+        @include span-columns(12);
 
         text-align: right;
+    }
+    .nav-previous {
+        @include span-columns(6);
+        & + .nav-next {
+            @include span-columns(6);
+        }
     }
 }
 
@@ -1075,7 +1081,8 @@ article.format-chat {
     }
 }
 
-.comment-reply-title {
+.comment-reply-title,
+.comments-title {
     @include type-style-h2;
     small {
         @include type-style-small;

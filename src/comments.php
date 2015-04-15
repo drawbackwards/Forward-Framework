@@ -30,14 +30,6 @@ if ( post_password_required() ) {
 			?>
 		</h2>
 
-		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
-		<nav id="comment-nav-above" class="comment-navigation" role="navigation">
-			<h1 class="screen-reader-text"><?php _e( 'Comment navigation', 'forward' ); ?></h1>
-			<div class="nav-previous"><?php previous_comments_link( __( 'Older Comments', 'forward' ) ); ?></div>
-			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments', 'forward' ) ); ?></div>
-		</nav><!-- #comment-nav-above -->
-		<?php endif; // check for comment navigation ?>
-
 		<ol class="comment-list">
 			<?php
 				wp_list_comments( array(
