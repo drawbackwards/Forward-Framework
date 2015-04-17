@@ -22,6 +22,22 @@ function forward_featured_image() {
 }
 endif;
 
+if ( ! function_exists( 'forward_social_links' ) ) :
+/**
+ * Show social links on post using the permalink.
+ */
+function forward_social_links() {
+
+	?>
+	<ul class="social-sharing" id="social-sharing">
+	  <li class="facebook"><a href="http://www.facebook.com/share.php?u=<?= wp_get_shortlink() ?>&title=<?= get_the_title() ?>" data-title="<?= get_the_title() ?>" title="Share on Facebook">Share on Facebook</a></li>
+	  <li class="twitter"><a href="http://twitter.com/home?status=<?= get_the_title() ?>+<?= wp_get_shortlink() ?>" data-title="<?= get_the_title() ?>" title="Share on Twitter">Share on Twitter</a></li>
+	  <li class="linkedin"><a href="http://www.linkedin.com/shareArticle?mini=true&url=<?= wp_get_shortlink() ?>&title=<?= get_the_title() ?>" data-title="<?= get_the_title() ?>" title="Share on LinkedIn">Share on LinkedIn</a></li>
+	</ul>
+	<?php
+}
+endif;
+
 if ( ! function_exists( 'forward_posts_navigation' ) ) :
 /**
  * Display navigation to next/previous set of posts when applicable.

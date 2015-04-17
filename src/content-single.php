@@ -27,7 +27,12 @@
 		?>
 	</div><!-- .entry-content -->
 
+	<div class="entry-social">
+		<?php forward_social_links(); ?>
+	</div>
+
 	<footer class="entry-footer">
 		<?php forward_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
+
 </article><!-- #post-## -->

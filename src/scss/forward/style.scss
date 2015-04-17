@@ -883,12 +883,33 @@ article.page,
         }
     }
 }
+
 // Theme-Check requirements
 .gallery-caption {
     display: block;
 }
 .bypostauthor {
     display: block;
+}
+
+// Social sharing links
+// 
+.social-sharing {
+    @include row;
+    @include zero-left;
+    @include no-bullets;
+
+    margin-bottom: unit(2);
+    li {
+        @include type-style-small;
+
+        float: left;
+
+        margin-right: 1em;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
 }
 
 //////////////////
