@@ -1298,11 +1298,11 @@ input[type=submit] {
 }
 .gform_footer {
 }
-.gform_button {
+.gform_button.button {
     margin-top: 0;
 }
-.gform_validation_container {
-    display: none !important;
+.gform_validation_container.gfield {
+    display: none;
 }
 .validation_error {
     margin-bottom: unit(2);

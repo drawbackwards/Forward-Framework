@@ -213,11 +213,11 @@ input[type=submit]:hover{background-color:#276aa2}
 input[type=submit]:active{position:relative;top:1px;right:0;bottom:0;left:0}
 .post-password-form label{margin-top:1.77689em}
 .post-password-form input[type=password]{margin-top:.75019em}
-.gform_button,.post-password-form input[type=submit]{margin-top:0}
+.gform_button.button,.post-password-form input[type=submit]{margin-top:0}
 .gform_fields{list-style:none;margin-left:0;padding-left:0}
 .gform_fields li{padding-left:0;margin-left:0}
 .gfield_description{font-size:14px;font-size:.875rem;line-height:1.333em;margin-bottom:1em}
-.gform_validation_container{display:none!important}
+.gform_validation_container.gfield{display:none}
 .validation_error{margin-bottom:30px;margin-bottom:1.875rem;color:#B2432C}
 .gfield_error input[type=color],.gfield_error input[type=date],.gfield_error input[type=datetime],.gfield_error input[type=datetime-local],.gfield_error input[type=email],.gfield_error input[type=month],.gfield_error input[type=number],.gfield_error input[type=password],.gfield_error input[type=search],.gfield_error input[type=tel],.gfield_error input[type=text],.gfield_error input[type=time],.gfield_error input[type=url],.gfield_error input[type=week],.gfield_error textarea{border-color:#B2432C}
 .gfield_error .gfield_description{color:#B2432C}
