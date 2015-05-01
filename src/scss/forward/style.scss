@@ -1281,6 +1281,43 @@ input[type=submit] {
     }
 }
 
+// Gravity forms
+// 
+.gform_fields {
+    @include no-bullets;
+    @include zero-left;
+}
+.gfield {
+}
+.ginput_container {
+}
+.gfield_description {
+    @include type-style-small;
+
+    margin-bottom: ms(0);
+}
+.gform_footer {
+}
+.gform_button {
+    margin-top: 0;
+}
+.gform_validation_container {
+    display: none;
+}
+.validation_error {
+    margin-bottom: unit(2);
+
+    color: $hex-red;
+}
+.gfield_error {
+    @include all-text-inputs {
+        border-color: $hex-red;
+    }
+    .gfield_description {
+        color: $hex-red;
+    }
+}
+
 
 /////////
 // 404 //
