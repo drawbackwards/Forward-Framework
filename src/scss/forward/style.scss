@@ -1302,7 +1302,7 @@ input[type=submit] {
     margin-top: 0;
 }
 .gform_validation_container {
-    display: none;
+    display: none !important;
 }
 .validation_error {
     margin-bottom: unit(2);
