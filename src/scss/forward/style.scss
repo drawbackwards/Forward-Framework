@@ -650,6 +650,11 @@ img {
             }
         }
     }
+    .children {
+        // Required if primary menu is not set.
+        // 
+        // @extend .sub-menu;
+    }
 }
 
 // Mobile Menu Switch
