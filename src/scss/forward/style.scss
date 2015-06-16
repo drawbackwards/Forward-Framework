@@ -49,7 +49,7 @@ h3,
 h4,
 h5,
 h6 {
-    @include font-weight(semi-bold);
+    @include font-weight(normal);
 
     clear: both;
 }
@@ -68,7 +68,7 @@ p {
 
 b,
 strong {
-    @include font-weight(semi-bold);
+    @include font-weight(normal);
 }
 
 dfn,
@@ -225,7 +225,7 @@ dl {
 }
 
 dt {
-    @include font-weight(semi-bold);
+    @include font-weight(normal);
 }
 
 dd {
@@ -365,7 +365,7 @@ img {
 .attachment-post-thumbnail {
     display: block;
 
-    margin-bottom: ms(2);
+    margin-bottom: ms(3);
 }
 
 
@@ -455,10 +455,10 @@ img {
     @include position(absolute, 0px null null $gutter);
 }
 .site-title {
+    @include type-style-h1;
+    @include font-weight(light);
 }
 .site-logo {
-    @include type-style-h1;
-    @include font-weight(semi-bold);
     // @include transition (font-size $timing-default $easing-default);
     @include media($tablet) {
         line-height: $header-bar-height-mobile;
@@ -545,7 +545,7 @@ img {
                 padding-bottom: rem(5);
                 // border: 1px solid red;
             }
-            @include font-weight(normal);
+            @include font-weight(light);
             @include position(relative);
 
             float: left;
@@ -590,6 +590,7 @@ img {
         @include media($desktop) {
             @include position(absolute, 38px null null -11px);
             @include zero-left;
+
             display: none;
 
             min-width: 150px;
@@ -750,6 +751,13 @@ img {
     padding-right: 0;
 }
 
+// Remove margin on single posts
+// 
+.single .content-area,
+.page .content-area {
+    margin-bottom: 0;
+}
+
 
 /////////////
 // Sidebar //
@@ -791,10 +799,27 @@ img {
         border-bottom: none;
     }
     ul {
+        @include no-bullets;
+
+        margin-left: 0;
         li {
             &:last-child {
             }
         }
+    }
+}
+
+// Removes border & spacing for top widget position
+// 
+.widget_search {
+    @include zero-bottom;
+
+    border-bottom: none;
+    .search-submit {
+        margin-bottom: 0;
+    }
+    .search-form {
+        margin-bottom: ms(0);
     }
 }
 
@@ -851,15 +876,19 @@ article.page,
     }
 }
 
+.page article.page {
+    padding-bottom: 0;
+    // margin-bottom: 0;
+
+    border: none;
+}
+
 .entry-title {
     @include type-style-h1;
     // Long title fix (will affect all titles).
     // @include word-wrap;
 
     margin-bottom: ms(-3);
-    a {
-        @include link-hover-none;
-    }
 }
 .entry-meta {
     @include type-style-small;
@@ -1231,8 +1260,7 @@ article.format-chat {
 
     margin-bottom: unit(2);
     padding-bottom: unit(2);
-
-    border-bottom: 1px solid $hex-border;
+    // border-bottom: 1px solid $hex-border;
     .submit {
         @include media($mobile) {
             width: 100%;
@@ -1266,12 +1294,14 @@ article.format-chat {
 
 .site-footer {
     @include media($tablet) {
-        padding-top: unit(1);
-        padding-bottom: unit(1);
+        padding-top: unit(2);
+        padding-bottom: unit(2);
     }
 
     padding-top: unit(4);
     padding-bottom: unit(4);
+
+    border-top: 1px solid $hex-border;
     .site-info {
         @include type-style-small;
     }
@@ -1304,6 +1334,8 @@ article.format-chat {
         @include span-columns(1.5 of 4, block-collapse);
 
         margin-top: 0;
+        padding-right: 0;
+        padding-left: 0;
     }
     label {
         @include span-columns(2.5 of 4, block-collapse);
@@ -1311,6 +1343,14 @@ article.format-chat {
             box-sizing: border-box;
             width: 100%;
         }
+    }
+}
+
+.search-results {
+    article:last-child {
+        border: none;
+        padding-bottom: 0;
+        margin-bottom: unit(2);
     }
 }
 
@@ -1334,7 +1374,12 @@ label {
     margin-bottom: ms(0);
     padding: 6px 8px;
 
-    border: 1px solid $hex-border;
+    border: 1px solid shade($hex-border, 10%);
+    &:hover,
+    &:focus {
+        border-color: shade($hex-border, 30%);
+        outline: none;
+    }
 }
 
 @include all-text-inputs {
@@ -1347,17 +1392,24 @@ input[type=search] {
     @extend %input-defaults;
 
     width: auto;
+
+    border-right: none;
 }
 
 input[type=submit] {
-    padding: 6px 15px;
+    @include font-weight(normal);
+    @include media($mobile) {
+        width: 100%;
+    }
 
-    color: $hex-white;
+    padding: 6px ms(2);
+
+    color: $hex-primary;
     border: 1px solid $hex-primary;
-    border-radius: 1px;
-    background-color: $hex-primary;
+    background-color: transparent;
     &:hover {
-        background-color: $hex-primary-hover;
+        color: $hex-white;
+        background-color: $hex-primary;
     }
     &:active {
         @include position(relative, 1px 0 0 0 );

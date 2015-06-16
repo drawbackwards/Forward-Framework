@@ -31,21 +31,6 @@ $modular-scale-base: 1em;
     @return modular-scale($value);
 }
 
-
-// Source Sans Pro font weights
-// 
-@mixin font-weight($weight: light) {
-    @if $weight == light {
-        font-weight: 300;
-    }
-    @if $weight == normal {
-        font-weight: 400;
-    }
-    @if $weight == semi-bold {
-        font-weight: 600;
-    }
-}
-
 // Font weight translations
 // 
 @mixin font-weight($weight: default) {
@@ -83,9 +68,9 @@ $modular-scale-base: 1em;
 //
 
 @mixin type-style-h1 {
-    @include font-weight(normal);
+    @include font-weight(light);
     @include media($tablet) {
-        font-size: px(36);
+        font-size: ms(3);
     }
 
     font-size: ms(4);
@@ -93,14 +78,16 @@ $modular-scale-base: 1em;
 
     margin-top: ms(-2);
     margin-bottom: ms(-2);
-
     &:first-child {
         margin-top: 0;
+    }
+    a {
+        @include link-hover-none;
     }
 }
 
 @mixin type-style-h2 {
-    @include font-weight(normal);
+    @include font-weight(light);
 
     font-size: ms(2);
     line-height: ms(1);
@@ -110,7 +97,7 @@ $modular-scale-base: 1em;
 }
 
 @mixin type-style-h3 {
-    @include font-weight(semi-bold);
+    @include font-weight(normal);
 
     font-size: ms(1);
     line-height: ms(0);
@@ -132,7 +119,7 @@ $modular-scale-base: 1em;
 }
 
 @mixin type-style-h5 {
-    @include font-weight(semi-bold);
+    @include font-weight(normal);
 
     font-size: ms(0);
     line-height: ms(0);
@@ -142,7 +129,7 @@ $modular-scale-base: 1em;
 }
 
 @mixin type-style-h6 {
-    @include font-weight(semi-bold);
+    @include font-weight(normal);
 
     font-size: ms(0);
     line-height: ms(0);
@@ -198,7 +185,7 @@ $modular-scale-base: 1em;
         padding-right: 0;
     }
 
-    padding-right: 2.35765%;
+    padding-right: 2.35765% * 2;
 }
 
 @mixin link-colors($normal, $hover: false, $active: false, $visited: false, $focus: false) {

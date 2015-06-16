@@ -42,7 +42,7 @@ $hex-primary-hover: shade($hex-primary, 20%);
 $hex-secondary: $hex-red;
 $hex-secondary-hover: shade($hex-secondary, 20%);
 
-$hex-border: #e6e6e6;
+$hex-border: shade(#e6e6e6, 5%);
 $hex-border-hover: shade($hex-border, 20%);
 
 $hex-footer: tint(#000, 50%);
