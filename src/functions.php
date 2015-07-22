@@ -5,6 +5,19 @@
  * @package Forward
  */
 
+function google_fonts() {
+	$query_args = array(
+		'family' => 'Source+Sans+Pro:200,300,400,600',
+		// 'family' => 'Open+Sans:400,700|Oswald:700',
+		// 'subset' => 'latin,latin-ext',
+	);
+
+	wp_register_style( 'source-sans', add_query_arg( $query_args, "//fonts.googleapis.com/css" ), array(), null );
+
+	wp_enqueue_style('source-sans');
+}
+add_action('wp_enqueue_scripts', 'google_fonts');
+
 /**
  * Set the content width based on the theme's design and stylesheet.
  */
