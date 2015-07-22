@@ -5,11 +5,11 @@
 // Project Variables
 // 
 var project     = 'forward',
-    build       = './build/',
-    dist        = './dist/'+project+'/',
-    source      = './src/' // 'source' instead of 'src' to avoid confusion with gulp.src,
+    build       = 'build/',
+    dist        = 'dist/'+project+'/',
+    source      = 'src/'
     lang        = 'languages/',
-    bower       = './bower_components/',
+    bower       = 'bower_components/',
     url         = 'forward.local'
 ;
 
