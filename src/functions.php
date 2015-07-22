@@ -5,6 +5,12 @@
  * @package Forward
  */
 
+
+if ( ! function_exists( 'google_fonts' ) ) :
+/**
+ * Adds google font support.
+ * 
+ */
 function google_fonts() {
 	$query_args = array(
 		'family' => 'Source+Sans+Pro:200,300,400,600',
@@ -16,6 +22,7 @@ function google_fonts() {
 
 	wp_enqueue_style('source-sans');
 }
+endif; // google_fonts
 add_action('wp_enqueue_scripts', 'google_fonts');
 
 /**
@@ -24,6 +31,7 @@ add_action('wp_enqueue_scripts', 'google_fonts');
 if ( ! isset( $content_width ) ) {
 	$content_width = 640; /* pixels */
 }
+
 
 if ( ! function_exists( 'forward_setup' ) ) :
 /**
@@ -91,6 +99,8 @@ function forward_setup() {
 endif; // forward_setup
 add_action( 'after_setup_theme', 'forward_setup' );
 
+
+if ( ! function_exists( 'forward_widgets_init' ) ) :
 /**
  * Register widget area.
  *
@@ -107,8 +117,10 @@ function forward_widgets_init() {
 		'after_title'   => '</h1>',
 	) );
 }
+endif; // forward_widgets_init
 add_action( 'widgets_init', 'forward_widgets_init' );
 
+if ( ! function_exists( 'forward_scripts' ) ) :
 /**
  * Enqueue scripts and styles.
  */
@@ -142,7 +154,9 @@ function forward_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
+endif; // forward_scripts
 add_action( 'wp_enqueue_scripts', 'forward_scripts' );
+
 
 /**
  * Implement the Custom Header feature.
