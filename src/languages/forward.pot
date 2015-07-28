@@ -1,10 +1,10 @@
-# Copyright (C) 2015 Drawbackwards
-# This file is distributed under the same license as the Forward package.
+# Copyright (C) 2015 Design.org
+# This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Forward 1.0\n"
+"Project-Id-Version: Forward 1.0.1\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/build\n"
-"POT-Creation-Date: 2015-03-27 20:20:58+00:00\n"
+"POT-Creation-Date: 2015-07-27 23:58:08+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -13,22 +13,11 @@ msgstr ""
 "Language-Team: LANGUAGE <LL@li.org>\n"
 
 #: 404.php:15
-msgid "Oops! That page can&rsquo;t be found."
+msgid "404"
 msgstr ""
 
 #: 404.php:19
-msgid ""
-"It looks like nothing was found at this location. Maybe try one of the links "
-"below or a search?"
-msgstr ""
-
-#: 404.php:27
-msgid "Most Used Categories"
-msgstr ""
-
-#. translators: %1$s: smiley
-#: 404.php:44
-msgid "Try looking in the monthly archives. %1$s"
+msgid "The page requested could not be found."
 msgstr ""
 
 #: comments.php:28
@@ -38,19 +27,19 @@ msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] ""
 msgstr[1] ""
 
-#: comments.php:35 comments.php:53
+#: comments.php:45
 msgid "Comment navigation"
 msgstr ""
 
-#: comments.php:36 comments.php:54
+#: comments.php:46
 msgid "Older Comments"
 msgstr ""
 
-#: comments.php:37 comments.php:55
+#: comments.php:47
 msgid "Newer Comments"
 msgstr ""
 
-#: comments.php:65
+#: comments.php:57
 msgid "Comments are closed."
 msgstr ""
 
@@ -75,28 +64,28 @@ msgid ""
 "searching can help."
 msgstr ""
 
-#: content-page.php:18 content-single.php:20 content.php:29
+#: content-page.php:21 content-single.php:23 content.php:32
 msgid "Pages:"
 msgstr ""
 
-#: content-page.php:26 inc/template-tags.php:124
+#: content-page.php:29 inc/template-tags.php:157
 msgid "Edit"
 msgstr ""
 
 #. translators: %s: Name of current post
-#: content.php:22
+#: content.php:25
 msgid "Continue Reading %s"
 msgstr ""
 
-#: footer.php:16
-msgid "Site by %1$s"
+#: footer.php:17
+msgid "Forward by %1$s &mdash; A %2$s Project."
 msgstr ""
 
-#: functions.php:53
+#: functions.php:77
 msgid "Primary Menu"
 msgstr ""
 
-#: functions.php:88
+#: functions.php:114
 msgid "Sidebar"
 msgstr ""
 
@@ -108,151 +97,151 @@ msgstr ""
 msgid "Page %s"
 msgstr ""
 
-#: inc/template-tags.php:23
+#: inc/template-tags.php:54
 msgid "Posts navigation"
 msgstr ""
 
-#: inc/template-tags.php:27
+#: inc/template-tags.php:58
 msgid "Older Posts"
 msgstr ""
 
-#: inc/template-tags.php:31
+#: inc/template-tags.php:62
 msgid "Newer Posts"
 msgstr ""
 
-#: inc/template-tags.php:54
+#: inc/template-tags.php:85
 msgid "Post navigation"
 msgstr ""
 
-#: inc/template-tags.php:84
+#: inc/template-tags.php:117
 msgctxt "post date"
 msgid "Posted on %s"
 msgstr ""
 
-#: inc/template-tags.php:89
+#: inc/template-tags.php:122
 msgctxt "post author"
 msgid "by %s"
 msgstr ""
 
 #. translators: used between list items, there is a space after the comma
-#: inc/template-tags.php:106 inc/template-tags.php:112
+#: inc/template-tags.php:139 inc/template-tags.php:145
 msgid ", "
 msgstr ""
 
-#: inc/template-tags.php:108
+#: inc/template-tags.php:141
 msgid "Posted in %1$s"
 msgstr ""
 
-#: inc/template-tags.php:114
+#: inc/template-tags.php:147
 msgid "Tagged %1$s"
 msgstr ""
 
-#: inc/template-tags.php:120
+#: inc/template-tags.php:153
 msgid "Leave a comment"
 msgstr ""
 
-#: inc/template-tags.php:120
+#: inc/template-tags.php:153
 msgid "1 Comment"
 msgstr ""
 
-#: inc/template-tags.php:120
+#: inc/template-tags.php:153
 msgid "% Comments"
 msgstr ""
 
-#: inc/template-tags.php:141
+#: inc/template-tags.php:174
 msgid "Category: %s"
 msgstr ""
 
-#: inc/template-tags.php:143
+#: inc/template-tags.php:176
 msgid "Tag: %s"
 msgstr ""
 
-#: inc/template-tags.php:145
+#: inc/template-tags.php:178
 msgid "Author: %s"
 msgstr ""
 
-#: inc/template-tags.php:147
+#: inc/template-tags.php:180
 msgid "Year: %s"
 msgstr ""
 
-#: inc/template-tags.php:147
+#: inc/template-tags.php:180
 msgctxt "yearly archives date format"
 msgid "Y"
 msgstr ""
 
-#: inc/template-tags.php:149
+#: inc/template-tags.php:182
 msgid "Month: %s"
 msgstr ""
 
-#: inc/template-tags.php:149
+#: inc/template-tags.php:182
 msgctxt "monthly archives date format"
 msgid "F Y"
 msgstr ""
 
-#: inc/template-tags.php:151
+#: inc/template-tags.php:184
 msgid "Day: %s"
 msgstr ""
 
-#: inc/template-tags.php:151
+#: inc/template-tags.php:184
 msgctxt "daily archives date format"
 msgid "F j, Y"
 msgstr ""
 
-#: inc/template-tags.php:154
+#: inc/template-tags.php:187
 msgctxt "post format archive title"
 msgid "Asides"
 msgstr ""
 
-#: inc/template-tags.php:156
+#: inc/template-tags.php:189
 msgctxt "post format archive title"
 msgid "Galleries"
 msgstr ""
 
-#: inc/template-tags.php:158
+#: inc/template-tags.php:191
 msgctxt "post format archive title"
 msgid "Images"
 msgstr ""
 
-#: inc/template-tags.php:160
+#: inc/template-tags.php:193
 msgctxt "post format archive title"
 msgid "Videos"
 msgstr ""
 
-#: inc/template-tags.php:162
+#: inc/template-tags.php:195
 msgctxt "post format archive title"
 msgid "Quotes"
 msgstr ""
 
-#: inc/template-tags.php:164
+#: inc/template-tags.php:197
 msgctxt "post format archive title"
 msgid "Links"
 msgstr ""
 
-#: inc/template-tags.php:166
+#: inc/template-tags.php:199
 msgctxt "post format archive title"
 msgid "Statuses"
 msgstr ""
 
-#: inc/template-tags.php:168
+#: inc/template-tags.php:201
 msgctxt "post format archive title"
 msgid "Audio"
 msgstr ""
 
-#: inc/template-tags.php:170
+#: inc/template-tags.php:203
 msgctxt "post format archive title"
 msgid "Chats"
 msgstr ""
 
-#: inc/template-tags.php:173
+#: inc/template-tags.php:206
 msgid "Archives: %s"
 msgstr ""
 
 #. translators: 1: Taxonomy singular name, 2: Current taxonomy term
-#: inc/template-tags.php:177
+#: inc/template-tags.php:210
 msgid "%1$s: %2$s"
 msgstr ""
 
-#: inc/template-tags.php:179
+#: inc/template-tags.php:212
 msgid "Archives"
 msgstr ""
 
@@ -264,19 +253,23 @@ msgstr ""
 msgid "Forward"
 msgstr ""
 
-#. #-#-#-#-#  forward.pot (Forward 1.0)  #-#-#-#-#
 #. Theme URI of the plugin/theme
-#. #-#-#-#-#  forward.pot (Forward 1.0)  #-#-#-#-#
-#. Author URI of the plugin/theme
-msgid "http://drawbackwards.com"
+msgid "http://design.org/wordpress-starter-theme/"
 msgstr ""
 
 #. Description of the plugin/theme
-msgid "Forward by Drawbackwards"
+msgid ""
+"A modern WordPress starter theme built for designers. Many themes try to do "
+"everything, Forward doesn't. Meet a lightweight, WordPress starter theme "
+"that gives you a quality jump-start on your next project."
 msgstr ""
 
 #. Author of the plugin/theme
-msgid "Drawbackwards"
+msgid "Design.org"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://design.org"
 msgstr ""
 
 #. Template Name of the plugin/theme
