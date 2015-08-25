@@ -1,8 +1,8 @@
 {
   "name": "forward",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "authors": [
-    "Ben Leivian <ben@drawbackwards.com>"
+    "Drawbackwards"
   ],
   "moduleType": [
     "node"
@@ -21,7 +21,10 @@
     "bourbon": "~4.2.2",
     "neat": "~1.7.2",
     "normalize.css": "~3.0.3",
-    "meyer-reset": "*"
+    "meyer-reset": "*",
+    "waypoints": "~3.1.1",
+    "velocity": "~1.2.2",
+    "modernizr": "~2.8.3"
   },
   "description": "Components for the Forward Framework."
 }

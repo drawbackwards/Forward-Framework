@@ -32,7 +32,7 @@ var gulp        = require('gulp'),
 // Process Stylesheets
 //
 gulp.task('styles', function() {
-  return sass(source + 'scss/forward/style.scss', {
+  return sass(source + 'scss/style.scss', {
     style: 'expanded',
     loadPath: bower
   })
@@ -51,7 +51,7 @@ gulp.task('styles', function() {
 
 // Scripts; broken out into different tasks to create specific bundles which are then compressed in place
 //
-gulp.task('scripts', ['scripts-lint', 'scripts-core', 'scripts-extras'], function(){
+gulp.task('scripts', ['scripts-lint', 'scripts-core', 'scripts-plugins'], function(){
   return gulp.src([build+'js/**/*.js', '!'+build+'js/**/*.min.js']) // Avoid recursive min.min.min.js
   .pipe(plugins.rename({suffix: '.min'}))
   .pipe(plugins.uglify())
@@ -77,14 +77,19 @@ gulp.task('scripts-core', function() {
   .pipe(gulp.dest(build+'js/'));
 });
 
-// An example task for extra scripts that aren't loaded on every page
+// Combine plugin scripts
 //
-gulp.task('scripts-extras', function() {
+gulp.task('scripts-plugins', function() {
   return gulp.src([
     // You can also add dependencies from Bower components e.g.: bower+'dependency/dependency.js',
-    source+'js/extras.js'
+    bower+'modernizr/modernizr.js',
+    // Enable waypoints & velocity scripts below
+    // bower+'waypoints/lib/jquery.waypoints.min.js',
+    // bower+'waypoints/lib/shortcuts/inview.min.js', // Optional
+    // bower+'velocity/velocity.min.js',
+    // bower+'velocity/velocity.ui.min.js'
   ])
-  .pipe(plugins.concat('extras.js'))
+  .pipe(plugins.concat('plugins.js'))
   .pipe(gulp.dest(build+'js/'));
 });
 

@@ -16,8 +16,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 // Import default configuration.
 // Use '@import config-child' when building child themes.
-// 
-@import 'config';
+//
+@import 'config-child';
 
 body,
 button,
@@ -192,7 +192,7 @@ big {
 }
 
 // Lists
-// 
+//
 
 hr {
     height: 1px;
@@ -279,7 +279,7 @@ figure.wp-caption {
 }
 
 // Image caption
-// 
+//
 .wp-caption-text {
     @include type-style-small;
 
@@ -290,7 +290,7 @@ figure.wp-caption {
 }
 
 // Alignments
-// 
+//
 .alignleft {
     @include media($mobile) {
         display: block;
@@ -362,7 +362,7 @@ img {
 }
 
 // Featured image
-// 
+//
 .attachment-post-thumbnail {
     display: block;
 
@@ -375,7 +375,7 @@ img {
 ///////////////
 
 // Remove iOS styling
-// 
+//
 @include all-text-inputs {
     border-radius: 0;
 
@@ -475,7 +475,7 @@ img {
 }
 
 // Admin bar
-// 
+//
 #wpadminbar {
     @include media($tablet) {
         @include position(fixed, 0px null null 0px);
@@ -487,7 +487,7 @@ img {
 ////////////////
 
 // Main Navigation
-// 
+//
 .main-navigation {
     @include media($tablet) {
         @include position(fixed, $header-bar-height-mobile null null 0px);
@@ -654,13 +654,13 @@ img {
     }
     .children {
         // Required if primary menu is not set.
-        // 
+        //
         // @extend .sub-menu;
     }
 }
 
 // Mobile Menu Switch
-// 
+//
 #mobile-menu-switch {
     @include media($tablet) {
         display: block;
@@ -701,7 +701,7 @@ img {
 }
 
 // Post Navigation
-// 
+//
 .post-navigation {
     @include media($tablet) {
         margin-top: unit(2);
@@ -713,7 +713,7 @@ img {
 }
 
 // Comment Navigation
-// 
+//
 .comment-navigation {
     @include media($tablet) {
         margin-top: 0;
@@ -745,7 +745,7 @@ img {
 }
 
 // No Sidebar on Full Width
-// 
+//
 .page-template-page-full-width .content-area {
     @include span-columns(12);
 
@@ -753,7 +753,7 @@ img {
 }
 
 // Remove margin on single posts
-// 
+//
 .single .content-area,
 .page .content-area {
     margin-bottom: 0;
@@ -784,7 +784,7 @@ img {
 }
 
 // Widget
-// 
+//
 .widget {
     margin-bottom: ms(0);
     padding-top: ms(0);
@@ -811,7 +811,7 @@ img {
 }
 
 // Removes border & spacing for top widget position
-// 
+//
 .widget_search {
     @include zero-bottom;
 
@@ -940,12 +940,12 @@ article.page,
 }
 
 // Continue reading link
-// 
+//
 .more-link {
 }
 
 // Post pagination
-// 
+//
 .page-links {
     span {
         margin-right: 2px;
@@ -954,7 +954,7 @@ article.page,
 }
 
 // Gallery
-// 
+//
 .gallery {
     @include row;
 
@@ -1020,7 +1020,7 @@ article.page,
 }
 
 // Social sharing links
-// 
+//
 .social-sharing {
     @include row;
     @include zero-left;
@@ -1057,7 +1057,7 @@ article.future {
 }
 
 // Image
-// 
+//
 .single-format-image {
     // Single page body element
 }
@@ -1066,7 +1066,7 @@ article.format-image {
 }
 
 // Audio
-// 
+//
 .single-format-audio {
     // Single page body element
 }
@@ -1075,7 +1075,7 @@ article.format-audio {
 }
 
 // Video
-// 
+//
 .single-format-video {
     // Single page body element
 }
@@ -1084,7 +1084,7 @@ article.format-video {
 }
 
 // Aside
-// 
+//
 .single-format-aside {
     // Single page body element
 }
@@ -1093,7 +1093,7 @@ article.format-aside {
 }
 
 // Status
-// 
+//
 .single-format-status {
     // Single page body element
 }
@@ -1102,7 +1102,7 @@ article.format-status {
 }
 
 // Link
-// 
+//
 .single-format-link {
     // Single page body element
 }
@@ -1111,7 +1111,7 @@ article.format-link {
 }
 
 // Quote
-// 
+//
 .single-format-quote {
     // Single page body element
 }
@@ -1120,7 +1120,7 @@ article.format-quote {
 }
 
 // Chat
-// 
+//
 .single-format-chat {
     // Single page body element
 }
@@ -1272,7 +1272,7 @@ article.format-chat {
 }
 
 // Pingbacks
-// 
+//
 .pingback {
     .comment-body {
         margin-bottom: unit(1);
@@ -1418,7 +1418,7 @@ input[type=submit] {
 }
 
 // Post password form
-// 
+//
 .post-password-form {
     label {
         margin-top: ms(2);
@@ -1432,7 +1432,7 @@ input[type=submit] {
 }
 
 // Gravity forms
-// 
+//
 .gform_fields {
     @include no-bullets;
     @include zero-left;
