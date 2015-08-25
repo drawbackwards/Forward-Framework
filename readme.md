@@ -1,29 +1,39 @@
 ![forward-wordpress-starter-theme](https://cloud.githubusercontent.com/assets/1250818/8885259/dc5923d0-3212-11e5-9579-25d6731ba6ca.jpg)
 
-# Forward Framework
+# Forward Framework Child Theme
 
-A killer WordPress theme framework built using underscores, gulp, sass, bourbon, bourbon neat, bower & browsersync. This project is also available as a pre-compiled [WordPress starter theme](https://github.com/drawbackwards/Forward-WordPress-Starter-Theme/releases).
+A Child Theme starting point of the Forward Framework. Make sure to read [Setup](#setup) & [Overriding Styles](#overriding-styles)
 
 ## Setup
 
-#### Where Do I Put This?
+#### Install The Forward Parent Theme
 
-Clone/Fork/Download this project wherever you like and symlink `build/` to `wp-content/themes/[example-theme]`.
+Clone/Fork/Download the [Forward WordPress Starter Theme](https://github.com/drawbackwards/Forward-WordPress-Starter-Theme) to `wp-content/themes/forward`
+
+    $ cd ~/Sites/[example-wordpress-install]/wp-content/themes/
+
+    $ git clone git@github.com:drawbackwards/Forward-WordPress-Starter-Theme.git forward
+
+
+#### Install This Child Theme
+
+Clone/Fork/Download this project wherever you like and symlink `build/` to `wp-content/themes/[forward-child]`.
 
 __Note:__ Values `[inside-brackets]` can be changed.
 
-    $ git clone git@github.com:drawbackwards/Forward-Framework.git ~/[Sites]/[forward-framework]
+    $ git clone -b child-theme git@github.com:drawbackwards/Forward-Framework.git ~/[Sites]/[forward-framework-child-theme]
 
     $ cd ~/Sites/[example-wordpress-install]/wp-content/themes/
     
-    $ ln -s ~/Sites/forward-framework/build [example-theme]
+    $ ln -s ~/Sites/forward-framework-child-theme/build [forward-child]
 
 Your themes directory should now look like this:
 
     `- wp-content/
       |- plugins/
       `- themes/
-        |- example-theme -> ~/Sites/forward-framework/build
+        |- forward/
+        |- forward-child -> ~/Sites/forward-framework-child-theme/build
         `- twentyfifteen/
 
 #### Modify Project Variables
@@ -37,7 +47,7 @@ Your themes directory should now look like this:
 
 #### Install Gulp Plugins / Dependencies
 
-    $ cd ~/Sites/forward-framework/
+    $ cd ~/Sites/forward-framework-child-theme/
 
 	$ npm install
 
@@ -77,6 +87,19 @@ Running `gulp` or `gulp watch` will start the watch process & browser-sync. Chan
 Running `gulp dist` will generate an optimized, production ready version of the theme based on `build/`. This will be the folder you deploy to production.
 
 	$ gulp dist
+
+## Overriding Styles
+
+Like a parent theme, edits to `scss/forward/` should be avoided. All variables, mixins and styles within `scss/forward/` can be overridden by copying & pasting into the corresponding templates in `scss/`. Gulp will not output duplicate/unnecessary code.
+
+    `- scss/
+      |- forward/
+      |  |- mixins.scss
+      |  |- variables.scss
+      |  `- style.scss
+      |- mixins.scss     # Overrides forward/mixins.scss
+      |- variables.scss  # Overrides forward/variables.scss
+      `- style.scss      # Overrides forward/style.scss
 
 ## License
 
