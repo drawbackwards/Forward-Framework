@@ -4,7 +4,13 @@
 
 A killer WordPress theme framework built using underscores, gulp, sass, bourbon, bourbon neat, bower & browsersync. This project is also available as a pre-compiled [WordPress starter theme](https://github.com/drawbackwards/Forward-WordPress-Starter-Theme/releases).
 
-## Setup
+## Child Theme Setup
+
+A Child Theme starting point of the Forward Framework is available on the [`child-theme`](https://github.com/drawbackwards/Forward-Framework/tree/child-theme#forward-framework-child-theme) branch. Make sure to read [Setup](https://github.com/drawbackwards/Forward-Framework/tree/child-theme#setup) & [Overriding Styles](https://github.com/drawbackwards/Forward-Framework/tree/child-theme#overriding-styles).
+
+## Standalone Setup
+
+Keep Reading!
 
 #### Where Do I Put This?
 
