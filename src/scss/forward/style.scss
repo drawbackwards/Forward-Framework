@@ -59,7 +59,8 @@ a {
     @include link-hover;
     @include links(hex-primary);
     &:active {
-        @include position(relative, 1px null null null);
+        // #depress-links by 1 pixel (may cause issues with 3rd party styles).
+        // @include position(relative, 1px null null null);
     }
 }
 
@@ -691,7 +692,8 @@ img {
             text-decoration: none;
         }
         &:active {
-            top: 0;
+            // Enable if #depress-links is active.
+            // top: 0;
         }
         &.on {
             border-left: 1px solid $hex-border;
@@ -1413,7 +1415,8 @@ input[type=submit] {
         background-color: $hex-primary;
     }
     &:active {
-        @include position(relative, 1px 0 0 0 );
+        // #depress-links (submit buttons) by 1 pixel (may cause issues with 3rd party styles).
+        // @include position(relative, 1px 0 0 0 );
     }
 }
 

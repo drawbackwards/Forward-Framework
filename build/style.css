@@ -14,7 +14,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 pre,textarea{overflow:auto}
 hr,img{border:0}
 embed,iframe,img,object,pre,video{max-width:100%}
-.header-container,a:active,sub,sup{position:relative}
+.header-container,sub,sup{position:relative}
 .comment-list li.comment,.gform_fields li,.main-navigation .menu li,.no-bullets li,.social-sharing li,.widget ul li{list-style-type:none;list-style-image:none}
 html{box-sizing:border-box;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
 *,::after,::before{box-sizing:inherit}
@@ -53,7 +53,6 @@ body{margin-top:0;margin-bottom:0;background-color:#fff}
 h1,h2,h3,h4,h5,h6{font-weight:400;clear:both}
 a:hover{text-decoration:underline;color:#276aa2}
 #mobile-menu-switch .toggle:hover,.comment-body h1 a:hover,.entry-title a:hover,.error404 .page-title a:hover,.site-title a:hover,article.page h1 a:hover,article.post h1 a:hover,ins,mark{text-decoration:none}
-a:active{top:1px}
 b,dt,strong{font-weight:400}
 cite,dfn,em,i{font-style:italic}
 blockquote{line-height:1.77689em;padding-left:1.333em;border-left:1px solid #dbdbdb}
@@ -113,7 +112,6 @@ input[type=color],input[type=date],input[type=datetime],input[type=datetime-loca
 #mobile-menu-switch{position:fixed;top:0;right:0;display:none}
 #mobile-menu-switch .toggle{font-size:14px;font-size:.875rem;line-height:60px;display:block;width:70px;height:60px;text-align:center;text-transform:uppercase;color:#3185CB}
 .comment-body .comment-meta .comment-metadata a,.comment-body .reply a,.comment-reply-title small a,.comments-title small a{color:#999}
-#mobile-menu-switch .toggle:active{top:0}
 #mobile-menu-switch .toggle.on{border-left:1px solid #dbdbdb;background-color:#f9f9f9}
 .post-navigation{margin-top:60px;margin-top:3.75rem;margin-bottom:60px;margin-bottom:3.75rem}
 .comment-navigation{margin-top:-30px;margin-top:-1.875rem;margin-bottom:60px;margin-bottom:3.75rem}
@@ -226,7 +224,6 @@ input[type=color],input[type=date],input[type=datetime],input[type=datetime-loca
 input[type=search]{width:auto;border-right:none}
 input[type=submit]{font-weight:400;padding:6px 1.77689em;color:#3185CB;border:1px solid #3185CB;background-color:transparent}
 input[type=submit]:hover{color:#f9f9f9;background-color:#3185CB}
-input[type=submit]:active{position:relative;top:1px;right:0;bottom:0;left:0}
 .post-password-form label{margin-top:1.77689em}
 .post-password-form input[type=password]{margin-top:.75019em}
 .gform_button.button,.post-password-form input[type=submit]{margin-top:0}
