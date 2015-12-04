@@ -2,8 +2,8 @@
 Contributors: Drawbackwards
 Tags: black, blue, gray, white, light, two-columns, left-sidebar, responsive-layout, custom-menu, editor-style, featured-images, microformats, post-formats, sticky-post, threaded-comments, translation-ready
 Requires at least: 4.0
-Tested up to: 4.2.2
-Stable tag: 1.0.1
+Tested up to: 4.3.1
+Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 

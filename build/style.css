@@ -4,7 +4,7 @@ Theme URI: http://design.org/wordpress-starter-theme/
 Author: Design.org
 Author URI: http://design.org
 Description: A modern WordPress starter theme built for designers. Many themes try to do everything, Forward doesn't. Meet a lightweight, WordPress starter theme that gives you a quality jump-start on your next project.
-Version: 1.0.1
+Version: 1.0.2
 Text Domain: forward
 Tags: black, blue, gray, white, light, two-columns, left-sidebar, responsive-layout, custom-menu, editor-style, featured-images, microformats, post-formats, sticky-post, threaded-comments, translation-ready
 
@@ -46,7 +46,6 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 address,blockquote,blockquote p,dd,dl,p{margin-bottom:1em}
 blockquote,q{quotes:none}
 blockquote:after,blockquote:before,q:after,q:before{content:"";content:none}
-.gallery::after,.main-navigation .menu::after,.nav-links::after{clear:both;content:""}
 table{border-collapse:collapse;border-spacing:0}
 body,button,input,select,textarea{font-weight:300;font-family:"Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;font-size:1em;line-height:1.77689em;margin-top:1em;margin-bottom:1em;color:#595959}
 body{margin-top:0;margin-bottom:0;background-color:#fff}
@@ -100,15 +99,15 @@ input[type=color],input[type=date],input[type=datetime],input[type=datetime-loca
 .site-description{display:none}
 .main-navigation{position:absolute;top:20px;right:0}
 .main-navigation .menu{display:block;padding-left:0;list-style:none}
-.main-navigation .menu::after{display:table}
+.main-navigation .menu::after,.main-navigation .menu>ul::after{display:table;clear:both;content:""}
 .main-navigation .menu li{padding-left:0;margin-left:0}
 .main-navigation .menu:first-child{margin-left:0}
 .main-navigation .menu .menu-item,.main-navigation .menu .page_item{font-weight:300;position:relative;float:left;margin-left:2em}
-.main-navigation .menu .menu-item:first-child,.main-navigation .menu .page_item:first-child,.widget ul,.widget ul li{margin-left:0}
+.main-navigation .menu .menu-item:first-child,.main-navigation .menu .page_item:first-child,.main-navigation .menu>ul,.widget ul,.widget ul li{margin-left:0}
 .main-navigation .menu .current_page_item,.main-navigation .menu .current_page_parent{font-weight:600}
-.main-navigation .menu>.menu-item-has-children:hover .sub-menu{display:block}
-.main-navigation .sub-menu .menu-item,.main-navigation .sub-menu .page_item{line-height:1.333em;float:none;margin-left:0}
-.main-navigation .sub-menu .menu-item:last-child,.main-navigation .sub-menu .page_item:last-child{margin-bottom:0}
+.main-navigation .menu .page_item_has_children:hover .children,.main-navigation .menu .page_item_has_children:hover .sub-menu,.main-navigation .menu>.menu-item-has-children:hover .children,.main-navigation .menu>.menu-item-has-children:hover .sub-menu{display:block}
+.main-navigation .children .menu-item,.main-navigation .children .page_item,.main-navigation .sub-menu .menu-item,.main-navigation .sub-menu .page_item{line-height:1.333em;float:none;margin-left:0}
+.main-navigation .children .menu-item:last-child,.main-navigation .children .page_item:last-child,.main-navigation .sub-menu .menu-item:last-child,.main-navigation .sub-menu .page_item:last-child{margin-bottom:0}
 #mobile-menu-switch{position:fixed;top:0;right:0;display:none}
 #mobile-menu-switch .toggle{font-size:14px;font-size:.875rem;line-height:60px;display:block;width:70px;height:60px;text-align:center;text-transform:uppercase;color:#3185CB}
 .comment-body .comment-meta .comment-metadata a,.comment-body .reply a,.comment-reply-title small a,.comments-title small a{color:#999}
@@ -133,6 +132,12 @@ input[type=color],input[type=date],input[type=datetime],input[type=datetime-loca
 .widget ul li{padding-left:0}
 .widget_search{padding-bottom:0;border-bottom:none}
 .widget_search .search-form{margin-bottom:1em}
+.widget_calendar caption{margin-bottom:.56278em}
+.widget_calendar table{width:100%;text-align:center}
+.widget_calendar td,.widget_calendar th{line-height:1.333em;padding:.75019em;border-bottom:1px solid #dbdbdb}
+.widget_calendar tfoot td{border-bottom:none}
+.widget_calendar #prev{text-align:left}
+.widget_calendar #next{text-align:right}
 .comment-body,article.page,article.post{margin-bottom:60px;margin-bottom:3.75rem;padding-bottom:60px;padding-bottom:3.75rem;border-bottom:1px solid #dbdbdb}
 .comment-body h1,article.page h1,article.post h1{font-weight:300;font-size:3.15733em;line-height:1em;margin-top:.56278em;margin-bottom:.56278em}
 .comment-body h1:first-child,article.page h1:first-child,article.post h1:first-child{margin-top:0}
@@ -152,7 +157,7 @@ input[type=color],input[type=date],input[type=datetime],input[type=datetime-loca
 .page-title{font-weight:400;font-size:1em;line-height:1em;margin-top:1em;margin-bottom:1.333em;color:#999}
 .comment-body .reply,.form-allowed-tags,.social-sharing li{font-size:14px;font-size:.875rem;line-height:1.333em}
 .nav-links{display:block;line-height:1.333em}
-.nav-links::after{display:table}
+.nav-links::after{clear:both;content:"";display:table}
 .nav-links .nav-next{float:left;display:block;margin-right:2.35765%;width:100%;text-align:right}
 .nav-links .nav-next:last-child{margin-right:0}
 .nav-links .nav-previous{float:left;display:block;margin-right:2.35765%;width:48.82117%}
@@ -161,7 +166,7 @@ input[type=color],input[type=date],input[type=datetime],input[type=datetime-loca
 .nav-links .nav-previous+.nav-next:last-child{margin-right:0}
 .page-links span{margin-right:2px;margin-left:2px}
 .gallery{display:block;margin-bottom:1em;padding-top:1em}
-.gallery::after{display:table}
+.gallery::after{clear:both;content:"";display:table}
 .gallery .gallery-item{margin-bottom:1em;text-align:center}
 .gallery-columns-2 .gallery-item{float:left;display:block;margin-right:2.35765%;width:48.82117%}
 .gallery-columns-2 .gallery-item:last-child{margin-right:0}
@@ -216,7 +221,7 @@ input[type=color],input[type=date],input[type=datetime],input[type=datetime-loca
 .search-form label{float:left;display:block;width:67.13936%}
 .search-form label:last-child{width:59.71639%}
 .search-form label input[type=search]{box-sizing:border-box;width:100%}
-.search-results article:last-child{border:none;padding-bottom:0;margin-bottom:30px;margin-bottom:1.875rem}
+.search-results article:last-child{margin-bottom:30px;margin-bottom:1.875rem;padding-bottom:0;border:none}
 .content-area label{font-weight:400;font-size:1em;line-height:1em;margin-top:1em;display:block;margin-bottom:.5em}
 input[type=color],input[type=date],input[type=datetime],input[type=datetime-local],input[type=email],input[type=month],input[type=number],input[type=password],input[type=search],input[type=tel],input[type=text],input[type=time],input[type=url],input[type=week],input[type=search],textarea{margin-top:.31672em;margin-bottom:1em;padding:6px 8px;border:1px solid #c5c5c5}
 input[type=color]:focus,input[type=color]:hover,input[type=date]:focus,input[type=date]:hover,input[type=datetime]:focus,input[type=datetime]:hover,input[type=datetime-local]:focus,input[type=datetime-local]:hover,input[type=email]:focus,input[type=email]:hover,input[type=month]:focus,input[type=month]:hover,input[type=number]:focus,input[type=number]:hover,input[type=password]:focus,input[type=password]:hover,input[type=search]:focus,input[type=search]:hover,input[type=tel]:focus,input[type=tel]:hover,input[type=text]:focus,input[type=text]:hover,input[type=time]:focus,input[type=time]:hover,input[type=url]:focus,input[type=url]:hover,input[type=week]:focus,input[type=week]:hover,input[type=search]:focus,input[type=search]:hover,textarea:focus,textarea:hover{border-color:#999;outline:0}
@@ -239,11 +244,11 @@ input[type=submit]:hover{color:#f9f9f9;background-color:#3185CB}
 .error404 .page-title{font-weight:300;font-size:3.15733em;line-height:1em;margin-top:.56278em;margin-bottom:.56278em}
 .error404 .page-title:first-child{margin-top:0}
 @media screen and (min-width:769px){.main-navigation{display:block!important;height:auto!important}
-.main-navigation .menu>.menu-item-has-children{min-height:40px}
-.main-navigation .sub-menu{position:absolute;top:38px;left:-11px;margin-left:0;padding-left:0;display:none;min-width:150px;padding:.625rem;border:1px solid #dbdbdb;background-color:#f9f9f9}
-.main-navigation .sub-menu .menu-item,.main-navigation .sub-menu .page_item{margin-bottom:.625rem}
-.main-navigation .sub-menu .sub-menu{position:static;top:30px;padding-bottom:0;padding-left:0;border:none}
-.main-navigation .sub-menu .sub-menu .menu-item,.main-navigation .sub-menu .sub-menu .page_item{padding-left:.625rem}
+.main-navigation .menu .page_item_has_children,.main-navigation .menu>.menu-item-has-children{min-height:40px}
+.main-navigation .children,.main-navigation .sub-menu{position:absolute;top:38px;left:-11px;margin-left:0;padding-left:0;display:none;min-width:150px;padding:.625rem;border:1px solid #dbdbdb;background-color:#f9f9f9}
+.main-navigation .children .menu-item,.main-navigation .children .page_item,.main-navigation .sub-menu .menu-item,.main-navigation .sub-menu .page_item{margin-bottom:.625rem}
+.main-navigation .children .children,.main-navigation .children .sub-menu,.main-navigation .sub-menu .children,.main-navigation .sub-menu .sub-menu{position:static;top:30px;padding-bottom:0;padding-left:0;border:none}
+.main-navigation .children .children .menu-item,.main-navigation .children .children .page_item,.main-navigation .children .sub-menu .menu-item,.main-navigation .children .sub-menu .page_item,.main-navigation .sub-menu .children .menu-item,.main-navigation .sub-menu .children .page_item,.main-navigation .sub-menu .sub-menu .menu-item,.main-navigation .sub-menu .sub-menu .page_item{padding-left:.625rem}
 .content-area{padding-right:4.7153%}
 }
 @media screen and (min-width:769px) and (max-width:768px){.content-area{padding-right:0}
@@ -264,12 +269,13 @@ body{margin-top:60px}
 .main-navigation .container{padding-right:0;padding-left:0}
 .main-navigation .menu{padding-top:.67417em;padding-bottom:.67417em}
 .main-navigation .menu .menu-item,.main-navigation .menu .page_item{float:none;margin-bottom:0;margin-left:0;padding-top:.46875rem;padding-bottom:.3125rem}
-.main-navigation .menu>.menu-item,.main-navigation .menu>.page_item{margin-bottom:.625rem;padding-top:0;padding-right:1.01125em;padding-bottom:.625rem;padding-left:1.01125em;border-bottom:1px solid #dbdbdb}
-.main-navigation .sub-menu{float:none;margin-left:0}
-.main-navigation .sub-menu .menu-item,.main-navigation .sub-menu .page_item{padding-left:.625rem}
-.main-navigation .sub-menu .sub-menu{margin-bottom:0;padding-bottom:0;padding-left:0}
-.main-navigation .sub-menu .sub-menu li:last-child{margin-bottom:0;padding-bottom:0}
-.main-navigation .sub-menu .sub-menu .menu-item,.main-navigation .sub-menu .sub-menu .page_item{padding-left:.625rem}
+.main-navigation .menu .page_item,.main-navigation .menu>.menu-item{margin-bottom:.625rem;padding-top:0;padding-right:1.01125em;padding-bottom:.625rem;padding-left:1.01125em;border-bottom:1px solid #dbdbdb}
+.main-navigation .children,.main-navigation .sub-menu{float:none;margin-left:0}
+.main-navigation .children .menu-item,.main-navigation .children .page_item,.main-navigation .sub-menu .menu-item,.main-navigation .sub-menu .page_item{padding-left:.625rem}
+.main-navigation .children .children,.main-navigation .children .sub-menu,.main-navigation .sub-menu .children,.main-navigation .sub-menu .sub-menu{margin-bottom:0;padding-bottom:0;padding-left:0}
+.main-navigation .children .children li:last-child,.main-navigation .children .sub-menu li:last-child,.main-navigation .sub-menu .children li:last-child,.main-navigation .sub-menu .sub-menu li:last-child{margin-bottom:0;padding-bottom:0}
+.main-navigation .children .children .menu-item,.main-navigation .children .children .page_item,.main-navigation .children .sub-menu .menu-item,.main-navigation .children .sub-menu .page_item,.main-navigation .sub-menu .children .menu-item,.main-navigation .sub-menu .children .page_item,.main-navigation .sub-menu .sub-menu .menu-item,.main-navigation .sub-menu .sub-menu .page_item{padding-left:.625rem}
+.main-navigation .children .page_item{margin-bottom:0;padding-top:.46875rem;padding-bottom:.3125rem;border-bottom:0}
 .admin-bar #mobile-menu-switch{top:46px}
 .post-navigation{margin-top:1.875rem;margin-bottom:1.875rem}
 .comment-navigation{margin-top:0;margin-bottom:1.875rem}

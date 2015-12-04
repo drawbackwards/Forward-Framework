@@ -2,7 +2,7 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Forward 1.0.1\n"
+"Project-Id-Version: Forward 1.0.2\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/build\n"
 "POT-Creation-Date: 2015-07-27 23:58:08+00:00\n"
 "MIME-Version: 1.0\n"
