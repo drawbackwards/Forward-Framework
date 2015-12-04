@@ -9,14 +9,14 @@
 if ( ! function_exists( 'forward_google_fonts' ) ) :
 /**
  * Adds google font support.
- * 
+ *
  */
 function forward_google_fonts() {
 	$query_args = array(
 		'family' => 'Source+Sans+Pro:200,300,400,600',
 
 		// Here's an example for changing fonts.
-		// 
+		//
 		// 'family' => 'Open+Sans:400,700|Oswald:700',
 		// 'subset' => 'latin,latin-ext',
 	);
@@ -160,11 +160,15 @@ function forward_scripts() {
 endif; // forward_scripts
 add_action( 'wp_enqueue_scripts', 'forward_scripts' );
 
-
 /**
- * Implement the Custom Header feature.
+ * Add stylesheet to the visual editor.
  */
-//require get_template_directory() . '/inc/custom-header.php';
+function forward_add_editor_styles() {
+
+    add_editor_style( get_stylesheet_uri() );
+
+}
+add_action( 'init', 'forward_add_editor_styles' );
 
 /**
  * Custom template tags for this theme.
