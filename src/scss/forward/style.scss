@@ -826,6 +826,35 @@ img {
     }
 }
 
+// Calendar widget
+//
+.widget_calendar {
+    caption {
+        margin-bottom: ms(-2);
+    }
+    table {
+        width: 100%;
+
+        text-align: center;
+    }
+    td,
+    th {
+        line-height: ms(1);
+
+        padding: ms(-1);
+
+        border-bottom: 1px solid $hex-border;
+    }
+    tfoot td {
+        border-bottom: none;
+    }
+    #prev {
+        text-align: left;
+    }
+    #next {
+        text-align: right;
+    }
+}
 
 //////////
 // Blog //
