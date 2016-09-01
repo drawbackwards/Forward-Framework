@@ -37,7 +37,7 @@ gulp.task('styles', function() {
     loadPath: bower
   })
   .pipe(plugins.autoprefixer('last 2 versions', 'ie 9', 'ios 6', 'android 4'))
-  .pipe(plugins.combineMediaQueries())
+  .pipe(plugins.mergeMediaQueries())
   .pipe(plugins.minifyCss({ keepSpecialComments: 1, keepBreaks: true, compatibility: 'ie8' }))
   .pipe(plugins.pixrem())
   .pipe(gulp.dest(build))
