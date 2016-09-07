@@ -1,5 +1,16 @@
 (function ($) {
 
+	// Resize mobile menu to
+	function setMobileMenuHeight() {
+		var headerHeight = $('#masthead').outerHeight();
+		var windowHeight = window.innerHeight;
+		var menuOffset = headerHeight;
+		var menuHeight = windowHeight - menuOffset;
+
+		$("#site-navigation").css("height", menuHeight);
+		// .css("top", menuOffset);
+	}
+
 	$(document).ready(function() {
 
 		// Show mobile menu
@@ -20,18 +31,7 @@
 	});
 
 	$(window).resize(function() {
-	    setMobileMenuHeight();
+			setMobileMenuHeight();
 	});
-
-	// Resize mobile menu to 
-	function setMobileMenuHeight() {
-		var headerHeight = $('#masthead').outerHeight();
-		var windowHeight = window.innerHeight;
-		var menuOffset = headerHeight;
-		var menuHeight = windowHeight - menuOffset;
-
-		$("#site-navigation").css("height", menuHeight);
-		// .css("top", menuOffset);
-	}
 
 })(jQuery);
