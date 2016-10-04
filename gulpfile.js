@@ -203,6 +203,21 @@ gulp.task('browser-sync', function() {
 });
 
 
+////////////////////////////
+// WordPress Localization //
+////////////////////////////
+gulp.task( 'makepot', function() {
+    return gulp.src( source + '**/*.php' )
+        .pipe( plugins.sort() )
+        .pipe( plugins.wpPot( {
+            domain:   project,
+            destFile: project + '.pot',
+            package:  project
+        } ) )
+        .pipe( gulp.dest( source + 'languages/' ) );
+} );
+
+
 ///////////
 // Tasks //
 ///////////
