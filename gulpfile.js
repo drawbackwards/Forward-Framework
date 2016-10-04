@@ -224,7 +224,7 @@ gulp.task( 'makepot', function() {
 
 // Build styles and scripts; copy PHP files
 //
-gulp.task('build', ['styles', 'scripts', 'images', 'languages', 'php']);
+gulp.task('build', ['makepot', 'styles', 'scripts', 'images', 'languages', 'php']);
 
 // Release creates a clean distribution package under `dist` after running build, clean, and wipe in sequence
 //
