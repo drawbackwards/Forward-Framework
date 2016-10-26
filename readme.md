@@ -53,6 +53,16 @@ Your themes directory should now look like this:
 
     $ bower install
 
+#### Install sass
+
+Sass is a Ruby component (known as a gem). If you're a Mac user Ruby is already on your system but if you're developing
+on Linux or Windows you may  have to install it. Once you've got Ruby you should be able to install sass from the
+command line (you may need to use `sudo`).
+
+    $ gem install sass
+
+For troubleshooting see the [sass install page](http://sass-lang.com/install).
+
 #### Generate Theme Files
 
 This will generate the initial theme files in `build/`.
