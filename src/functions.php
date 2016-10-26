@@ -141,7 +141,7 @@ function forward_scripts() {
 	  }
 
 	  // Load theme-specific JavaScript with versioning based on last modified time; http://www.ericmmartin.com/5-tips-for-using-jquery-with-wordpress/
-	  wp_enqueue_script( 'forward-js-core', get_stylesheet_directory_uri() . '/js/core' . $suffix . '.js', array( 'jquery' ), filemtime( get_template_directory() . '/js/core' . $suffix . '.js' ), true );
+	  wp_enqueue_script( 'forward-js-core', get_template_directory_uri() . '/js/core' . $suffix . '.js', array( 'jquery' ), filemtime( get_template_directory() . '/js/core' . $suffix . '.js' ), true );
 
 	  // Conditionally load another script
 	  // if ( is_singular() ) {
