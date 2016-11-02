@@ -32,7 +32,10 @@ sitemap.xml.gz
 .sass-cache
 bower_components
 node_modules
-build/*
-!build/style.css
+build
 dist
 ._*
+
+## Optionally track the stylesheet
+# build/*
+# !build/style.css
