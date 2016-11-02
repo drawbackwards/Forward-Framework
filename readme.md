@@ -98,13 +98,13 @@ Running `gulp build` will generate/rebuild the `build/` directory without starti
 
 Running `gulp` or `gulp watch` will start the watch process & browser-sync. Changes to `src/` are written to `build/`.
 
-  $ gulp
+    $ gulp
 
 #### gulp dist
 
 Running `gulp dist` will generate an optimized, production ready version of the theme based on `build/`. This will be the folder you deploy to production.
 
-  $ gulp dist
+    $ gulp dist
 
 ## License
 
@@ -121,8 +121,5 @@ Running `gulp dist` will generate an optimized, production ready version of the 
 * [Bourbon Neat](http://neat.bourbon.io)
 * [Bower](http://bower.io)
 * [Browsersync](http://www.browsersync.io)
-* [CSSmin](https://www.npmjs.com/package/gulp-cssmin)
 * [Autoprefixer](https://github.com/postcss/autoprefixer-core)
-* [Combine Media Queries](https://www.npmjs.com/package/gulp-combine-media-queries)
-* [Pixrem](https://www.npmjs.com/package/gulp-pixrem)
 * [Normalize](https://necolas.github.io/normalize.css/)
