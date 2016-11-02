@@ -21,7 +21,7 @@ __Note:__ Values `[inside-brackets]` can be changed.
     $ git clone git@github.com:drawbackwards/Forward-Framework.git ~/[Sites]/[forward-framework]
 
     $ cd ~/Sites/[example-wordpress-install]/wp-content/themes/
-    
+
     $ ln -s ~/Sites/forward-framework/build [example-theme]
 
 Your themes directory should now look like this:
@@ -41,16 +41,28 @@ Your themes directory should now look like this:
 
     $ npm install --global gulp
 
+#### Install Yarn (preferred over npm)
+
+    # Using homebrew
+    $ brew update
+    $ brew install yarn
+
+    # OR using npm
+    $ npm install -g yarn
+
+For additional methods see the [yarn install page](https://yarnpkg.com/en/docs/install).
+
 #### Install Gulp Plugins / Dependencies
 
     $ cd ~/Sites/forward-framework/
+    $ yarn
 
-	$ npm install
+    # OR use npm
+    $ npm install
 
 #### Install Bower & Components
 
-	$ npm install -g bower
-
+    $ npm install -g bower
     $ bower install
 
 #### Install sass
@@ -67,7 +79,7 @@ For troubleshooting see the [sass install page](http://sass-lang.com/install).
 
 This will generate the initial theme files in `build/`.
 
-	$ gulp build
+    $ gulp build
 
 #### Activate Theme & Create a Navigation Menu
 
@@ -86,13 +98,13 @@ Running `gulp build` will generate/rebuild the `build/` directory without starti
 
 Running `gulp` or `gulp watch` will start the watch process & browser-sync. Changes to `src/` are written to `build/`.
 
-	$ gulp
+  $ gulp
 
 #### gulp dist
 
 Running `gulp dist` will generate an optimized, production ready version of the theme based on `build/`. This will be the folder you deploy to production.
 
-	$ gulp dist
+  $ gulp dist
 
 ## License
 
