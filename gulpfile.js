@@ -1,53 +1,67 @@
-///////////
-// Setup //
-///////////
+// ===========================================================================
+// Setup
+// ===========================================================================
+
 
 // Project Variables
-//
-var project     = 'forward',
-    build       = 'build/',
-    dist        = 'dist/'+project+'/',
-    source      = 'src/'
-    lang        = 'languages/',
-    bower       = 'bower_components/',
-    url         = 'forward.local'
-;
+// ---------------------------------------------------------------------------
 
-// Gulp Settings & Startup
-//
-var gulp        = require('gulp'),
-    sass        = require('gulp-ruby-sass'),
-    gutil       = require('gulp-util'),
-    plugins     = require('gulp-load-plugins')({ camelize: true }) // This loads all modules prefixed with "gulp-" to plugin.moduleName,
-    del         = require('del'),
-    browserSync = require('browser-sync'),
-    reload      = browserSync.reload;
-;
+var project     = 'forward';
+var build       = 'build/';
+var dist        = 'dist/'+project+'/';
+var source      = 'src/';
+var lang        = 'languages/';
+var bower       = 'bower_components/';
+var url         = 'forward.local';
 
 
-////////////
-// Styles //
-////////////
+// Plugins
+// ---------------------------------------------------------------------------
 
-// Process Stylesheets
-//
+var gulp        = require('gulp');
+var del         = require('del');
+var plugins     = require('gulp-load-plugins')({ camelize: true }); // This loads all modules prefixed with "gulp-" to plugins.moduleName
+var browserSync = require('browser-sync').create();
+
+
+// PostCSS Processors
+// ---------------------------------------------------------------------------
+
+var postcss         = require('gulp-postcss');
+var perfectionist   = require('perfectionist');
+var autoprefixer    = require('autoprefixer');
+var cssnano         = require('cssnano');
+var combinemq       = require("css-mqpacker");
+
+
+// ===========================================================================
+// Styles
+// ===========================================================================
+
+// Main Styles
+// ---------------------------------------------------------------------------
+
 gulp.task('styles', function() {
-  return sass(source + 'scss/forward/style.scss', {
-    style: 'expanded',
-    loadPath: bower
-  })
-  .pipe(plugins.autoprefixer('last 2 versions', 'ie 9', 'ios 6', 'android 4'))
-  .pipe(plugins.mergeMediaQueries())
-  .pipe(plugins.minifyCss({ keepSpecialComments: 1, keepBreaks: true, compatibility: 'ie8' }))
-  .pipe(plugins.pixrem())
+  gulp.src(source + 'scss/forward/style.scss')
+  .pipe(plugins.sourcemaps.init())
+  .pipe(plugins.sass({
+    sourcemap: true,
+    includePaths: [bower]
+  }).on('error', plugins.sass.logError))
+  .pipe(postcss([autoprefixer, combinemq({
+    sort: true
+  }), cssnano, perfectionist({
+      format: 'compact'
+  })]))
+  .pipe(plugins.sourcemaps.write('.'))
   .pipe(gulp.dest(build))
-  .pipe(browserSync.reload({ stream: true }))
+  .pipe(browserSync.stream({match: '**/*.css'}));
 });
 
 
-/////////////
-// Scripts //
-/////////////
+// ===========================================================================
+// Scripts
+// ===========================================================================
 
 // Scripts; broken out into different tasks to create specific bundles which are then compressed in place
 //
@@ -89,9 +103,9 @@ gulp.task('scripts-extras', function() {
 });
 
 
-////////////
-// Images //
-////////////
+// ===========================================================================
+// Images
+// ===========================================================================
 
 // Copy images; minification occurs during packaging
 //
@@ -101,9 +115,9 @@ gulp.task('images', function() {
 });
 
 
-///////////////
-// Languages //
-///////////////
+// ===========================================================================
+// Languages
+// ===========================================================================
 
 // Copy everything under `src/languages` indiscriminately
 //
@@ -113,10 +127,9 @@ gulp.task('languages', function() {
 });
 
 
-
-/////////
-// PHP //
-/////////
+// ===========================================================================
+// PHP
+// ===========================================================================
 
 // Copy PHP source files to the build directory
 //
@@ -126,9 +139,9 @@ gulp.task('php', function() {
 });
 
 
-//////////////////
-// Distribution //
-//////////////////
+// ===========================================================================
+// Distribution
+// ===========================================================================
 
 // Prepare a distribution, the properly minified, uglified, and sanitized version of the theme ready for installation
 //
@@ -156,13 +169,15 @@ gulp.task('dist-copy', ['dist-wipe'], function() {
 //
 gulp.task('dist-styles', ['dist-copy'], function() {
   return gulp.src([dist+'**/*.css', '!'+dist+'**/*.min.css'])
-  .pipe(plugins.minifyCss({ keepSpecialComments: 1, keepBreaks: true }))
+  .pipe(postcss([cssnano]))
   .pipe(gulp.dest(dist));
 });
 
 // Optimize images in place
 //
-gulp.task('dist-images', ['dist-styles'], function() {
+// Use the line below if you wish to compress the styles to a single line.
+// gulp.task('dist-images', ['dist-styles'], function() {
+gulp.task('dist-images', ['dist-copy'], function() {
   return gulp.src([dist+'**/*.png', dist+'**/*.jpg', dist+'**/*.jpeg', dist+'**/*.gif', '!'+dist+'screenshot.png'])
   .pipe(plugins.imagemin({
     optimizationLevel: 7
@@ -173,9 +188,9 @@ gulp.task('dist-images', ['dist-styles'], function() {
 });
 
 
-///////////
-// Bower //
-///////////
+// ===========================================================================
+// Bower
+// ===========================================================================
 
 // Executed on `bower update` which is in turn triggered by `npm update`; use this to manually copy front-end dependencies into your working source folder
 //
@@ -190,22 +205,9 @@ gulp.task('bower-normalize', function() {
 });
 
 
-//////////////////
-// Browser Sync //
-//////////////////
-
-gulp.task('browser-sync', function() {
-    browserSync({
-        proxy: url
-        // Port setting for MAMP users
-        // , port: 8888
-    });
-});
-
-
-///////////
-// Tasks //
-///////////
+// ===========================================================================
+// Tasks
+// ===========================================================================
 
 // Build styles and scripts; copy PHP files
 //
@@ -217,12 +219,16 @@ gulp.task('dist', ['dist-images']);
 
 // Watch Task
 //
-gulp.task('watch', ['browser-sync'], function() {
+gulp.task('watch', ['styles'], function(gulpCallback) {
+  browserSync.init({
+    proxy: url
+  }, function callback() {
   gulp.watch(source+'scss/**/*.scss', ['styles']);
   gulp.watch([source+'js/**/*.js', bower+'**/*.js'], ['scripts']);
   gulp.watch(source+'**/*(*.png|*.jpg|*.jpeg|*.gif)', ['images']);
   gulp.watch(source+'**/*.php', ['php']);
-  // gulp.watch([build+'**/*', dist+'**/*'], reload);
+    gulpCallback();
+  });
 });
 
 // Default Task (Watch)
