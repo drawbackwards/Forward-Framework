@@ -1,0 +1,200 @@
+// ===========================================================================
+//
+// HTML Tags & Formatting
+//
+//
+// ===========================================================================
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    @include font-weight(normal);
+
+    clear: both;
+}
+
+a {
+    @include link-hover;
+    @include links(hex-primary);
+    &:active {
+        // #depress-links by 1 pixel (may cause issues with 3rd party styles).
+        // @include position(relative, 1px null null null);
+    }
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+b,
+strong {
+    @include font-weight(normal);
+}
+
+dfn,
+cite,
+em,
+i {
+    font-style: italic;
+}
+
+blockquote {
+    line-height: ms(2);
+
+    margin-bottom: ms(0);
+    padding-left: ms(1);
+
+    border-left: 1px solid $hex-border;
+    p {
+        margin-bottom: ms(0);
+        > &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+address {
+    margin-bottom: ms(0);
+}
+
+code,
+kbd,
+tt,
+var,
+samp,
+pre {
+    font-family: $mono;
+    font-size: rem(12);
+    line-height: ms(2);
+
+    -webkit-hyphens: none;
+       -moz-hyphens: none;
+            hyphens: none;
+
+        -ms-hyphens: none;
+}
+
+code {
+    margin-right: ms(-4);
+    margin-left: ms(-4);
+    padding: ms(-5) ms(-3) ms(-5) ms(-3);
+
+    background-color: $hex-faint;
+    // Increase specificity
+    body & {
+        border: 1px solid $hex-border;
+    }
+}
+
+pre {
+    overflow: auto;
+
+    max-width: 100%;
+    margin-bottom: 1.6em;
+    padding: ms(2);
+    // Uncomment below for 'word-wrap'
+    // white-space: pre;
+    // white-space: pre-wrap;
+    // word-wrap: break-word;
+
+    background-color: $hex-faint;
+    // Increase specificity
+    body & {
+        border: 1px solid $hex-border;
+    }
+}
+
+acronym,
+abbr {
+    cursor: help;
+
+    border-bottom: 1px dotted #eaeaea;
+    border-bottom: 1px dotted rgba(51, 51, 51, .1);
+}
+
+mark,
+ins {
+    padding-right: ms(-5);
+    padding-left: ms(-5);
+
+    text-decoration: none;
+
+    background-color: $hex-highlight;
+}
+
+sup,
+sub {
+    font-size: 75%;
+    line-height: 0;
+
+    position: relative;
+
+    height: 0;
+
+    vertical-align: baseline;
+}
+
+sup {
+    bottom: 1ex;
+}
+
+sub {
+    top: .5ex;
+}
+
+small {
+    font-size: 75%;
+}
+
+big {
+    font-size: 125%;
+}
+
+// Lists
+//
+
+hr {
+    height: 1px;
+    margin-bottom: 1.6em;
+
+    border: 0;
+    background-color: #eaeaea;
+    background-color: rgba(51, 51, 51, .1);
+}
+
+ul,
+ol {
+    margin: 0 0 ms(0) ms(1);
+}
+
+ul {
+    list-style: disc;
+}
+
+ol {
+    list-style: decimal;
+}
+
+li > ul,
+li > ol {
+    margin-bottom: 0;
+}
+
+dl {
+    margin-bottom: ms(0);
+}
+
+dt {
+    @include font-weight(normal);
+}
+
+dd {
+    margin-bottom: ms(0);
+}
+
+.no-bullets {
+    @include no-bullets;
+}

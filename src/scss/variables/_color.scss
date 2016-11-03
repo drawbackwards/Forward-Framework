@@ -1,24 +1,9 @@
-///////////////
-// Variables //
-///////////////
-
-// Global Variables
-// 
-$wp-admin-bar-height: 46px;
-$wp-admin-bar-height-desktop: 32px;
-$header-bar-height: 120px;
-$header-bar-height-mobile: 60px;
-$header-logo-width: 260px;
-$timing-default: .25s;
-$easing-default: ease-in-out;
-
-// Margin / Padding
-// 
-$margin: $gutter;
-$padding: $gutter;
-
+// ===========================================================================
+//
 // Colors
-// 
+//
+// ===========================================================================
+
 $hex-default: tint(#000, 35%);
 $hex-default-hover: shade($hex-default, 20%);
 
@@ -31,7 +16,7 @@ $hex-blue: #3185CB;
 $hex-highlight: #fff9c0;
 
 // Greys
-// 
+//
 $hex-faint: #fdfdfd;
 $hex-light-grey: tint(#000, 60%);
 $hex-grey: tint(#000, 50%);
@@ -50,15 +35,3 @@ $hex-footer-hover: shade($hex-footer, 20%);
 $hex-footer-bg: #f3f3f3;
 
 $hex-background: shade($hex-real-white, 0%);
-
-// Type
-// 
-$helvetica: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$source-sans: 'Source Sans Pro', $helvetica;
-$mono: Monaco, Consolas, 'Lucida Console', monospace;
-$default-font: $source-sans;
-$default-font-weight: light;
-
-// Borders
-// 
-$border-thin: 1px solid $hex-border;

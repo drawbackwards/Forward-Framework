@@ -1,0 +1,96 @@
+// ===========================================================================
+//
+// Sidebar
+//
+// ===========================================================================
+
+.widget-area {
+    @include span-columns(4);
+    @include tablet-single;
+    // @include transition (margin $timing-default $easing-default);
+    @include media($tablet) {
+        margin-top: unit(2);
+        margin-bottom: unit(2);
+    }
+
+    margin-top: unit(4);
+    margin-bottom: unit(4);
+}
+.screen-reader-text {
+    display: none;
+}
+.widget-title {
+    @include type-style-h5;
+}
+
+// Widget
+//
+.widget {
+    margin-bottom: ms(0);
+    padding-top: ms(0);
+    padding-bottom: ms(0);
+
+    border-bottom: 1px solid $hex-border;
+    &:first-child {
+        padding-top: 0;
+    }
+    &:last-child {
+        padding-bottom: 0;
+
+        border-bottom: none;
+    }
+    ul {
+        @include no-bullets;
+
+        margin-left: 0;
+        li {
+            &:last-child {
+            }
+        }
+    }
+}
+
+// Removes border & spacing for top widget position
+//
+.widget_search {
+    @include zero-bottom;
+
+    border-bottom: none;
+    .search-submit {
+        margin-bottom: 0;
+    }
+    .search-form {
+        margin-bottom: ms(0);
+    }
+}
+
+// Calendar widget
+//
+.widget_calendar {
+    caption {
+        margin-bottom: ms(-2);
+    }
+    table {
+        width: 100%;
+
+        text-align: center;
+    }
+    td,
+    th {
+        font-weight: inherit;
+        line-height: ms(1);
+
+        padding: ms(-1);
+
+        border-bottom: 1px solid $hex-border;
+    }
+    tfoot td {
+        border-bottom: none;
+    }
+    #prev {
+        text-align: left;
+    }
+    #next {
+        text-align: right;
+    }
+}

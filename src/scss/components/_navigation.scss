@@ -1,0 +1,267 @@
+// ===========================================================================
+//
+// Navigation
+//
+// ===========================================================================
+
+
+// Main Navigation
+// ---------------------------------------------------------------------------
+
+.main-navigation {
+    @include media($tablet) {
+        @include position(fixed, $header-bar-height-mobile null null 0px);
+
+        display: none;
+        float: none;
+        overflow-y: scroll;
+
+        width: 100%;
+
+        background-color: $hex-white;
+
+        -webkit-overflow-scrolling: touch;
+    }
+    @include media($desktop) {
+        display: block !important;
+
+        height: auto !important;
+    }
+    @include position(absolute, 20px 0px null null);
+    // Adjust for wp admin bar
+    .admin-bar & {
+        @include media($tablet) {
+            top: $header-bar-height-mobile + $wp-admin-bar-height;
+        }
+    }
+    a {
+        @include media($tablet) {
+            color: $hex-default;
+        }
+    }
+    .container {
+        @include media($tablet) {
+            padding-right: 0;
+            padding-left: 0;
+        }
+    }
+    .menu {
+        @include row;
+        @include no-bullets;
+        @include media($tablet) {
+            padding-top: $gutter / 3;
+            padding-bottom: $gutter / 3;
+        }
+        &:first-child {
+            margin-left: 0;
+        }
+        .page_item,
+        .menu-item {
+            @include media($tablet) {
+                float: none;
+
+                margin-bottom: 0;
+                margin-left: 0;
+                padding-top: unit(.5);
+                padding-bottom: rem(5);
+            }
+            @include font-weight(light);
+            @include position(relative);
+
+            float: left;
+
+            margin-left: 2em;
+            &:first-child {
+                margin-left: 0;
+            }
+            a {
+                @include media($tablet) {
+                    display: block;
+                }
+            }
+        }
+        > ul {
+            @include clearfix;
+
+            margin-left: 0;
+        }
+        .current_page_item,
+        .current_page_parent {
+            @include font-weight(semi-bold);
+        }
+        > .menu-item-has-children,
+        .page_item_has_children {
+            @include media($desktop) {
+                min-height: 40px;
+            }
+            @include media($tablet) {
+            }
+            &:hover .sub-menu,
+            &:hover .children {
+                display: block;
+            }
+        }
+        > .menu-item,
+        .page_item {
+            @include media($tablet) {
+                margin-bottom: rem(10);
+                padding-top: 0;
+                padding-right: $gutter / 2;
+                padding-bottom: rem(10);
+                padding-left: $gutter / 2;
+
+                border-bottom: $border-thin;
+            }
+        }
+    }
+    .sub-menu {
+        @include media($desktop) {
+            @include position(absolute, 38px null null -11px);
+            @include zero-left;
+
+            display: none;
+
+            min-width: 150px;
+            padding: rem(10);
+
+            border: $border-thin;
+            background-color: $hex-white;
+        }
+        @include media($tablet) {
+            float: none;
+
+            margin-left: 0;
+        }
+        .page_item,
+        .menu-item {
+            @include media($desktop) {
+                margin-bottom: rem(10);
+            }
+            @include media($tablet) {
+                padding-left: rem(10);
+            }
+
+            line-height: ms(1);
+
+            float: none;
+
+            margin-left: 0;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        .sub-menu {
+            @include media($desktop) {
+                position: static;
+                top: 30px;
+
+                padding-bottom: 0;
+                padding-left: 0;
+
+                border: none;
+            }
+            @include media($tablet) {
+                @include zero-bottom;
+
+                padding-left: 0;
+                li:last-child {
+                    @include zero-bottom;
+                }
+            }
+            .page_item,
+            .menu-item {
+                @include media($desktop) {
+                    padding-left: rem(10);
+                }
+                @include media($tablet) {
+                    padding-left: rem(10);
+                }
+            }
+        }
+    }
+    .children {
+        // Required if primary menu is not set.
+        @extend .sub-menu;
+        .page_item {
+            @include media($tablet) {
+                margin-bottom: 0;
+                padding-top: unit(.5);
+                padding-bottom: rem(5);
+
+                border-bottom: 0;
+            }
+        }
+    }
+}
+
+
+// Mobile Menu Switch
+// ---------------------------------------------------------------------------
+
+#mobile-menu-switch {
+    @include media($tablet) {
+        display: block;
+    }
+    @include position(fixed, 0px 0px null null);
+
+    display: none;
+    // Adjust for wp admin bar
+    .admin-bar & {
+        @include media($tablet) {
+            top: $wp-admin-bar-height;
+        }
+    }
+    .toggle {
+        font-size: rem(14);
+        line-height: $header-bar-height-mobile;
+
+        display: block;
+
+        width: $header-bar-height-mobile + 10px;
+        height: $header-bar-height-mobile;
+
+        text-align: center;
+        text-transform: uppercase;
+
+        color: $hex-primary;
+        &:hover {
+            text-decoration: none;
+        }
+        &:active {
+            // Enable if #depress-links is active.
+            // top: 0;
+        }
+        &.on {
+            border-left: 1px solid $hex-border;
+            background-color: $hex-white;
+        }
+    }
+}
+
+
+// Post Navigation
+// ---------------------------------------------------------------------------
+
+.post-navigation {
+    @include media($tablet) {
+        margin-top: unit(2);
+        margin-bottom: unit(2);
+    }
+
+    margin-top: unit(4);
+    margin-bottom: unit(4);
+}
+
+
+// Comment Navigation
+// ---------------------------------------------------------------------------
+
+.comment-navigation {
+    @include media($tablet) {
+        margin-top: 0;
+        margin-bottom: unit(2);
+    }
+
+    margin-top: unit(-2);
+    margin-bottom: unit(4);
+}

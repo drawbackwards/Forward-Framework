@@ -1,0 +1,20 @@
+// ===========================================================================
+//
+// Footer
+//
+// ===========================================================================
+
+.site-footer {
+    @include media($tablet) {
+        padding-top: unit(2);
+        padding-bottom: unit(2);
+    }
+
+    padding-top: unit(4);
+    padding-bottom: unit(4);
+
+    border-top: 1px solid $hex-border;
+    .site-info {
+        @include type-style-small;
+    }
+}

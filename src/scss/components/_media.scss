@@ -1,0 +1,133 @@
+// ===========================================================================
+//
+// Images & Media
+//
+// ===========================================================================
+
+embed,
+iframe,
+object,
+video {
+    max-width: 100%;
+}
+img {
+    max-width: 100%;
+    height: auto;
+
+    -ms-interpolation-mode: bicubic;
+    border: 0;
+}
+
+.entry-content img,
+.entry-summary img,
+.comment-content img[height],
+img[class*='align'],
+img[class*='wp-image-'],
+img[class*='attachment-'] {
+    height: auto;
+
+    vertical-align: bottom;
+}
+
+img.size-full,
+img.size-large,
+img.wp-post-image,
+figure.wp-caption {
+    max-width: 100%;
+    height: auto;
+}
+
+.entry-content .twitter-tweet-rendered {
+    max-width: 100% !important;
+}
+
+// Image caption
+//
+.wp-caption-text {
+    @include type-style-small;
+
+    padding-top: ms(0);
+    padding-bottom: ms(0);
+
+    text-align: center;
+}
+
+// Alignments
+//
+.alignleft {
+    @include media($mobile) {
+        display: block;
+        float: none;
+    }
+
+    display: inline;
+    float: left;
+}
+
+.alignright {
+    @include media($mobile) {
+        display: block;
+        float: none;
+    }
+
+    display: inline;
+    float: right;
+}
+
+.aligncenter {
+    display: block;
+
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.alignnone {
+    display: block;
+}
+
+blockquote,
+.wp-caption,
+img {
+    &.alignleft {
+        @include media($mobile) {
+            margin: ms(1) auto ms(0) auto;
+        }
+
+        margin: ms(-2) ms(1) ms(-2) 0;
+    }
+    &.alignright {
+        @include media($mobile) {
+            margin: ms(1) auto ms(0) auto;
+        }
+
+        margin: ms(-2) 0 ms(-2) ms(1);
+    }
+    &.aligncenter,
+    &.alignnone {
+        clear: both;
+
+        margin-top: ms(1);
+        margin-bottom: ms(0);
+    }
+}
+
+.wp-caption {
+    &.alignleft,
+    &.alignright,
+    &.aligncenter,
+    &.alignnone {
+        @include media($mobile) {
+            margin-bottom: ms(-3);
+        }
+
+        margin-bottom: ms(-3);
+    }
+}
+
+// Featured image
+//
+.attachment-post-thumbnail {
+    display: block;
+
+    margin-bottom: ms(3);
+}

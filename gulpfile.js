@@ -42,7 +42,7 @@ var combinemq       = require("css-mqpacker");
 // ---------------------------------------------------------------------------
 
 gulp.task('styles', function() {
-  gulp.src(source + 'scss/forward/style.scss')
+  gulp.src(source + 'scss/style.scss')
   .pipe(plugins.sourcemaps.init())
   .pipe(plugins.sass({
     sourcemap: true,

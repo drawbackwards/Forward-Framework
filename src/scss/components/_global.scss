@@ -1,0 +1,33 @@
+// ===========================================================================
+//
+// Global
+//
+// ===========================================================================
+
+body,
+button,
+input,
+select,
+textarea {
+    @include type-style-default;
+
+    color: $hex-default;
+}
+
+body {
+    @include media($tablet) {
+        margin-top: $header-bar-height-mobile;
+    }
+
+    margin-top: 0;
+    margin-bottom: 0;
+
+    background-color: $hex-background;
+}
+
+// Remove iOS styling/
+@include all-text-inputs {
+    border-radius: 0;
+
+    -webkit-appearance: none;
+}

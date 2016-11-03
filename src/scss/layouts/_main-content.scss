@@ -1,0 +1,36 @@
+// ===========================================================================
+//
+// Main Content
+//
+// ===========================================================================
+
+.content-area {
+    @include span-columns(8);
+    @include tablet-single;
+    // @include transition (margin $timing-default $easing-default);
+    @include media($desktop) {
+        @include double-gutter;
+    }
+    @include media($tablet) {
+        margin-top: unit(2);
+        margin-bottom: unit(2);
+    }
+
+    margin-top: unit(4);
+    margin-bottom: unit(4);
+}
+
+// No Sidebar on Full Width
+//
+.page-template-page-full-width .content-area {
+    @include span-columns(12);
+
+    padding-right: 0;
+}
+
+// Remove margin on single posts
+//
+.single .content-area,
+.page .content-area {
+    margin-bottom: 0;
+}

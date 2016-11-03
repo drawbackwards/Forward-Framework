@@ -1,0 +1,149 @@
+// ==========================================================================
+//
+// Simple Reset
+// - Adapted from Fix v0.1.1: https://github.com/jaydenseric/Fix
+//
+// ===========================================================================
+
+
+html {
+    box-sizing: border-box;
+
+        -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    // -webkit-font-smoothing: antialiased;
+    // -moz-osx-font-smoothing: grayscale;
+    -webkit-tap-highlight-color: transparent;
+}
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+body {
+    font-family: sans-serif;
+    line-height: 1;
+
+    margin: 0;
+}
+iframe {
+    border: 0;
+}
+main {
+    display: block;
+}
+ul,
+ol {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+li {
+}
+dl {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+dd {
+    margin-left: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: inherit;
+
+    margin-top: 0;
+    margin-bottom: 0;
+}
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+sup {
+    font-size: 75%;
+    line-height: 0;
+
+    position: relative;
+    top: -.5em;
+
+    vertical-align: baseline;
+}
+strong {
+    font-weight: bold;
+}
+figure {
+    margin: 0;
+}
+img {
+    max-width: 100%;
+    height: auto;
+
+    vertical-align: middle;
+
+    border: 0;
+}
+a {
+    text-decoration: none;
+
+    color: inherit;
+}
+button {
+    font: inherit;
+
+    overflow: visible;
+
+    margin: 0;
+    padding: 0;
+
+    cursor: pointer;
+    text-align: inherit;
+    letter-spacing: inherit;
+    text-transform: inherit;
+
+    border: 0;
+    background: none;
+
+    -webkit-font-smoothing: inherit;
+}
+::-moz-focus-inner {
+    padding: 0;
+
+    border: 0;
+}
+// https://codepen.io/absolutholz/post/fieldset-reset
+legend {
+    display: table;
+    float: left;
+
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+    + * {
+        clear: both;
+    }
+}
+
+fieldset {
+    min-width: 0;
+    margin: 0;
+    padding: .01em 0 0 0;
+
+    border: 0;
+}
+
+body:not(:-moz-handler-blocked) fieldset {
+    display: table-cell;
+}
+
+table {
+    border-collapse: collapse;
+}

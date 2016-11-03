@@ -1,0 +1,144 @@
+// ===========================================================================
+//
+// Mixins (Unsorted)
+//
+// ===========================================================================
+
+// Standard unit of measurement to keep things simple
+//
+$global-unit: 15;
+@function unit($value) {
+    @return rem($global-unit * $value);
+}
+
+// Wrapper for modular scale function
+//
+$modular-scale-ratio: $perfect-fourth;
+$modular-scale-base: 1em;
+@function ms($value: 0) {
+    @return modular-scale($value);
+}
+
+// Font weight translations
+//
+@mixin font-weight($weight: default) {
+    @if ($weight == thin) or ($weight == ultralight) or ($weight == ultra-light) {
+        font-weight: 100;
+    }
+    @if ($weight == extralight) or ($weight == extra-light) {
+        font-weight: 200;
+    }
+    @if ($weight == light) {
+        font-weight: 300;
+    }
+    @if ($weight == normal) or ($weight == book) or ($weight == regular) or ($weight == default) {
+        font-weight: 400;
+    }
+    @if ($weight == medium) {
+        font-weight: 500;
+    }
+    @if ($weight == semibold) or ($weight == semi-bold) or ($weight == demi) {
+        font-weight: 600;
+    }
+    @if ($weight == bold) {
+        font-weight: 700;
+    }
+    @if ($weight == extrabold) or ($weight == extrabold) {
+        font-weight: 800;
+    }
+    @if ($weight == black) or ($weight == heavy) {
+        font-weight: 900;
+    }
+}
+
+@mixin link-hover {
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+@mixin link-hover-none {
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+@mixin double-gutter {
+    @include media($tablet) {
+        padding-right: 0;
+    }
+
+    padding-right: 2.35765% * 2;
+}
+
+@mixin link-colors($normal, $hover: false, $active: false, $visited: false, $focus: false) {
+    color: $normal;
+    @if $visited {
+        &:visited {
+            color: $visited;
+        }
+    }
+    @if $focus {
+        &:focus {
+            color: $focus;
+        }
+    }
+    @if $hover {
+        &:hover {
+            color: $hover;
+        }
+    }
+    @if $active {
+        &:active {
+            color: $active;
+        }
+    }
+}
+
+@mixin links($style: default) {
+    @if $style == hex-white {
+        @include link-colors($hex-white, $hex-real-white);
+    }
+    @if $style == hex-primary {
+        @include link-colors($hex-primary, $hex-primary-hover);
+    }
+    @if $style == hex-secondary {
+        @include link-colors($hex-secondary, $hex-secondary-hover);
+    }
+    @if $style == hex-footer {
+        @include link-hover;
+        @include link-colors($hex-footer, $hex-footer-hover);
+    }
+    @if $style == default {
+        @include link-colors($hex-default, $hex-default-hover);
+        @include link-hover;
+    }
+}
+
+@mixin bg-image($filename, $x: left, $y: top, $ext: png ) {
+    background-image: url('./img/#{$filename}.#{$ext}');
+    background-repeat: no-repeat;
+    background-position: $x $y;
+}
+
+@mixin bg-image-hidpi($filename, $width, $height, $x: left, $y: top, $ext: png ) {
+    @include hidpi {
+        background-image: url('./img/#{$filename}@2x.#{$ext}');
+        background-size: $width + px $height + px;
+    }
+
+    background-image: url('./img/#{$filename}.#{$ext}');
+    background-repeat: no-repeat;
+    background-position: $x $y;
+}
+
+@mixin tablet-single {
+    @include media($tablet) {
+        @include span-columns(8 of 8);
+    }
+}
+@mixin mobile-single {
+    @include media($mobile) {
+        @include span-columns(4 of 4);
+    }
+}
