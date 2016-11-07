@@ -1,0 +1,65 @@
+// ===========================================================================
+//
+// Header
+//
+// ===========================================================================
+
+.site-header {
+    // @include transition (padding, height $timing-default $easing-default);
+    @include media($tablet) {
+        @include position(fixed, 0px null null 0px);
+
+        z-index: 1;
+
+        width: 100%;
+        height: $header-bar-height-mobile;
+        padding-top: 0;
+        padding-bottom: 0;
+
+        background-color: $hex-real-white;
+    }
+
+    height: $header-bar-height;
+    padding-top: unit(2);
+    padding-bottom: unit(2);
+
+    border-bottom: 1px solid $hex-border;
+    // Adjust for wp admin bar
+    .admin-bar & {
+        @include media($tablet) {
+            top: $wp-admin-bar-height;
+        }
+    }
+}
+.site-branding {
+    @include media($tablet) {
+        left: $gutter / 2;
+    }
+    @include position(absolute, 0px null null $gutter);
+}
+.site-title {
+    @include type-style-h1;
+    @include font-weight(light);
+}
+.site-logo {
+    // @include transition (font-size $timing-default $easing-default);
+    @include media($tablet) {
+        line-height: $header-bar-height-mobile;
+    }
+
+    display: inline-block;
+
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.site-description {
+    display: none;
+}
+
+// Admin bar
+//
+#wpadminbar {
+    @include media($tablet) {
+        @include position(fixed, 0px null null 0px);
+    }
+}

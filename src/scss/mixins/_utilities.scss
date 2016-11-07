@@ -1,0 +1,87 @@
+// ===========================================================================
+//
+// Utilities
+//
+// ===========================================================================
+
+@mixin no-bullet {
+    margin-left: 0;
+
+    list-style-type: none;
+    list-style-image: none;
+}
+@mixin no-bullets {
+    padding-left: 0;
+
+    list-style: none;
+    li {
+        @include zero-left;
+        @include no-bullet;
+    }
+}
+
+@mixin no-wrap {
+    white-space: nowrap;
+}
+
+@mixin ellipsis {
+    overflow: hidden;
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+@mixin zero-all {
+    margin: 0;
+    padding: 0;
+}
+@mixin zero-top {
+    margin-top: 0;
+    padding-top: 0;
+}
+@mixin zero-bottom {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+@mixin zero-left {
+    margin-left: 0;
+    padding-left: 0;
+}
+@mixin zero-right {
+    margin-right: 0;
+    padding-right: 0;
+}
+@mixin zero-last {
+    &:last-child {
+        @include zero-bottom;
+    }
+}
+
+@mixin hide {
+    display: none;
+    visibility: hidden;
+}
+
+@mixin all-text-inputs {
+    input[type='color'],
+    input[type='date'],
+    input[type='datetime'],
+    input[type='datetime-local'],
+    input[type='email'],
+    input[type='month'],
+    input[type='number'],
+    input[type='password'],
+    input[type='search'],
+    input[type='tel'],
+    input[type='text'],
+    input[type='time'],
+    input[type='url'],
+    input[type='week'],
+    textarea {
+        @content;
+    }
+    // Alternate bourbon implementation below (Causes csscomb errors)
+    // #{$all-text-inputs} {
+    //     @content;
+    // }
+}

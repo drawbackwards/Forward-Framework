@@ -1,0 +1,48 @@
+// ===========================================================================
+//
+// Search
+//
+// ===========================================================================
+
+.search-form {
+    @include row;
+
+    margin-bottom: unit(2);
+    .content-area & {
+        margin-top: unit(2);
+    }
+    label {
+        .content-area & {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+    }
+    input[type=search] {
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .search-submit {
+        @include span-columns(1.5 of 4, block-collapse);
+
+        margin-top: 0;
+        padding-right: 0;
+        padding-left: 0;
+    }
+    label {
+        @include span-columns(2.5 of 4, block-collapse);
+        input[type=search] {
+            box-sizing: border-box;
+            width: 100%;
+        }
+    }
+}
+
+.search-results {
+    article:last-child {
+        margin-bottom: unit(2);
+        padding-bottom: 0;
+
+        border: none;
+    }
+}

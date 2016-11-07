@@ -1,0 +1,161 @@
+// ===========================================================================
+//
+// Comments
+//
+// ===========================================================================
+
+.comments-title {
+    @include type-style-h2;
+
+    margin-bottom: ms(2);
+}
+
+.comment-body {
+    @include row;
+    @include media($mobile) {
+        margin-bottom: unit(1);
+        padding-bottom: unit(1);
+        padding-left: 0;
+    }
+
+    margin-bottom: unit(2);
+    padding-bottom: unit(2);
+    padding-left: 65px;
+    .comment-meta {
+        margin-bottom: ms(-4);
+        .comment-author {
+            @include position(relative, 0 0 0 0 );
+
+            display: inline;
+        }
+        .comment-metadata {
+            @include type-style-small;
+
+            display: inline;
+
+            margin-left: ms(-2);
+            a {
+                color: $hex-light-grey;
+            }
+        }
+        .avatar {
+            @include position(absolute, 0px 0 0 -65px );
+            @include media($mobile) {
+                display: none;
+            }
+
+            border-radius: 50%;
+        }
+        .says {
+            display: none;
+        }
+    }
+    .comment-content {
+        p {
+            margin-bottom: ms(-4);
+        }
+    }
+    .reply {
+        @include type-style-small;
+
+        padding-top: ms(-4);
+        a {
+            color: $hex-light-grey;
+        }
+    }
+}
+
+.comment-form-comment {
+    margin-bottom: 0;
+}
+
+.comment-list {
+    @include media($tablet) {
+        margin-bottom: unit(1);
+        padding-bottom: unit(0);
+    }
+    @include zero-left;
+
+    margin-bottom: unit(2);
+    padding-bottom: unit(1);
+
+    list-style: none;
+    li.comment {
+        @include zero-left;
+        @include no-bullet;
+    }
+    .children {
+        @include media($mobile) {
+            @include zero-left;
+        }
+    }
+}
+
+.form-allowed-tags {
+    @include type-style-small;
+    // You might just want to hide this
+    // display: none;
+
+    margin-bottom: ms(0);
+    code {
+    }
+}
+
+.comment-reply-title,
+.comments-title {
+    @include type-style-h2;
+    small {
+        @include type-style-small;
+        @include font-weight(light);
+
+        float: right;
+
+        margin-top: 10px;
+
+        text-transform: capitalize;
+        a {
+            color: $hex-light-grey;
+        }
+    }
+}
+
+.comment-notes {
+    @include type-style-small;
+
+    margin-bottom: unit(2);
+}
+
+.comment-respond {
+    @include media($mobile) {
+        margin-bottom: unit(1);
+        padding-bottom: unit(1);
+    }
+
+    margin-bottom: unit(2);
+    padding-bottom: unit(2);
+    // border-bottom: 1px solid $hex-border;
+    .submit {
+        @include media($mobile) {
+            width: 100%;
+        }
+
+        margin-bottom: 0;
+    }
+}
+
+// Pingbacks
+//
+.pingback {
+    .comment-body {
+        margin-bottom: unit(1);
+        padding-bottom: unit(1);
+        padding-left: 0;
+    }
+    + .comment .comment-body {
+        @include media($mobile) {
+            margin-top: unit(1);
+        }
+
+        margin-top: unit(2);
+    }
+}

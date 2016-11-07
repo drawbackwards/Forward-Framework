@@ -1,0 +1,114 @@
+// ===========================================================================
+//
+// Forms
+//
+// ===========================================================================
+
+label {
+    .content-area & {
+        @include type-style-h5;
+
+        display: block;
+
+        margin-bottom: .5em;
+    }
+}
+
+%input-defaults {
+    margin-top: ms(-4);
+    margin-bottom: ms(0);
+    padding: 6px 8px;
+
+    border: 1px solid shade($hex-border, 10%);
+    &:hover,
+    &:focus {
+        border-color: shade($hex-border, 30%);
+        outline: none;
+    }
+}
+
+@include all-text-inputs {
+    @extend %input-defaults;
+
+    width: 100%;
+}
+
+input[type=search] {
+    @extend %input-defaults;
+
+    width: auto;
+
+    border-right: none;
+}
+
+input[type=submit] {
+    @include font-weight(normal);
+    @include media($mobile) {
+        width: 100%;
+    }
+
+    padding: 6px ms(2);
+
+    color: $hex-primary;
+    border: 1px solid $hex-primary;
+    background-color: transparent;
+    &:hover {
+        color: $hex-white;
+        background-color: $hex-primary;
+    }
+    &:active {
+        // #depress-links (submit buttons) by 1 pixel (may cause issues with 3rd party styles).
+        // @include position(relative, 1px 0 0 0 );
+    }
+}
+
+// Post password form
+//
+.post-password-form {
+    label {
+        margin-top: ms(2);
+    }
+    input[type='password'] {
+        margin-top: ms(-1);
+    }
+    input[type='submit'] {
+        margin-top: 0;
+    }
+}
+
+// Gravity forms
+//
+.gform_fields {
+    @include no-bullets;
+    @include zero-left;
+}
+.gfield {
+}
+.ginput_container {
+}
+.gfield_description {
+    @include type-style-small;
+
+    margin-bottom: ms(0);
+}
+.gform_footer {
+}
+.gform_button.button {
+    margin-top: 0;
+}
+.gform_validation_container.gfield {
+    display: none;
+}
+.validation_error {
+    margin-bottom: unit(2);
+
+    color: $hex-red;
+}
+.gfield_error {
+    @include all-text-inputs {
+        border-color: $hex-red;
+    }
+    .gfield_description {
+        color: $hex-red;
+    }
+}
