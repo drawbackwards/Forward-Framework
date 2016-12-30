@@ -1,6 +1,6 @@
 {
   "name": "forward-framework",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A killer WordPress theme framework built using underscores, gulp, sass, bourbon neat, bower & browsersync.",
   "homepage": "https://github.com/drawbackwards/Forward-Framework",
   "repository": {
