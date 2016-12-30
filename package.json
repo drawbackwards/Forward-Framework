@@ -1,11 +1,11 @@
 {
-  "name": "wordpress-gulp-bower-sass",
-  "version": "0.0.4",
-  "description": "A WordPress/Gulp/Bower/Sass starter kit",
-  "homepage": "https://github.com/synapticism/wordpress-gulp-bower-sass",
+  "name": "forward-framework",
+  "version": "1.0.2",
+  "description": "A killer WordPress theme framework built using underscores, gulp, sass, bourbon neat, bower & browsersync.",
+  "homepage": "https://github.com/drawbackwards/Forward-Framework",
   "repository": {
     "type": "git",
-    "url": "https://github.com/synapticism/wordpress-gulp-bower-sass.git"
+    "url": "https://github.com/drawbackwards/Forward-Framework.git"
   },
   "keywords": [
     "wordpress",
@@ -16,7 +16,7 @@
   "scripts": {
     "postinstall": "bower install"
   },
-  "author": "Alexander Synaptic",
+  "author": "Drawbackwards",
   "license": "GNU General Public Licence 2.0",
   "main": "index.js",
   "private": true,
