@@ -19,9 +19,9 @@
   ],
   "devDependencies": {
     "bourbon": "~4.2.2",
-    "neat": "~1.7.2",
     "normalize.css": "~3.0.3",
-    "meyer-reset": "*"
+    "meyer-reset": "*",
+    "neat": "^2.0.0"
   },
   "description": "Components for the Forward Framework."
 }
