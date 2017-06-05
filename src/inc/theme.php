@@ -12,7 +12,7 @@ if ( ! function_exists( 'forward_scripts' ) ) :
  * Enqueue scripts and styles.
  */
 function forward_scripts() {
-	wp_enqueue_style( 'forward-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'forward-style', get_stylesheet_uri(), null, null );
 
 	// Front-end scripts
 	if ( !is_admin() ) {
